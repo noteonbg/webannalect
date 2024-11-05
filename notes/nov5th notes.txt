@@ -1,0 +1,272 @@
+key things.
+0. intent first language next.
+1. our loyalty is towards project
+2. tolerate uncertainty..keep your bp level normal..
+and try to write a small program which clarifies
+the syntax or the concept on which we have doubt on.
+3. generalize our learning consequence of this
+we have less things to remember.
+
+Example of things that dont change.
+Event handling..
+
+good programmer.
+1. project is my boss because it pays my salary
+2. when i get doubts, i will keep level normal... and write a "small"
+program which will clarify my doubt.
+3. must be good at variables and functions (5/5)
+4. good at problem solving..  ( people who depend on their memory
+are stupid people they can never good at problem solving depnd on
+a process)
+intelligence == not repeatable..
+process to solve the probme == repeatable..
+
+I spoke something vague or complicated let me know..
+
+harmless word web technology..
+technology is Shakespeare cousin..
+
+web.. think of http and its related protocol usage..
+
+web technology...
+web server... == server which processes http requests..
+client side
+server side..
+
+http
+client side
+server side
+boss is the browser... 
+
+telescope   zoom out problems comes mainly because of zoom out most 
+of times, ensure we dont get the problem because of zoom outs..
+
+web application
+1. which browsers are you targeting.
+2. what devices are you targeting.
+3. under what restrictions you want to run..
+4. performance criterias if any..
+
+ghost word in IT industry is performance.. best practice it will wokr
+faster... needs data to be collected..
+
+hardest question in the project do you know what will change
+what will not change..
+
+moral of the story, in any multistep dont trust your instinct, intellingece
+rather have a process (checklist) -- this will gurantee repetabililty.
+
+web.
+client side and server side.
+what is target environment and devices..
+performance criteria.
+maintenance...
+
+To design the web site there are multiple steps.. 
+multiple steps my brain wont work. so where is the checklist..
+
+we are building presentation layer.. that means.. presentation
+layer has to be slave to some business layer..
+
+show patience while doing zoom out, so that we wont
+waste time coding which nobody uses...
+
+we are building a web based presentation.
+1. html  --structure of the page.. link.. ul, li
+2. css  -- does decoration for the page.. positioning layouts.. colors fonts..
+3. js  -- decides dynamic behavior of the page.. when we click..
+
+approach.
+0. we have filled up the excel sheet.
+1. html  first
+2. css next.
+3. javascript last..
+
+you will  know which part of the html page will change, which part
+of the html page will not change based on that we can give ids..
+
+who are building html think which part of the page will change
+ensure you give a id for that particular part..
+
+html tag
+various tags..
+html tags are interpreted by the browser..
+
+only with html ... we cannot do anything... we have to use css and javascript
+to get functionality going..
+
+1. structure...
+2. responsiveness.. targeting various devices..
+3. how to use css and html together to get 2 done..
+
+remember
+concept is not a function of time
+syntax is function of time..
+
+html page syntax.
+know which part will change, which part will not change..
+
+while learning.. let us ensure we learn from official guys first
+and then the freaky guys and not from freaky guys first..
+
+tags that introduce new line   --Div, p, h1
+tags that dont introduce new line..  span
+
+projects which require heroes are zeroes.
+
+hyperlink..
+
+<A href="where to go"> what to show in the screen  </A>
+
+
+
+https://www.random.org/account/
+
+
+https://www.random.org/terms/
+
+todays world collecing information  has lost value..
+skill is what are you doing with the information.
+
+any official website will tell their technology is the best
+.as a technical person we should not believe this....because
+we are fan of our project and not the technology.
+
+inline element it does not introduce newl ines.
+example span, hyperlink..
+
+1. head, body , html
+2. div, span
+3. hyperlink tag.
+4. ul, li tags.
+5. form tags..
+6. h1, h6... tags. heading..
+
+remember we will see the power of tags only after learning css along
+with it..
+
+only html, css and js first.. then i will talk about sass , react.. little bit
+why... 
+boss does not care for sass, react. angular.. boss tells give me html
+js and css only.. boss = browser.
+
+what is purpose of form. =group things.
+
+
+what is purpose of ui elements like textbox, radio button, checkbox
+to interact and collect information from user
+
+i am picking up
+<form action="random.org/procssit" method="">
+userid
+password.
+</form>
+I did not use a form.. then what will happen.. grouping of userid
+and password willn ot happen
+
+form  is used to group information...
+input elements is used to interact with user and capture the information.
+
+
+form action="where to send the grouped information" 
+method="how to send the information"
+if you want to send the grouped information thru the form, submit button
+is needed.
+if you are dong something on your own just for logic in the client
+normal button will do.
+
+0. know architecture, fill up excel sheet.. and then we will use how to use
+id in the html.
+1. html has got some tags... which is processed by the browser.
+2. know tags which introduce new line and tags which dont introduce new line
+span, a href..
+3. form is a grouping mechanism.
+4. user inputs ok interact with user and capture input
+
+2.05 ... 2.30 PM and join back..
+
+on need basis learning..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+microscope. zoom in
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

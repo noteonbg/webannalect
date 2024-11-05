@@ -1,0 +1,57 @@
+Day 1  -- 4th Nov
+
+Problem Statement 1: Product Management System
+Objective: Create a system to manage products in a manufacturing company.
+
+Requirements:
+
+Implement functions to add new products, list existing products, and update product information (e.g., price).
+Each product should have a unique identifier, name, and price.
+Create a function to apply discounts to all products based on a percentage.
+Ensure that you can handle edge cases, such as trying to update a product that doesn't exist.
+
+
+Problem Statement 2: Order Processing System
+Objective: Develop an order processing system for a manufacturing company.
+
+Requirements:
+
+Create functions to place an order for products, list all orders, and calculate the total cost of all orders.
+Each order should contain a unique order ID, the list of products ordered, and the order total.
+Include functionality to cancel an order, which should remove it from the orders list.
+Implement a function to summarize all orders for a given customer.
+
+
+Problem Statement 3: Inventory Management System
+Objective: Create an inventory management system that tracks the stock of products in a factory.
+
+Requirements:
+
+Implement functions to add stock for existing products, reduce stock when products are sold, and check stock levels.
+Ensure that the system warns if stock levels fall below a certain threshold.
+Create a report function that summarizes stock levels for all products, indicating which products are low in stock.
+
+
+Problem Statement 4: Production Scheduling System
+Objective: Design a system to schedule the production of different products.
+
+Requirements:
+
+Implement a function that allows the scheduling of products for production based on demand forecasts.
+Each scheduled production should have a unique identifier, product name, scheduled date, and quantity.
+Include functionality to update production schedules and view upcoming production tasks.
+Ensure that the system can handle overlapping schedules and notify when a product is already scheduled for the same date.
+
+
+
+Problem Statement 5: Supplier Management System
+Objective: Create a system to manage suppliers and their relationships with products.
+
+Requirements:
+
+Implement functions to add new suppliers, associate products with suppliers, and list all products from a specific supplier.
+Each supplier should have a unique ID, name, contact information, and a list of products they supply.
+Create a function to update supplier details and another to remove a supplier from the system if they no longer provide products.
+
+
+

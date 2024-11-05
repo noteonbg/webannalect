@@ -1,0 +1,160 @@
+Example: Manufacturing Order Cost Calculator
+
+#1. HTML + JavaScript Code
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Order Cost Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Manufacturing Order Cost Calculator</h1>
+
+    <div class="container">
+        <label for="item">Item Name:</label>
+        <input type="text" id="item" placeholder="Enter item name">
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" placeholder="Enter quantity" min="1">
+
+        <label for="unitPrice">Unit Price (USD):</label>
+        <input type="number" id="unitPrice" placeholder="Enter unit price" step="0.01" min="0">
+
+        <button onclick="calculateTotalCost()">Calculate Total Cost</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        // JavaScript function to calculate the total cost
+        function calculateTotalCost() {
+            // Get the values from the input fields
+            const item = document.getElementById('item').value;
+            const quantity = document.getElementById('quantity').value;
+            const unitPrice = document.getElementById('unitPrice').value;
+
+            // Check if all fields are filled out
+            if (!item || quantity <= 0 || unitPrice <= 0) {
+                alert('Please fill in all fields with valid data.');
+                return;
+            }
+
+            // Calculate the total cost
+            const totalCost = quantity * unitPrice;
+
+            // Display the result
+            document.getElementById('result').innerHTML = `
+                <p><strong>Item:</strong> ${item}</p>
+                <p><strong>Quantity:</strong> ${quantity}</p>
+                <p><strong>Unit Price:</strong> $${unitPrice}</p>
+                <p><strong>Total Cost:</strong> $${totalCost.toFixed(2)}</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
+
+
+ Explanation of the Code:
+
+1. HTML Structure:
+   - Input Fields:
+     - An input field for the Item Name (text input).
+     - An input field for the Quantity (numeric input).
+     - An input field for the Unit Price (numeric input with decimal values).
+   - Button:
+     - A button that, when clicked, triggers the JavaScript function to calculate the total cost.
+   - Result Div:
+     - An area where the total cost and order details will be displayed after the calculation.
+
+2. CSS Styling:
+   - The page has a clean and simple design with a container that holds the input fields and results.
+   - The button has hover effects for a better user experience.
+
+3. JavaScript:
+   - Event Trigger: The `onclick` event on the button calls the `calculateTotalCost()` function.
+   - Function Logic:
+     - It first retrieves the values entered in the Item Name, Quantity, and Unit Price input fields.
+     - It checks if the input fields are filled out and ensures that the quantity and unit price are positive.
+     - It calculates the total cost by multiplying the Quantity by the Unit Price.
+     - The result is displayed dynamically on the webpage within the `<div id="result">`.
+     - If the inputs are invalid, it prompts the user with an alert.
+
+4. Output:
+   - When the user fills in the item name, quantity, and unit price, and then clicks "Calculate Total Cost", the total cost will be displayed below the button.
+
+ Example Interaction:
+
+# Scenario:
+- Item Name: Steel Plates
+- Quantity: 100
+- Unit Price: 15.75
+
+When the user clicks Calculate Total Cost, the result will be:
+
+
+Item: Steel Plates
+Quantity: 100
+Unit Price: $15.75
+Total Cost: $1575.00
+
+
+

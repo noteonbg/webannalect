@@ -1,196 +1,541 @@
-key things.
-0. intent first language next.
-1. our loyalty is towards project
-2. tolerate uncertainty..keep your bp level normal..
-and try to write a small program which clarifies
-the syntax or the concept on which we have doubt on.
-3. generalize our learning consequence of this
-we have less things to remember.
+moral of the story.
 
-Example of things that dont change.
+everybody agrees that practical is important..
+but zero theory means you have unlimited practicals..
+
+
+1. architecture to code..
+2. web.. http
+3. html,css and javascript all doing different jobs..
+4. in any project if we have view what will change, what will not change.
+that will give a context how things look like..
+5. we need a process to begin in any multistep process.
+5. I want to write html page  -- do you which part of page will page
+which part of page willnot change.. this will give a clue as to how to use id..
+6. approach of html.
+6.1 focus on html part.
+6.2 css part...
+6.3 javascript part
+
+quick intro on css and javascript..
+practical thing would be know some css to make some modifications..
+being decent in javascript and gettings things done is realistic.
+
+user friendly website..
+1. no scrolling.
+2. whatever you do number of clicks should be max 3 or less than 3..
+3. consistency... in color usage, in font usage, in layout...
+
+html5 has got some tags, these tags get interpreted by the browser..
+predefined tags...
+
+deciding on the structure of the page..
+form..group things..
+individual components in the form...
+
+<form action="where to process the request"  method="post"
+<input type="text" id="javascript/css" name="for server side compeonnt"
+
+method="http mode of sending the request"
+
+https://www.cleartrip.com/flights/results?adults=1&childs=0&infants=0&class=Economy&depart_date=06/11/2024&from=BLR&to=BOM&intl=n&origin=BLR%20-%20Bangalore,%20IN&destination=BOM%20-%20Mumbai,%20IN&sft=&sd=1730875497557&rnd_one=O&isCfw=false
+
+semantic web.. some more html tags.. 
+some basics of css.
+Event handling.
+javascript
+
+
+in any website.
+
+1. we have some information first...
+2. we want to divide the page into sections.
+3. inevitably there will be mechanisms to go different sections of the website or same web page...
+to indicate 3 we use the nav tag.. only nav tag alone will not do anything, inside hte nav tag we have
+to use some kind of links... ( routing)
+
+div tag  -- very old thing.. pre 2000 before html5 .. manage almost entire page by using div, span..
+nav tag, is an introduction after html 5... semantic structure...
+
+post html5 world is we will use semantic tags to indicate the intent ...
+ie we want a header we want a footer..
+
+what do you know in html
+
+1. some structure tags...
+	. hyperlink,div,span, semantic web.
+2. form tags.. action, method, id , name.. submit and normal button.
+3. why we give id.. to indicate changing part of the page..
+
+
+basic terminoology
+<input name="abc" id="t1" value="x"/> --tag
+name, id or value is considered as attributes..
+
+for any form component we need three things.
+1. label. which user can see and know what it communicates, place holder, label...
+2. name and id... name is used to recongize the information on the server side, id is used
+to pick the infomration in the client side,, (within javascript function)
+3. value... is value is contnet of the ui component.
+example 
+we enter something in the textbox how does the programmer come to know the conent of the textbox... by using value..
+we have a radio button
+
+value is important for all ui components,for textbox and its cousins.. content of textbox is the value
+for non textbox components like radio dropdown... value has to be specified else we land up with logical
+errors in the code..
+
+I cannot show any example right way I have to talk about javascript
+you can process the value in the html... you can process it on server side... or you in context of processing
+in client side.. in javascript
+
+Div --big superset..
+semantic web tags... came after div to give logical meaning to the html page...
+
+javascript
+
+1. respect it as a new programming language...
+2. people javascript is a scripting language... all this story is dead.. in todays world javascrpt
+is  programming language, as you can talk about c or c++
+
+what we can do with javascript anything you want...
+
+every programming language today is free..every programming languages wants developers...
+but in our context, why javascript.. because brower understands it..
+
+what are we going to do with javascript.
+
+1. set up some events in our web page.
+2. when that event occurs some function is getting called by the system.
+3. in that function what we will do.
+3.1 pick some section of the html page
+3.2  do some logic
+3.3 update the page.
+
+programming language.
+1. we should have idea regarding architecture...
+entry point, exit point how is your layering going on...
+
+we want access sections of html page let us call it as X.
+we want to do some logic.. let us call it as Y.
+dont mix x and y... doing that is called as architecture...
+how do you know something is not having an architecture change X, change everything in code..dont trust check...
+
+how many js files are you going to create and why.... basis for that will be architecture..
+
+javascript  -- this part if we ignore we will busy lot of English explanations and we will lot of volume of data to process.
+function
+functiond definition
+function calling
+function assignment
+
+variable..
+data type
+scope..
+
+how do you write javscript...
+1. we can write html page
+2. we can write it separately and link it..
+
+
+<script>
+function functionname()
+{
+	console.log("function getting called");
+
+}
+
+</script>
+
+when you define the function
+1. think who is going to call it, if you have no idea, dont define the function.
+
+
+<button onclick="f1()"
+dont tell f1 is getting called...
+f1 is getting assigned...
+we are telling the browser hey look when the click event happens then you must call the f1 function.
+
 Event handling..
+some change occurs and you have to report the change..
+change occurs == variable value changes... 
 
-good programmer.
-1. project is my boss because it pays my salary
-2. when i get doubts, i will keep level normal... and write a "small"
-program which will clarify my doubt.
-3. must be good at variables and functions (5/5)
-4. good at problem solving..  ( people who depend on their memory
-are stupid people they can never good at problem solving depnd on
-a process)
-intelligence == not repeatable..
-process to solve the probme == repeatable..
+in javascript 99% of our job will be to react to events.
+that means
 
-I spoke something vague or complicated let me know..
+1. system will detect changes. and it will have a mechanism to report to us... provided we tell
+the system hey look I am interested in this changes 
 
-harmless word web technology..
-technology is Shakespeare cousin..
+telling the system I am interested in this change.. event registration.
+so in javscript
 
-web.. think of http and its related protocol usage..
+we should have clarity as to what is meaning of event..
+we are event listeners most of times and not event causers...
+who is detecting the event system.
+who is telling I am interested in the event.. let me know.. we..
 
-web technology...
-web server... == server which processes http requests..
-client side
-server side..
+whenever you setup event handling... understand syntax wise there is  function assignment at work...
+some times syntax will look like function calling...
 
-http
-client side
-server side
-boss is the browser... 
 
-telescope   zoom out problems comes mainly because of zoom out most 
-of times, ensure we dont get the problem because of zoom outs..
-
-web application
-1. which browsers are you targeting.
-2. what devices are you targeting.
-3. under what restrictions you want to run..
-4. performance criterias if any..
-
-ghost word in IT industry is performance.. best practice it will wokr
-faster... needs data to be collected..
-
-hardest question in the project do you know what will change
-what will not change..
-
-moral of the story, in any multistep dont trust your instinct, intellingece
-rather have a process (checklist) -- this will gurantee repetabililty.
-
-web.
-client side and server side.
-what is target environment and devices..
-performance criteria.
-maintenance...
-
-To design the web site there are multiple steps.. 
-multiple steps my brain wont work. so where is the checklist..
-
-we are building presentation layer.. that means.. presentation
-layer has to be slave to some business layer..
-
-show patience while doing zoom out, so that we wont
-waste time coding which nobody uses...
-
-we are building a web based presentation.
-1. html  --structure of the page.. link.. ul, li
-2. css  -- does decoration for the page.. positioning layouts.. colors fonts..
-3. js  -- decides dynamic behavior of the page.. when we click..
-
-approach.
-0. we have filled up the excel sheet.
-1. html  first
-2. css next.
-3. javascript last..
-
-you will  know which part of the html page will change, which part
-of the html page will not change based on that we can give ids..
-
-who are building html think which part of the page will change
-ensure you give a id for that particular part..
-
-html tag
-various tags..
-html tags are interpreted by the browser..
-
-only with html ... we cannot do anything... we have to use css and javascript
-to get functionality going..
-
-1. structure...
-2. responsiveness.. targeting various devices..
-3. how to use css and html together to get 2 done..
-
-remember
-concept is not a function of time
-syntax is function of time..
-
-html page syntax.
-know which part will change, which part will not change..
-
-while learning.. let us ensure we learn from official guys first
-and then the freaky guys and not from freaky guys first..
-
-tags that introduce new line   --Div, p, h1
-tags that dont introduce new line..  span
-
-projects which require heroes are zeroes.
-
-hyperlink..
-
-<A href="where to go"> what to show in the screen  </A>
+respect javascript as a new language.. dont compare it with anything python... java or javascript
 
 
 
-https://www.random.org/account/
+
+remember these rules.
+
+1. function define
+1.1 think who is going to call it.
+1.2 also think how will you tell the caller function succed or function failed or does not matter..
+
+2. function calling
+2.1 open documentation... else we will do astrology on the function.
 
 
-https://www.random.org/terms/
-
-todays world collecing information  has lost value..
-skill is what are you doing with the information.
-
-any official website will tell their technology is the best
-.as a technical person we should not believe this....because
-we are fan of our project and not the technology.
-
-inline element it does not introduce newl ines.
-example span, hyperlink..
-
-1. head, body , html
-2. div, span
-3. hyperlink tag.
-4. ul, li tags.
-5. form tags..
-6. h1, h6... tags. heading..
-
-remember we will see the power of tags only after learning css along
-with it..
-
-only html, css and js first.. then i will talk about sass , react.. little bit
-why... 
-boss does not care for sass, react. angular.. boss tells give me html
-js and css only.. boss = browser.
-
-what is purpose of form. =group things.
+3. function assignment.
+remember this is a mechanism to store function as a variable..or assign a function to a variable....
+remember when we function assignment it means two people are there X and Y.
+X is assigning the function, it means X is owner of the function, and X is not the caller of the function.
 
 
-what is purpose of ui elements like textbox, radio button, checkbox
-to interact and collect information from user
+how to create a variables and what data types are there
 
-i am picking up
-<form action="random.org/procssit" method="">
-userid
-password.
-</form>
-I did not use a form.. then what will happen.. grouping of userid
-and password willn ot happen
+data type... means content + operation..
+you choose data type based on the operation you want..
 
-form  is used to group information...
-input elements is used to interact with user and capture the information.
+two ways for todays world in javascript how to create variables..
+let x ="hello";
+x="hi"
+x=false;
+x=[];
+
+const x ="hello";  // this way means x cannot be reassigned
+
+let x="hello"
+x=have only the string type you cannot enforce.. in javascript.
+
+quick summary
+1. awareness regarding semantic html tags..
+2. javascript learn it as a new language...
+3. function . define, call or assign
+4. variable creation in javascript.. think of let or const.. depending on whether you want reassignment or not..
+
+standard stupidity if we can avoid great, else we will join the party..
+lot of people dont have the decency to respect javascript a new language, they want to compare it with 
+something they know....like java or c++ or python... this is pathetic.. so what some people have done is
+put fancy dress for javascript call it with  new name and make it look like java or c++ , example typescript.
+but any person who does not know javascript should not use the word web for presentation.
+
+learn to write javascript functions.
+when you define, pleas think who is going to call it..
+
+you can write n functions in javascript
+but be conscious which is event handling function and which one is not..
+why never use return in eventhandling functions because we are not calling what will system will do with
+the return...
+
+in all event handling functions.. we are event listeners..
+event handling is one way communication
+
+from event source to event listener.. event lister cannot talk back to the event source..
 
 
-form action="where to send the grouped information" 
-method="how to send the information"
-if you want to send the grouped information thru the form, submit button
-is needed.
-if you are dong something on your own just for logic in the client
-normal button will do.
 
-0. know architecture, fill up excel sheet.. and then we will use how to use
-id in the html.
-1. html has got some tags... which is processed by the browser.
-2. know tags which introduce new line and tags which dont introduce new line
-span, a href..
-3. form is a grouping mechanism.
-4. user inputs ok interact with user and capture input
 
-2.05 ... 2.30 PM and join back..
 
-on need basis learning..
 
-attempt the following.
-1. casestudy folder...
-assignment.txt problem statement 1 and problem statement 2
-casestudy2.docx ..
+rule no avoid writing global variables in real life, for today we will use global variables..
+
+
+
+
+
+
+
+
+
+
+javsacript has got data types, i tells dont tell me what the data type i will judge it dynamically.
+
+
+
+
+
+
+quick summary of javascript
+
+1. respect javascript as a new language..
+2. function... 
+define  -- think who is going to call it, kid will tell I will call it.. many a times in javascript system will calling
+it.. what we wrote was a event handling function.
+assign  -- this is what we do during event handling.. tell somebody hey look here is my function, you call it under
+some circumstance..
+call  -- open documentation.
+3. variable creation..
+let
+const
+data type is recognized by javascript dynamically.
+
+let x ="Hell"
+let y ="o"
+let z = x+y; + is defined with string...
+console.log(z);
+
+
+
+let x ="Hello"
+let y ="o"
+let z = x-y;  // minus operation is not defined in string datatype.
+console.log(z);
+
+what is moral. data type means decide operation and pick your type..
+no i dont want to decide on my operation.. ok in that case dont create the variable..
+
+let x ="hello"
+let y= x.toUppercase();  //function call, open documentation and read it...dont assume.
+console.log(x); // HELLO it wont... 
+y will bein uppercase...
+
+open documentation when you do function calls in any programming language dont assume..
+
+data types in javascript we will leanr it on need basis..
+
+array..   
+a contiguous allocation in memory... with a fixed size.. this is standard definition of array in any programming language
+
+but in javascript array does not have a size.
+
+let x=[];//this is an array..
+x.push(3);//you can add elements in to the array.
+
+for(let y=0; y< x.length; y++)
+{
+	console.log(x[y]);
+}
+
+let x={}// x is an object or X is a dictionary.. key and value pairs..
+let x = {length:3, breadth:4 };
+x[length]=7;
+x[breadth]=4;
+
+let x=0;
+x="abc";
+
+write a javascript function that takes a string as argument and returns the uppercase string
+call it in the script tag, supply argument as hello.. and see what is output you are getting.
+
+write a function takes two numbers and returns product of that number .
+2.30PM
+
+write a  javascript function which takes an array of 5 numbers and returns the sum of the array.
+let x =[2,3,4,5,6];
+x.length
+for...
+
+write a javascript function whose input is a number and it returns 5 multiples of the number.
+example if we input as 5, it should return 5,10,15,20,25
+if input is 2, it should return 2,4,6,8,10
+use the method called push to add an element into the array.
+
+
+	object or dictionary..
+	let x ={ m1:3, m2:"hello"}
+	let x = { productid:4, sales:44 }
+	console.log(x[productid])
+
+	function whose input argument is an object or dictionary  { length:4, breadth:5 }
+	return type should be  { perimeter: 18, area :20 }
+
+	input argument is a object  { length, breadth }
+	return type is an object  { perimeter, area }
+
+	what we should know is
+	how to write a function in javascript takes a simple type like a number, array, and an object as input
+	and returns as output.
+
+	one very important thing to recognize in any programming language is to know the data type we are having.
+	
+	let x ="3";
+	let y = x-1;
+	
+	we should always be conscious what data type we are holding in the variable because operations
+	are decided on the basis of that only.
+
+	we are in the browser...the browser has got mechanism to process javascript that is reason
+	we are able to run our functions in the browser.
+	
+	the browser has got various objects which is made available to us in our javascript code.
+	localstorage.
+	geolocation
+	document
+	navigator.
+	you get other objects also depending on which object you got properties and behavour will change..
+
+
+
+	
+	how to access sections of the html page in our javascript function.
+	
+
+	
+
+	access section of the html page.. textbox, some html tag..
+	do some business logic
+	update the page or navigate to a different page.
+	
+	dont byheart the syntax, why syntax is non standardized each framework comes with an opinion
+ 	of this needs to be done..
+
+	demonstate consciousness in javascript how..
+	when you tell give this element by Id... remember for which element did you get it..
+	in this case we got for a span element..
+
+	s1)	read some value from the ui.
+	s2)	some business logic -- contact the python server get the data...
+	s3)     change things in the ui. (how change part of the html page or go to another page..)
+
+
+	reading book gives you pleasure but never makes us useful in a project..
+	project means tolerate uncertainty, when we have a doubt, can we write a small program.
+
+	99% cases in javascript our job will be pass objects between functions and return also will objects.. 
+
+	when you set up events dont assume event handlin is working check check check..
+
+	kids hate constraints adults like constraints..
+
+	[2] -show multiples of 2
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+css
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

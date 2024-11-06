@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmaceutical Patient Form</title>
+</head>
+<body>
+    <header>
+        <h1>Patient Information Form</h1>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Medical Information</legend>
+                <label for="prescription">Prescription Details:</label>
+                <textarea id="prescription" name="prescription" rows="4" required></textarea>
+
+                <label for="allergies">Allergies:</label>
+                <input type="text" id="allergies" name="allergies">
+
+                <label for="medications">Current Medications:</label>
+                <input type="text" id="medications" name="medications">
+
+                <label for="health-conditions">Pre-existing Health Conditions:</label>
+                <input type="text" id="health-conditions" name="health-conditions">
+
+                <label for="blood-type">Blood Type:</label>
+                <input type="radio" id="a+" name="blood-type" value="A+" required>
+                <label for="a+">A+</label>
+                <input type="radio" id="o+" name="blood-type" value="O+">
+                <label for="o+">O+</label>
+                <input type="radio" id="b+" name="blood-type" value="B+">
+                <label for="b+">B+</label>
+                <input type="radio" id="ab+" name="blood-type" value="AB+">
+                <label for="ab+">AB+</label>
+                <input type="radio" id="other" name="blood-type" value="other">
+                <label for="other">Other</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Feedback</legend>
+                <label for="feedback">Comments:</label>
+                <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+                <label for="satisfaction">Satisfaction Level:</label>
+                <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5" step="1">
+                <span id="satisfaction-value">5</span>
+
+                <label for="subscribe">Subscribe to Newsletter:</label>
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+
+                <label for="contact-preference">Preferred Method of Contact:</label>
+                <select id="contact-preference" name="contact-preference">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                    <option value="mail">Mail</option>
+                </select>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pharmaceutical Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Optional: Display the current value of the slider
+        const slider = document.getElementById("satisfaction");
+        const output = document.getElementById("satisfaction-value");
+        slider.oninput = function() {
+            output.textContent = this.value;
+        }
+    </script>
+</body>
+</html>

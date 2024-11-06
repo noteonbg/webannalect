@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays and Objects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        pre {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Arrays and Object Literals</h1>
+
+    <h2>Array Example</h2>
+    <pre id="arrayExample"></pre>
+
+    <h2>Object Literal Example</h2>
+    <pre id="objectExample"></pre>
+
+    <h2>Array of Objects Example</h2>
+    <pre id="arrayOfObjectsExample"></pre>
+
+    <script>
+        // Array example
+        const fruits = ['Apple', 'Banana', 'Cherry'];
+        fruits.push('Date');
+        fruits.pop();
+
+        let arrayOutput = 'Fruits:\n';
+        fruits.forEach(fruit => {
+            arrayOutput += `- ${fruit}\n`;
+        });
+        document.getElementById('arrayExample').textContent = arrayOutput;
+
+        // Object literal example
+        const car = {
+            brand: 'Toyota',
+            model: 'Camry',
+            year: 2020,
+            features: ['Air Conditioning', 'Navigation System'],
+            displayInfo: function() {
+                return `${this.year} ${this.brand} ${this.model}`;
+            }
+        };
+
+        let objectOutput = `Car Details:\nBrand: ${car.brand}\nModel: ${car.model}\nYear: ${car.year}\nFeatures: ${car.features.join(', ')}\n`;
+        objectOutput += `Display Info: ${car.displayInfo()}`;
+        document.getElementById('objectExample').textContent = objectOutput;
+
+        // Array of objects example
+        const cars = [
+            { brand: 'Toyota', model: 'Camry', year: 2020 },
+            { brand: 'Honda', model: 'Civic', year: 2019 },
+            { brand: 'Ford', model: 'Mustang', year: 2021 },
+        ];
+
+        let arrayOfObjectsOutput = 'Cars:\n';
+        cars.forEach(car => {
+            arrayOfObjectsOutput += `- ${car.brand} ${car.model}, Year: ${car.year}\n`;
+        });
+        document.getElementById('arrayOfObjectsExample').textContent = arrayOfObjectsOutput;
+    </script>
+</body>
+</html>

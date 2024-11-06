@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmaceutical Inventory Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 22px);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 5px 0;
+            cursor: pointer;
+        }
+        .selected {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Medication Inventory</h2>
+        <input type="text" id="medicationNameInput" placeholder="Medication Name">
+        <input type="text" id="dosageInput" placeholder="Dosage">
+        <input type="number" id="quantityInput" placeholder="Quantity">
+        <button onclick="addMedication()">Add Medication</button>
+        <button onclick="updateMedication()">Update Selected Medication</button>
+        <button onclick="removeMedication()">Remove Selected Medication</button>
+        <button onclick="clearAll()">Delete All Medications</button>
+        <h3>All Medications:</h3>
+        <ul id="medicationList"></ul>
+    </div>
+
+    <script>
+        // Array to store medication objects
+        const medications = [];
+
+        function addMedication() {
+            const name = document.getElementById('medicationNameInput').value.trim();
+            const dosage = document.getElementById('dosageInput').value.trim();
+            const quantity = document.getElementById('quantityInput').value.trim();
+
+            if (name && dosage && quantity) {
+                const medication = {
+                    name: name,
+                    dosage: dosage,
+                    quantity: parseInt(quantity),
+                };
+                medications.push(medication); // Add to array
+                updateMedicationList(); // Update the displayed list
+                clearInputs(); // Clear input fields
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+
+        function updateMedication() {
+            const name = document.getElementById('medicationNameInput').value.trim();
+            const dosage = document.getElementById('dosageInput').value.trim();
+            const quantity = document.getElementById('quantityInput').value.trim();
+            const selectedItems = document.querySelectorAll('#medicationList .selected');
+
+            if (selectedItems.length > 0 && name && dosage && quantity) {
+                selectedItems.forEach(item => {
+                    const index = Array.from(item.parentNode.children).indexOf(item);
+                    medications[index] = {
+                        name: name,
+                        dosage: dosage,
+                        quantity: parseInt(quantity),
+                    }; // Update the array
+                    item.textContent = `${name} - Dosage: ${dosage}, Quantity: ${quantity}`; // Update displayed text
+                });
+                clearInputs(); // Clear input fields
+            } else if (selectedItems.length === 0) {
+                alert('Please select a medication to update.');
+            } else {
+                alert('Please fill in all fields to update.');
+            }
+        }
+
+        function removeMedication() {
+            const selectedItems = document.querySelectorAll('#medicationList .selected');
+            selectedItems.forEach(item => {
+                const index = Array.from(item.parentNode.children).indexOf(item);
+                medications.splice(index, 1); // Remove from array
+                item.remove(); // Remove from displayed list
+            });
+        }
+
+        function clearAll() {
+            medications.length = 0; // Clear the array
+            updateMedicationList(); // Update the displayed list
+        }
+
+        function updateMedicationList() {
+            const list = document.getElementById('medicationList');
+            list.innerHTML = ''; // Clear current list
+            medications.forEach(medication => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${medication.name} - Dosage: ${medication.dosage}, Quantity: ${medication.quantity}`;
+                listItem.onclick = function() {
+                    this.classList.toggle('selected');
+                    document.getElementById('medicationNameInput').value = medication.name; // Populate input for updating
+                    document.getElementById('dosageInput').value = medication.dosage;
+                    document.getElementById('quantityInput').value = medication.quantity;
+                };
+                list.appendChild(listItem);
+            });
+        }
+
+        function clearInputs() {
+            document.getElementById('medicationNameInput').value = '';
+            document.getElementById('dosageInput').value = '';
+            document.getElementById('quantityInput').value = '';
+        }
+    </script>
+</body>
+</html>

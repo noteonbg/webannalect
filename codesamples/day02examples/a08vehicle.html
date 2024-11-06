@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+
+            /*
+                vh Unit:
+
+        Viewport Height: The vh (viewport height) unit is a relative length unit in CSS.
+        1 vh: 1 unit of vh equals 1% of the height of the viewport. So, if the viewport height is 1000 pixels, 1 vh equals 10 pixels.
+        100vh:
+
+        This means that the height of the element will be equal to the entire height of
+         the viewport.
+        If you set an element's height to 100vh, it will stretch from the top of the
+         viewport to the bottom, filling the entire height of the browser window.
+
+            */
+        }
+        #container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 22px);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+        li {
+            padding: 5px 0;
+            cursor: pointer;
+        }
+        .selected {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Vehicle Management</h2>
+        <input type="text" id="vehicleNoInput" placeholder="Enter Vehicle No">
+        <input type="text" id="vehicleNameInput" placeholder="Enter Vehicle Name">
+        <input type="text" id="modelInput" placeholder="Enter Model">
+        <button onclick="addVehicle()">Add Vehicle</button>
+        <button onclick="updateVehicle()">Update Selected Vehicle</button>
+        <button onclick="removeVehicle()">Remove Selected Vehicle</button>
+        <button onclick="clearAll()">Delete All Vehicles</button>
+        <h3>All Vehicles:</h3>
+        <ul id="vehicleList"></ul>
+    </div>
+
+    <script>
+        // Array to store vehicles
+        const vehicles = [];
+
+        function addVehicle() {
+            const vehicleNo = document.getElementById('vehicleNoInput').value.trim();
+            const vehicleName = document.getElementById('vehicleNameInput').value.trim();
+            const model = document.getElementById('modelInput').value.trim();
+
+            if (vehicleNo && vehicleName && model) {
+                vehicles.push({ vehicleNo, vehicleName, model }); // Add to array
+
+                /*
+
+                const vehicle = {
+                    vehicleNo: 'ABC123',
+                    vehicleName: 'Toyota Camry',
+                    model: '2022'
+                };
+
+                    // Destructuring the object
+                    const { vehicleNo, vehicleName, model } = vehicle;
+
+                    console.log(vehicleNo);    // Output: ABC123
+                    console.log(vehicleName);  // Output: Toyota Camry
+                    console.log(model);        // Output: 2022
+
+
+                */
+                updateVehicleList(); // Update the displayed list
+                clearInputs(); // Clear input fields
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+
+        function updateVehicle() {
+            const vehicleNo = document.getElementById('vehicleNoInput').value.trim();
+            const vehicleName = document.getElementById('vehicleNameInput').value.trim();
+            const model = document.getElementById('modelInput').value.trim();
+            const selectedItems = document.querySelectorAll('#vehicleList .selected');
+
+            if (selectedItems.length > 0 && vehicleNo && vehicleName && model) {
+                selectedItems.forEach(item => {
+                    const index = Array.from(item.parentNode.children).indexOf(item);
+                    vehicles[index] = { vehicleNo, vehicleName, model }; // Update the array
+                    item.textContent = `${vehicleNo} - ${vehicleName} - ${model}`; // Update the displayed name
+                });
+                clearInputs(); // Clear input fields
+            } else if (selectedItems.length === 0) {
+                alert('Please select a vehicle to update.');
+            } else {
+                alert('Please fill in all fields to update.');
+            }
+        }
+
+        function removeVehicle() {
+            const selectedItems = document.querySelectorAll('#vehicleList .selected');
+            selectedItems.forEach(item => {
+                const index = Array.from(item.parentNode.children).indexOf(item);
+                vehicles.splice(index, 1); // Remove from array
+                item.remove(); // Remove from displayed list
+            });
+        }
+
+        function clearAll() {
+            vehicles.length = 0; // Clear the array
+            updateVehicleList(); // Update the displayed list
+        }
+
+        function updateVehicleList() {
+            const list = document.getElementById('vehicleList');
+            list.innerHTML = ''; // Clear current list
+            vehicles.forEach(vehicle => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${vehicle.vehicleNo} - ${vehicle.vehicleName} - ${vehicle.model}`;
+                listItem.onclick = function() {
+                    this.classList.toggle('selected');
+                    document.getElementById('vehicleNoInput').value = vehicle.vehicleNo; // Populate inputs for updating
+                    document.getElementById('vehicleNameInput').value = vehicle.vehicleName;
+                    document.getElementById('modelInput').value = vehicle.model;
+                };
+                list.appendChild(listItem);
+            });
+        }
+
+        function clearInputs() {
+            document.getElementById('vehicleNoInput').value = '';
+            document.getElementById('vehicleNameInput').value = '';
+            document.getElementById('modelInput').value = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmaceutical Inventory Management</title>
+</head>
+<body>
+    <h1>Pharmaceutical Inventory Management</h1>
+    
+    <h2>Add Medication</h2>
+    <input type="text" id="medicationName" placeholder="Medication Name">
+    <input type="number" id="medicationQuantity" placeholder="Quantity">
+    <button onclick="addMedication()">Add Medication</button>
+
+    <h2>Remove Medication</h2>
+    <input type="text" id="removeName" placeholder="Medication Name to Remove">
+    <button onclick="removeMedication()">Remove Medication</button>
+
+    <h2>View All Medications</h2>
+    <button onclick="viewMedications()">View All Medications</button>
+    <pre id="medicationList"></pre>
+
+    <script>
+        // Dictionary to hold medication data
+        const medications = {};
+
+        // Function to add medication to the dictionary
+        function addMedication() {
+            const name = document.getElementById('medicationName').value.trim();
+            const quantity = parseInt(document.getElementById('medicationQuantity').value.trim());
+
+            if (name && !isNaN(quantity) && quantity > 0) {
+                medications[name] = quantity; // Add or update the medication
+                alert(`Added/Updated: ${name} with quantity ${quantity}`);
+                clearInputs();
+            } else {
+                alert('Please provide a valid medication name and quantity.');
+            }
+        }
+
+        // Function to remove medication from the dictionary
+        function removeMedication() {
+            const name = document.getElementById('removeName').value.trim();
+
+            if (medications[name]) {
+                delete medications[name]; // Remove the medication from the dictionary
+                alert(`Removed: ${name}`);
+            } else {
+                alert(`Medication "${name}" not found.`);
+            }
+            document.getElementById('removeName').value = ''; // Clear input
+        }
+
+        // Function to view all medications
+        function viewMedications() {
+            const listElement = document.getElementById('medicationList');
+            listElement.textContent = ''; // Clear previous list
+            if (Object.keys(medications).length === 0) {
+                listElement.textContent = 'No medications in inventory.';
+            } else {
+                for (const name in medications) {
+                    listElement.textContent += `${name}: Quantity ${medications[name]}\n`;
+                }
+            }
+        }
+
+        // Function to clear input fields
+        function clearInputs() {
+            document.getElementById('medicationName').value = '';
+            document.getElementById('medicationQuantity').value = '';
+        }
+    </script>
+</body>
+</html>

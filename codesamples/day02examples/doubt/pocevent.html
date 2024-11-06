@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script>
+        
+    function f1()
+    {
+
+        //below lines are done becuase of fate.. = business logic
+        let x = document.getElementById("whocares");
+        let y = document.getElementById("t1");
+        // I am fully conscious what type of object x and y point to...
+        // x is pointing to span
+        //y is pointing to a textbox..
+        
+        if(y.value == 0)
+                 document.location ="freak.html";
+        else
+             x.innerHTML="non zero given";
+
+    }
+       
+    </script>
+
+</head>
+<body>
+    <button onclick="f1()">b1</button>
+    
+    <input type="text" id="t1" placeholder="poc"/>
+    <span id="whocares"> </span>
+    
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+    <head>
+
+        <script>
+
+               //logic functions 
+            function checkNonZero(numbergiven)
+            {
+                   return numbergiven != 0; 
+
+            }
+
+            function doubleTheNumber(numbergiven)
+            {
+                return numbergiven*2;
+            }
+
+               //ui function.. 
+
+            function doubleitevent() {
+
+                const x = document.getElementById("number-given");
+                const y = checkNonZero(x.value);
+                let message ="zero value is given";
+                if(y)
+                {
+                    const doublenumber = doubleTheNumber(x.value);
+                    message="Result is  " +doublenumber;
+                    
+
+                    
+                    
+                }
+                const spanelement = document.getElementById("message");
+                spanelement.innerHTML=message;
+                
+
+                
+            }
+
+            function freak()
+            {
+                
+                let x = document.getElementById("number-given");
+                x.value="";
+                x.disabled=true;
+                console.log("are we alive") ;//being optimisitc is a sin..
+                x = document.getElementById("message");
+                x.innerHTML="things have ended"
+
+
+                x = document.getElementById("doubleit");
+                x.disabled=true;
+                x = document.getElementById("tripleit");
+                x.disabled=true;
+                x = document.getElementById("endall");
+                x.disabled=true;
+
+
+
+
+
+            }
+
+
+        </script>
+
+    </head>
+    <body>
+        <h1> know process generically </h1>    
+        <hr/>
+        
+        <label for="some number">Number :</label>
+        <input type="text" id="number-given"  required>
+        <span id="message"> response will come here </span>
+        <br/>
+        <form id="all">
+                <input type="radio" id="doubleit" name="what"  value="a1" onclick="doubleitevent()">
+                Double it
+                <input type="radio" id="tripleit" name="what" value="a2">Triple It
+                <input type="radio" id="endall" name="what" value="a3" onclick="freak()"> end All
+        </div>
+
+    </body>
+
+
+</html>

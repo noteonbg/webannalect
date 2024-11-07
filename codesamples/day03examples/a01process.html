@@ -40,11 +40,11 @@
 
             function freak()
             {
-                
+             
                 let x = document.getElementById("number-given");
-                x.value="";
+                x.value=" what value you want to set";//wanted to clear the text box value
                 x.disabled=true;
-                console.log("are we alive") ;//being optimisitc is a sin..
+                
                 x = document.getElementById("message");
                 x.innerHTML="things have ended"
 
@@ -55,6 +55,8 @@
                 x.disabled=true;
                 x = document.getElementById("endall");
                 x.disabled=true;
+
+               
 
 
 
@@ -70,16 +72,18 @@
         <h1> know process generically </h1>    
         <hr/>
         
+        <form id="all">
         <label for="some number">Number :</label>
         <input type="text" id="number-given"  required>
         <span id="message"> response will come here </span>
         <br/>
-        <form id="all">
+        
                 <input type="radio" id="doubleit" name="what"  value="a1" onclick="doubleitevent()">
                 Double it
                 <input type="radio" id="tripleit" name="what" value="a2">Triple It
                 <input type="radio" id="endall" name="what" value="a3" onclick="freak()"> end All
         </div>
+        </form>
 
     </body>
 

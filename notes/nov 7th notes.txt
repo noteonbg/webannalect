@@ -1,0 +1,190 @@
+semantic web... section, head, summary... and these tags these add
+more meaning to web page when somebody reads..
+practically to make the web page look attractive... how to use css also along
+with it..
+
+practically 
+hopefully we know how to write html and use id, use some form tags..
+
+JavaScript..
+1.respect it as a new language
+
+2. to understand the word event...
+Event source  -- system or browser..
+Event Listener..  --- this is what we are...
+
+when we talk about function..
+1. function definition
+2. function calling
+3. function assignment..  == during event handling we land up with lot of function
+assignment.. we define the function we don't call it system will call it..
+
+
+we start with function and then come to variables.
+variables, we should be conscious about the data type and scope.
+
+variables that come outside the function are global variables (totally bad idea in any programming language)
+variables that come inside a function typically are local variables..
+
+variables what happens in real life, we cannot be happy thinking of using only number or a string
+we have get comfortable dealing with objects that is what real life is all about..
+
+object with length and breadth as input
+returned object with area and perimeter...
+
+
+in javascript as a presentation person.
+
+1. some event handling will happen
+2. capture the input from the UI or some other places..
+3. do some logic  ( currently we are doing logic in javascript itself in real life.. it means contact server and get some data )
+4. now we have data from the server.. how to use that data..
+4.1 change some part of the page.
+4.2 navigate to a different page...
+
+in javascript in any programming language.
+a programmer when we sees a variable he is not conscious what data type of the variable he has... it means he is in comma state..
+
+
+
+
+if I feel I am unclear about something, first I should know.. excel or written format will clear the lack of clarity..
+
+
+https://www.redbus.in/search?fromCityName=Coimbatore&fromCityId=141&srcCountry=IND&toCityName=CMBT,%20Chennai,%20Chennai&toCityId=66065&destCountry=IND&onward=9-Nov-2024&opId=0&busType=Any
+
+user friendliness.
+0. know the context..
+1. no scrolling
+2. reduce number of clicks
+3. keep the ui consistant..
+
+how to do good design copy an existing one.
+
+
+
+
+syntax for the entire thing below is non standardized..
+1. some event handling will happen
+2. capture the input from the UI or some other places..
+3. do some logic  ( currently we are doing logic in javascript itself in real life.. it means contact server and get some data )
+4. now we have data from the server.. how to use that data..
+4.1 change some part of the page.
+4.2 navigate to a different page...
+
+moral science word called step by step is great, but can we practice it..
+
+process.
+1. patiently check whether id is ok according to the requirement or not.
+2. decide on the event handling..
+
+lower the cost of failure and then tolerate the uncertainty, doubt will there, can you write a poc...
+== approach as a programmer
+
+can we learn syntax or concept on need basis.. 
+
+which events we are responsding to all cannot in mind.. excel sheet..
+
+people who remember only variable names will forget concept if variable names change..
+
+habit of respecting architecture than being over enthusiastic to show output is a good skill to have..
+
+separate your functions into two parts..
+1. accessing html, updating html page -- keep it as one category of functions
+2. logic doing, keep it as another set of functions
+dont mix both..
+
+in any programming language.. it is better first to call the function and then define it, than define a function
+and think where to call it..
+
+when you call the function we are forced to think what is input what is return type. how will i communicate failure success..
+
+if you see more functions.. bp should not raise that is what real life..
+
+college people like int and string and think whole world works with it.
+but in real life in and out you deal only with objects..
+
+
+
+how to debug.
+
+1. use logging and then debugging
+thru code know which part of the program is failing then start debugging line by line..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. divide your javascript functions into ui functions and logic functions.
+2. dont hope functions are working.. check thru logs.
+3. be conscious which object you have....
+
+
+
+those who have come back..
+
+1. complete the tripe it logic 
+2. modify the area perimter program where
+
+you have two checkboxes for area and perimeter , by default keep the area selected...
+have a button called result.. 
+
+when you click on the result button, depending on which all checkboxes have been
+selected you must show appropriate result.
+
+after it is working make a copy of the file and change it the
+textboxes to sliders and spinners.
+
+currently what we did was taking pain killers by doing some simple logic..
+most of times is needed to understand some other person code..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

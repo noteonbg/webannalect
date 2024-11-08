@@ -36,8 +36,7 @@
         <select id="medications">
             <option value="">--Select a Medication--</option>
             <option value="Aspirin">Aspirin</option>
-            <option value="Ibuprofen">Ibuprofen</option>
-            <option value="Paracetamol">Paracetamol</option>
+            <option value="freak"></option>
         </select>
 
         <br>
@@ -53,8 +52,8 @@
 
             if (newMedication) {
                 const option = document.createElement('option');
-                option.value = newMedication;
-                option.textContent = newMedication;
+                option.value = newMedication;  // our progammer related logic
+                option.textContent = newMedication;//meant for end user to identify it
                 select.appendChild(option);
                 document.getElementById('newMedication').value = ''; // Clear the input
             } else {
@@ -64,7 +63,9 @@
 
         function removeMedication() {
             const select = document.getElementById('medications');
+            console.log(select.selectedIndex,"this is value");
             select.remove(select.selectedIndex);
+            
         }
     </script>
 </body>

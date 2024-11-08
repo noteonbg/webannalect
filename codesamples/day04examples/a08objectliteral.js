@@ -9,9 +9,13 @@ let productLiteral = {
     
     // Method to display product info
     displayInfo: function() {
-        return `${this.name} by ${this.brand}, priced at $${this.price}, belongs to ${this.category}.`;
+       // return `${this.name} by ${this.brand}, priced at $${this.price}, belongs to ${this.category}.`;
+       console.log(123);
     }
 };
+
+
+
 
 // Accessing properties and calling the method on the object literal
 console.log("Object Literal Product Info:");
@@ -32,6 +36,9 @@ function Product(name, brand, price, category) {
         return `${this.name} by ${this.brand}, priced at $${this.price}, belongs to ${this.category}.`;
     };
 }
+
+
+
 
 // Creating multiple products using the constructor
 let product1 = new Product('Smartwatch', 'FitTech', 199, 'Electronics');

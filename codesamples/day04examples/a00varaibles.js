@@ -1,8 +1,8 @@
 // Primitive Data Types
 
 // 1. String: Text data
-let name = "abc";
-console.log("String:", name); // John Doe
+let freak = "abc";
+console.log("String:", freak); //
 
 // 2. Number: Numeric data (both integers and floats)
 let age = 30;
@@ -40,6 +40,16 @@ let person = {
     zip: "10001"
   }
 };
+
+
+
+
+
+
+
+
+
+
 console.log("\nObject:", person);
 
 // Accessing object properties
@@ -58,6 +68,8 @@ console.log("Array - Second Color:", colors[1]);  // Green
 function greet(name) {
   return `Hello, ${name}!`;
 }
+
+
 console.log("\nFunction Call:", greet("abc"));  
 
 // 10. Date: Represents date and time
@@ -70,7 +82,8 @@ console.log("\nRegExp:", regex.test("Hello World"));  // true (case insensitive)
 console.log("RegExp:", regex.test("world"));  // false
 
 // Typeof Operator: Checking the data type of a value
-console.log("\nType of name (String):", typeof name);  // string
+
+console.log("\nType of name (String):", typeof freak);  // string
 console.log("Type of age (Number):", typeof age);  // number
 console.log("Type of isAdult (Boolean):", typeof isAdult);  // boolean
 console.log("Type of nothing (Null):", typeof nothing);  // object (this is a known quirk in JavaScript)

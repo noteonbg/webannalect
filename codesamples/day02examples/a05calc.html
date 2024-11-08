@@ -56,7 +56,7 @@
 </head>
 <body>
     <div id="calculator">
-        <input type="text" id="result" disabled>
+        <input type="text" id="result" value="0" disabled>
         <div>
             <button onclick="clearResult()">C</button>
             <button onclick="appendToResult('7')">7</button>
@@ -84,6 +84,7 @@
     </div>
 
     <script>
+        
         function appendToResult(value) {
             document.getElementById('result').value += value;
         }

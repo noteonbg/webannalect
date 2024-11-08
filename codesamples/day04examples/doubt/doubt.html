@@ -1,0 +1,32 @@
+<html>
+<head>
+<script>
+    console.log(1);
+
+    let people = [
+  { id: 1, name: "John", age: 30 },
+  { id: 2, name: "Jane", age: 25 },
+  { id: 3, name: "Alice", age: 35 }
+];
+
+
+
+let idToRemove = 2;
+
+function freak(x)
+{
+    console.log("freak");
+    return x != idToRemove;
+
+}
+people = people.filter(freak);
+console.log(people);
+
+
+</script>
+</head>
+<body>
+    <h1> ok we see this</h1>
+</body>
+
+</html>

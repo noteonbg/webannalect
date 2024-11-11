@@ -1,0 +1,250 @@
+1. respect architecture..
+2. it means you know what logic you are trying to solve in the page.
+3. you know what input you need to capture, you also know what is output
+you will get.
+4. you will know how the output tells you things succeeded or failed..
+
+html page..
+1. which part of the page will change, which part will not change..
+based on that you would have given id..
+2. we started with javascript basics...
+how do you create a varible, function ( always be conscious that
+wehthr we have function definition or function assignment or function calling)
+3. during event handling remember we do function assignment and not function
+calling..
+4. when we say i have javascript code. split that into two categories.
+4.1 event handling part... ( you read something from the ui
+and call some logic and update the ui)
+4.2 logic part.. (here no ui related thing should be there )
+
+setting up events syntax can change... so ... everybody will have an opinion
+on technology.. facebook,google, open source... .. customer does
+not care for all these opinions..
+
+we are in presentation layer..
+a person who is not conscious about his html should not be in web based
+presentation.
+
+eternal way of debugging.
+1. are you inside the function
+2. did you get the input right
+3. if you are returning something log the output..
+if 2 and 3 is causing problems then go debugging.
+
+people who hate uncertainty are unfit to be in any real life activity..
+1. lower the cost of failure..
+2. can you do a small program which checks the doubt..(writinga  poc)
+
+I want to work on X , X needs Y, I dont know Y. can we learn Y
+to the minimum to come back to X and continue doing X rather
+than doing phd on Y.
+
+X = our javascript page manipulation
+Y = exception handling
+
+what is exception handing.
+1. a mechanism thru which we separate the code into two blocks.
+normal flow of code.  -try block
+error rectficiaton low  --catch block
+how does control shift to the catch block something is thrown in
+the try block only then it comes to the catch block , here who is throwing
+it answer is eval..
+
+if else is your decision making thing..
+
+try
+{
+   s1  -- causes a problem -- if an object is being thrown
+   s2 
+   s3
+}catch( caught the problem)
+{
+
+}
+
+what is advantage of try and catch,, you can handle runtime errors.
+this is bad answer..
+C programming language does not have any try catch but still
+we can handle runtime errors..
+
+
+without try catch...
+
+open the file
+read the file
+close the file
+
+open the file
+if(opened the file) 
+   read the file
+   if(read the file)
+	..
+   close the file
+
+
+try
+{
+open the file
+read the file
+close the file
+
+}
+catch(file not opened)
+{
+
+}
+catch(file not read
+
+
+ when you access some portion of the html page. by using id..
+ you get an object, we should be conscious which object we have
+ based on the object the properties will change..
+
+ array based world..in real life, in javascript we will have lot of
+ times arrays which contains user defined object..
+
+data type = content + operations
+you pick a data type because you know these are operations you want..
+
+let x =3;
+let y = x *2;
+
+high priority thing.
+1. array of objects
+2. fiter , sort, add, update, remove.. 
+
+familiarity can create confusion..
+object is an independent concept, you dont need a class to talk
+about object.. in real life .. 
+
+some people always associate an object with some class. (this is problematic
+this is conceptually  not true.. in ajvascript it is not true also)
+
+in javascript we can have an object without it belonging to any class.
+
+we have to conscious in javascript about the syntax..
+
+so whether you have object or dictionary or array be conscious
+about its contents data type.. == consciousness.
+
+
+write a function which takes a variable as input
+and returns double of the input in case input is a int
+and uppercase of input in case input is a string.
+if it is not a string or an int.. return null.
+
+
+function freaky(x)
+{
+return x, depends on type of x..
+}
+
+1. we cannot deal with array or int, string... not all worth because
+no project deals with thse kind of things..
+
+we need to deal with array whose input argument is a dictionary or an object..
+object.. by using literal or by creating function based class or by using
+class syntax..
+
+when we told array...
+array is an example of DAtastructure
+
+datastructure ... 
+1. group
+2. operations to perform
+3. you figure out what is optimal way to store..
+4. in any datastructure,content of ds does not decide the operations.
+
+
+
+people = people.filter(person => person.id !== idToRemove);
+people = people.filter(we have defined and assigned a function);
+who is going to cal this function answer is filter function inside
+is going to call the function.
+
+many  a times we are going to call a function called f1.
+that means we are not the owner of f1..it is an inbuilt function..
+this inbuilt function is telling us hey look you must supply me another
+function which returns Boolean or returns or int... or some other
+condition.
+
+f1(f2); most important story.
+who is owner of f1.. somebody else person X.
+who is owner of f2.. somebody else person Y
+who is caller of f1... person Y.
+those dont value collaboration, lot of technical concepts will be not
+understood.
+
+filter == f1  ==inbuilt javsacript function
+f2...person => person.id !== idToRemove
+we are telling take each element from the array. let us call that element
+as person.. return a Boolean from the function based on
+personid != idToRemove
+
+generalized concept
+we can pass one function as an input argument to another function
+
+f1(f2);
+you must know f2 is being passed as input argument to f1..
+that means the caller of f1, defines f2 and assigns f2 but never call f2
+who is going to call f2 f1.. is going to call f2 under some circumstance..
+
+when in doubt do we have decency to write a small program.
+when in doubt do we have decency to write a small program.
+when in doubt do we have decency to write a small program.
+when in doubt do we have decency to write a small program.
+when in doubt do we have decency to write a small program.
+
+
+when you see a code like
+
+f4(f3);
+understand person who wrote f3 and person who called f4 is same.
+owner of f4 is different.
+
+
+
+
+
+drop down
+
+
+
+
+
+
+ in javascript when you have an object, you should be conscious
+	what object you have..
+
+	1. you had slider. it had its properties
+	2. you have spsan it had its properties
+	3. y ou have textbox
+	4. you have radio button or checkbox...
+	5. you have drop down remember it has got its own properties.
+
+
+	<h1 id="x">   </h1>
+	click on the button
+
+	let x = document.getlementById("x");
+	let y = document.createElemenet("p");
+	y.innerText="great this is working";
+	x.appendChild(y);
+
+	array of objects.. or array of dictionaries.. if you dont know
+	class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

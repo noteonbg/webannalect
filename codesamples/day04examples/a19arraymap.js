@@ -7,10 +7,12 @@ const products = [
   { id: 105, name: 'Washing Machine', category: 'Appliances', price: 700 }
 ];
 
+
+
 // Step 2: Apply a 10% discount on all products using `map()`
 const discountedProducts = products.map(product => {
   // Create a new object to avoid mutating the original product
-  const discountedProduct = { ...product };
+  const discountedProduct = { ...product };  // a way to make a copy of the prodect
   discountedProduct.price -= discountedProduct.price * 0.10;  // Apply 10% discount
   return discountedProduct;
 });
@@ -19,8 +21,11 @@ console.log('Discounted Products:', discountedProducts);
 
 // Step 3: Create a new array of product names using `map()`
 const productNames = products.map(product => product.name);
-
 console.log('Product Names:', productNames);
+
+
+
+
 
 // Step 4: Add a new field `isAvailable` based on certain conditions
 const productsWithAvailability = products.map(product => {
@@ -31,6 +36,10 @@ const productsWithAvailability = products.map(product => {
 });
 
 console.log('Products with Availability:', productsWithAvailability);
+
+
+
+
 
 // Step 5: Chain `map()` to perform multiple transformations
 const finalProductDetails = products

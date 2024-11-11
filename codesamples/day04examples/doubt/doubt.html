@@ -1,6 +1,106 @@
 <html>
 <head>
 <script>
+
+
+const products = [
+  { id: 101, name: 'Laptop', category: 'Electronics', price: 1200 },
+  { id: 102, name: 'Smartphone', category: 'Electronics', price: 600 },
+  { id: 103, name: 'Office Chair', category: 'Furniture', price: 150 },
+  { id: 104, name: 'Dining Table', category: 'Furniture', price: 400 },
+  { id: 105, name: 'Washing Machine', category: 'Appliances', price: 700 }
+];
+
+
+
+const productsWithAvailability = products.map(product => {
+  const updatedProduct = { ...product };
+  // Assuming availability is based on price (if price > 500, it's available)
+  updatedProduct.isAvailable = updatedProduct.price > 500;
+  return updatedProduct;
+});
+
+console.log(productsWithAvailability,products);
+
+
+
+
+/*
+
+function freak(knowconcept)
+{
+     return knowconcept.l*knowconcept.b;
+
+}
+
+    
+const materials = [{l:3,b:4},{ l:4,b:5}];
+//console.log(materials.map((material) => material.length));
+console.log(materials.map(freak));
+
+*/
+
+    /*
+
+    let x =[3]; //this is an array
+    let y=[],z=[];
+    y.push(x);
+    z.push(x);
+    //first element of the array in z is an array
+    z[0][0]=44;
+    console.log("z first element is an array",z)
+    z[0]=76;
+
+    
+    //you are losing what z[0] was earlier pointing to
+  
+    console.log(x,y,z);
+
+    */
+
+    
+
+/*
+    let x ={l:3,b:4};
+    let y=[],z=[];
+    y.push(x);
+    z.push(x);
+    z[0].l=7;
+    console.log(x);
+    */
+
+/*
+let people = [
+  { id: 1, name: "John", age: 30 },
+  { id: 2, name: "Jane", age: 25 },
+  { id: 3, name: "Alice", age: 35 }
+];
+
+let idToRemove = 2;
+function junk(x,agree)
+{
+    console.log("ok we are inside this function");
+    return true;
+}
+
+let people1 = people.filter(junk);
+people1[0].id=800;
+console.log(people,people1);
+
+*/
+/*
+
+
+//people = people.filter(person => person.id !== idToRemove);
+console.log(`\nAfter removing person with id = ${idToRemove}:`);
+console.log(people);
+*/
+
+
+
+
+
+    /*
     console.log(1);
 
     let people = [
@@ -21,6 +121,8 @@ function freak(x)
 }
 people = people.filter(freak);
 console.log(people);
+
+*/
 
 
 </script>

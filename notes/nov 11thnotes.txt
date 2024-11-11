@@ -1,0 +1,444 @@
+this week main focus will be on using javascript and css  along with html
+
+what is expected from all 6 of you would be.
+
+1. you know how to write some html.. put some id.
+2. access the html elements via javascript
+3. depending on what you are accessing know different objects have different properties.
+4. ideally we keep the business logic and ui manipulation functions separate when
+we write javascript.
+
+i think any person who uses the word "science" should be able to generalize the concepts
+i hate generalization then be ok.. with remember lot of "jargons"
+
+we have some content in javascript.. in a variable given by the server..
+how do you sort
+how do you filter it.
+and show it in the page..
+
+syntax point of view.
+0. those who dont respect javascript a new programming language, will get entertainment..
+1. you can create a variable.
+2. you can create a function
+3. when it is a function , difference between function calling, function assignment and
+function definition..
+
+syntax we have to learn.. how about learning syntax which is more commonly used..
+
+let x =3;// ok we x which is numbr. great.. but in a project the real challenge
+is to deal project specific data types..
+
+we have to know how to deal with project specific data types.. and these project
+specific data types will appear inside some datastructures in our project.
+
+Datastructures , in college in 6 months in real life you can manage with 15 minutes
+how to look at Datsatructures in real life.
+
+what is datastructure?
+1. group of things.
+2. some operations to perform.
+3. you decide to pick one from the library which helps in the operations ie 2.
+
+worst thing to do is picking names and then deciding operations.. I want a redblack tree
+horrible no... you what operations you want..
+
+I want to collect a group of things which hopefully is contingous and i will
+an occasional search on it... ok if this is case.. welcome to the array..
+
+array.. and its cousins.. linkedlist, queue, stack...  linear datastructure..
+normal notebook -- we usually write in the last available page. and we know
+when we want to search we search the notes from the beginning till the end..
+
+indexed notebook..
+before writing you do some alogrith. search..
+
+any datastructure operations does not depend on its content..
+array of people
+array of task
+array of process
+array of products
+it does not matter operations of that still remains an array based thing..
+lienar ds.. search if you tell, go from beginning till end..
+
+when we talk about any ds.. think about its content. to be relevant to the project.
+array of numbers
+array of strings..
+ok.. this may be used in some projects.. but most of times this is useless
+because project means it contains project specific data type...
+so it is better to deal with array of objects.. like people , task. product...
+
+
+let x =[{tasid:3, status:true},{ taskid:4, status:false},{taskid:3,status:false}]
+
+the most scary person in the project is a person who has strong opinion on some
+thing which is non deterministic..
+
+age old story
+1. when you define a function, think who is going to call it.
+2. when you calla  function, open documentation and read little bit..
+little bit
+what does function do.
+what is input argument
+what is return type
+what do they mean input argument and return type..
+
+1. array of objects.. be comfortable with that..
+how do you get this object, do you write indendently or create a class and write both
+are ok.. as long as you an array of objects.
+
+2. filter function.. of the array.
+
+ever since dinosaurs were programming.. what is logic is if you want to search..
+or filter.. you have to tell on what criteria you want the filtering to happen
+and this creteria is usually given by function which returns Boolean value..
+
+if you want to filter mention your criteria how... usually thru a function
+which rturns Boolean..
+
+
+people = people.filter(x);
+what is x, x is a function assignment...
+
+function assignment means.. we are going to only define a function we are not going
+to call who is going to call it.. ok the person who took as an input argument..
+
+function f1(){ return true; }
+f2(f1);// we are calling f1.
+
+we are only assigning f1 we are not calling f1.
+f2 under some circumstance will call f1, 
+
+when in doubt can we write  a small program.. rather than telling oh i understood..
+
+
+
+let x=[];
+let y =x;
+y[0]=3;
+console.log(x[0]);
+
+respect assignment in any programming language and know how the assignment works
+for different data types.. for object types.. which is including the array
+when we assing, we are not making a copy of what is being assigned..
+
+let x =3; //number
+let y =x;
+y=4;
+x will be 3.. number is a basic type in javascript...
+but any object type... new copies of the variable is not created..
+
+ok unnecessary copies are getting creted we shoulda void.. yes totally agreed.
+first prove unnecessary copies are getting created..
+
+in any programming langague,last thing in the world we want to know is jargons..
+
+as programmer
+zoom out  -- respect architecture...
+zoom in -- a programmer who is not 5/5 in variables and functions is a comma state programmer.
+
+ok we know we have variables in javascript.. created by using let or const..
+ok we have let or const that is fine.. but we should be "conscious" about the data type.
+of the variable..
+what is data type
+
+number
+string.
+object.
+array..
+if you are having simpler types.. javascript tells ok we will make a copy of it..
+when we have object types javascript tells by default i wont make any copies of it...
+so
+
+let x =3;
+let y =x;
+y=7
+console.log(x);
+
+only for primitive values in javascript copy is allowed, in other cases it same content
+that is shared across variables.
+
+in every programming language you have to respect assignment operator and know
+what it means for different data types..
+
+
+moral of the story.
+1. i have a variable i know its data type.. 
+2. ok since you know its data type you know now what implications assignment means..
+2.1 make a copy (tiny ones copy it.. tiny.. primitive ...)
+2.2 dont make a copy share it... ( big ones..s hare it   object types)
+
+
+do you know how to create an  array of some type which Task
+and filter it based on some condition.. example task is running, taks should have memory
+not more 50 bytes.. or priority..
+
+do you know array of objects and filter it based on some condition..
+
+
+programmer loyalty should be towards html or javscript -- Project..
+
+
+show me equal effort = I will show you a disaster..
+
+
+style of coding.. arrow function..
+
+let x =(f)=>return f*2;
+
+arrow function
+style of coding..
+
+what is advantage.. 
+we use arrow functions typically in places where need to define a function and assign
+it and we dont call it.
+
+usage scenario
+1. use arrow function , i need to define a function. i want to assign it I dont wnat to call
+it...if you dont want to call it, the function does not need a name..
+
+event handling. callbacks.. like what we saw in filter... we will use arrow functions..
+
+let hello = function() {
+  return "Hello World!";
+}
+hello();
+
+
+let freak = () => {
+  return "Hello World!";
+}
+freak();
+
+what we did here.. define a function and assign it..
+to a variable called hello.
+
+function can always be passed as a variable in most programming langauges.
+including our favourite ... college C.
+
+only thing when you see complicated things, stick with basics..
+i see a function.. ok...
+1.defining
+2.calling
+3.assinging..
+
+if you want to pass a function as a variable to some other function..
+usually we will do 1 and 3.
+use arrow function typically when you want to do 1 and 3.
+
+const materials = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
+
+console.log(materials.map((material) => material.length));
+
+use case for map
+we have some section in the html page which has got a id..
+we got the array from the server after making a call.
+ ['Hydrogen', 'Helium', 'Lithium', 'Beryllium']; we got this from the server..
+
+we have it to show it in the html page as li...
+we have to take each element from the array and add li toeach of element for the data
+got from the server...
+just apply map to the server given data you get a new array with the li element added..
+
+but most common usage map is this scenario..
+
+what does filter do.. it does not change the content of the array in any way
+it tells you tell me the logic on thta basis i will pick the elements and give you an array
+
+
+map.. tells I will take each element from the array, you decide how you want to use
+the element and give new transformed element. that i will put in the new array.
+
+
+we have a task array
+let tasks=[{ taskid:3, status:false,priority:4}, { taskid:3, status:true,priority:5}]
+
+function freak(x)
+{
+return x.taskid;
+
+}
+
+
+let onlytaskids = tasks.map(freak);
+
+
+
+you are taking each element from the array and transforming that elemen into whatever you logic
+tells.. and returning a new value..
+
+return only those tasks whose priority is 3 and above.. this is not map... this is filter scenario.
+
+arrow functions does not change the logic of the code.. what you did by giving a named
+function or anonymous function you should it in a more convenient way by using arrow functions.
+
+
+
+today prove you know
+
+1. array of objects.
+2. filtering array based on some criteria.
+3. using map with each element of the array
+4. sorting array.
+5. little bit of ui.. updating..
+
+you have 10 elements you filter you land up max 10 elements or less than 10 elements ...or zero
+elemens.. based on filtering criteria.
+
+in map if you have 10 elements you get 10 elements only and never less than 10 lements.
+because map tells I will take each element and apply some logic what you say and return
+new element based on the logic..
+
+remember we are in the varibles world.
+1. know data type of the variable in any programming alngauge why assngment peration will change..
+2. we have array of objects.. in that context know how to use filter, map..
+
+2.10 we will join back at 2.50PM
+
+we will write logic part first and ui part..
+
+array of product, have some elements inside it..
+
+add a product..  -- add an element into the array, ensure existing product
+if any is present you dont add the product
+view all products  -- return the array
+update product.  --input argument is a product object.
+you got update price of the product, dont update the name and id
+apply discount to all products based on a percentage.. (map operation_
+product -->id, name and price..
+logic for all these features..
+
+javascript
+
+1. global variable array of products.
+2. addaproduct
+input argument -- produt object
+return type.. bool
+3. update product
+input argument --product object
+return type ..bool
+4. view all product
+return type is array
+5. apply discount
+input argument is discount
+return type is array 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,9 +7,11 @@ let people = [
 
 // Step 2: Add a new object to the array
 let newPerson = { id: 4, name: "Bob", age: 28 };
+let count = people.push(newPerson);
 people.push(newPerson);
+people.push({ id: 4, name: "Bob", age: 28 });
 console.log("After adding a new person:");
-console.log(people);
+console.log(people,count);
 
 // Step 3: Remove an object from the array based on a criterion (e.g., remove person with id = 2)
 let idToRemove = 2;

@@ -1,0 +1,39 @@
+
+
+1. look at poc.js
+
+phase 1
+
+2  in the js file keep your product array global.
+3. write a logic function 
+    1. sorted by price..  return type is an array.
+    2. sorted by qty .. return type is an array
+    3. sorted by dateadded. return type is an array.
+    4. have a logic function whose input is category, return type is an array ..
+    which will have those category elemeents.
+    5. write a logic function whose input is price rturn type is an array 
+    which will have those price elemeents
+    6. write .... (verbal reasoning test..)
+
+    broad logic.
+    sorting   -- return type is an array..
+    filtering  -- input is parmetr, return type is filtered array... 
+    logic   
+      array is empty, no elements met the criteria
+      array is filled up, these elements met the criteria.
+
+    so summary is how many functions.. 8 logic functions
+
+check whether this logic functions work..
+
+phase 2..
+
+
+
+
+
+
+
+
+
+

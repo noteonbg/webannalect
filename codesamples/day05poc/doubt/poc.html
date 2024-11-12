@@ -1,0 +1,52 @@
+<html>
+    <script>
+
+        let i=4;  //global variable sin
+        function freak() //sin we can avoid this.
+        {
+            console.log("hey freak.. this is bad idea fucntion is global",i) 
+
+        }
+
+        
+        
+
+
+
+        let abc=[2,3,4];// best way to satisfy kids.. array is bad..
+        //let def = abc.map(freak);//freak function defined , freak function assigned.. freak function
+        let def =abc.map(x=>{console.log("oh no"); return "cii "+ x });
+        abc.forEach(x=>x*2 )
+        abc.freak(x);
+
+        // we are seeing map and foreach taking arrow function as input
+        // what should be the input of arrow function and return type of the arrow function
+
+
+
+
+
+        console.log(def);
+        //called by us....no
+
+    
+
+        /*
+        function myfunction(a,b)
+        {
+            console.log("inside myfucntion");
+            return 3;
+
+        }
+
+        let freak =(a,b)=>{ console.log("freak"); return 43;};
+        //how created the arrow function.. I
+        const y= freak(2,3)  //who called the arrow function ..I then it is pathetic scneario..
+        console.log(y);
+
+        */
+        
+
+    </script>
+
+</html>

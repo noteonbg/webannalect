@@ -1,0 +1,38 @@
+<html>
+    
+    <head>
+      
+    </head>
+    <body>
+            <br/> <input type="text" id="t1" maxlength="10" minlength="1"
+            placeholder="enter something" />
+            <span id="message"> ok poc doing </span>
+            <button id="freak"> doubts will keep coming </button>
+    </body>
+
+    <script>
+
+        //addEventListener is it a function
+        //addEventListner are 
+        
+            // registering for the Event
+            document.addEventListener("DOMContentLoaded",()=>{
+                       
+
+            const x  = document.getElementById("t1");
+            x.addEventListener("change",()=>{
+                    console.log("t1 is chainging");
+            });
+            const whocares  = document.getElementById("freak");
+            whocares.addEventListener("click",()=>{
+                    console.log("button is clicked");
+            }
+            );
+            
+          });  
+
+
+
+    </script>
+
+</html>

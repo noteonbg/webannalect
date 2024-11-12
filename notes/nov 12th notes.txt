@@ -1,0 +1,384 @@
+1. keep your bp level normal small assignment..
+
+arrow function
+filter..
+
+when you are using filter function...we pass a function as an input argument
+which tells on what condition the function should do the filtering..
+
+when we start using framework... the style in which we do event hanlding
+will keep changing..
+
+we have a ui.
+we have identified the changing parts.. put an id
+we know what service function we plan to call.
+we can setup event handling in javascript.
+access sections of the html page , read it and change it.
+we must know how to keep the logic part and ui part separate..
+
+zoom out.. are we going to use raw html and javascript or are we going to use some frameworks
+also.. we are going to use frameworks.. frameworks will have an opinion on how to do things..
+and frameworks will take care of most of issues he has told in the comments.txt
+
+Event handling, how to access html content and how to change html content will get
+dictated by the framework you are using..
+
+instead of getting addicted to syntax, generalize your concept.
+
+current our syntax focus is can we use html + javascript together..
+
+map functionality..
+
+map functionality..
+
+when you think of any operation.., pick a data type that gives you that operation.
+map funtionaltiy...typically n an array.
+
+what does this do.
+1. we have an array
+2. take each element from the array ..x
+3. decide what you want do with x... and your return is what you want to do y.
+4. collect this all y in new array and give to the caller.
+
+const numbers = [65, 44, 12, 4];
+const newArr = numbers.map(myFunction)
+function myFunction(num) {
+  return num * 10;
+}
+//kids program becuae conten of the array is int or string... in real life get
+//comfortable dealing with array which has got objects with it..
+
+
+let myFunction = (a, b) => a * b;  // style of coding..
+what did we do with this..
+
+
+//function defintion
+function x(a,b)
+{
+ return a*b;
+}
+
+let myFunction =x;  //function assignment..
+// myfunction variable is assigned with x function as of now..
+console.log(myFunction(2,3));
+
+
+
+== briefer way of doing things is
+
+let myFunction=(a,b) =>a *b;
+
+if you need to define a function and assign a function... and not call a function
+because somebody else is going to call it.. during event handling 
+
+arrow function is ideal..
+
+arrow function is a mechanism thru which we define and assign the function
+at the same time... what we dont do call..
+
+typically scenario
+
+x(arrow function y)  == conclusion is ,we are not the owner of f1 function
+arrow function --> we are person who is calling f1 and we defining thru the arrow
+what f1 is asking us to do.
+
+we define y and we are calling x. how y should be defined is dicated by x..
+
+
+
+
+
+
+if you are going to call the function make it as  a function only..
+if you are not going to call the function and system is going to call the function
+then use arrow function only..
+
+
+
+function
+1. define
+2. call  --if you are going to call it.. use the function keyword..no need for using
+arrow functions
+3. assign
+
+IT industry is notorious for people using "opinions" as facts.. any science person
+should not care for these opinions...  facts irrespective of moods it still remains same..
+
+map functionality..
+
+
+  f1(f2);
+f1 ==map
+f2 == our function arrow function
+first open documentation of f1 and see only then you know what is expected from f2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+filter functionality
+sort functionality.
+
+
+
+const numbers = [65, 44, 12, 4];
+
+const newArr = numbers.map(myFunction)
+
+
+function myFunction(num) {
+	 console.log("freak");
+
+}
+
+
+
+
+
+
+for any technical person adjective usage needs lot of details...
+it is neater, it is cleaner code.. all this people should get MA in English.. this is not
+technically valid..
+
+avoid having strong opinions on subjective things.. 
+
+
+after the arrow functon is there a necessary it should return..
+
+f1(arrow function)
+what arrow function take as input and what it should return no astrology read documentation
+of f1 that will tell.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+when we are using a function as an input to another function relax..
+
+f3(f4)
+it is understood we are definer of f4..
+it is understood we are caller of f3.
+so relax relax and open documentation of f3.. no I wont open, enjoy astrology on f4..
+
+
+array.foreach(take lement in the array and do something but dont return anything)
+
+array.map(take each element in the array, process it return it.. this return i will add
+it to the array and give you a new array)
+
+how do we know.. open documentation..
+
+arrow for user defined function , why not you can use, why use it..
+user defined function.. we are going to function calling, that means it needs a name..
+
+let freak =x=>2; 
+console.log(freak(3));
+
+function freak(x)
+{
+return 2;
+}
+
+freak(3);
+
+
+
+what is freak..
+freak is a variable which is assigned with a function whose input is x and return is 2.
+
+
+
+I have a  "need" for arrow function..
+need  = i will define, i will assign but i wont call the function.
+
+arrow function
+map
+
+
+ever since dinosaurs were programming we know global things are bad idea to us
+so relax is simple problem to overcome..
+
+when we see calling of function, we will open documentation.
+
+
+when we see function call, not opening documentation and reading it is a sin..
+because we will make assumptions about the function and it will be wrong..
+
+map
+foreach..
+what it is doing i will know only i open documention and 
+
+remember during any event handling function you should not return..
+because event handling is one way communication
+in any programming language... again, welcome to generalized learning..
+
+
+event source to event listener..
+
+when onclick, onchange..  you write functins, in those functions we never use return..
+
+web technology is 30 years old.. 1995
+in year 1995 to 2010.. everybody told keep html separate, keep js separate and keep css
+separate dont mix them... everybody agreed.
+
+2011.. somebody told hey keep html and javascript is not a good idea.. again
+lot of people agreed..
+2011 to 2024 ... people tell mix javascript and html... but you should not do directly
+com thru a framework..
+
+welcome to world of opinions..
+
+25   26
+textbox == number..
+have a button
+when you click on the button print the next number next to the textbox.
+try doin gthis the addevent istner way..
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+	
+   x=	give me the id of the textbox..
+  x.addEventLIstnener("change",()=>{console.log("ok we came to fucntion textbox changed");}
+   y = id of the button
+  y.addEventListener("click",()=>{ console.log("button clicked
+
+
+
+}
+);
+
+
+we are telling hey look i am registering for the event.
+what is event .. domcontentloaded.. what is this, when all the tags in the html has been
+interpreted by the browser.., then do this for me
+
+once you completed..
+
+now whichever example you have done..
+1. you have single html page...
+in that page at the last there is only javascript..
+in the html section we have not written any onclick, onchange..
+
+create a new file poc.js.
+put javascript content excluding that script in that file.
+
+
+come to your html
+<script src="poc.js"></script>
+
+
+in the head region of html
+ <meta name="description" content="html and event handlign separate.">
+    <meta name="keywords" content=" html, js, separation">
+    <meta name="author" content="Your Company Name">
+hope is web search engine crawls it gets information about the page, by using
+these meta tags.. ok.. but still in todays world this information alone is not sufficient
+
+so now onwards.
+
+1. keep html separate and keep js separate.
+2. in javascript file keep logic portion separate and event handling portion separate.
+3. in html... which ever part we are changing... we have an id...
+4. in all html pages.. just add this meta tag called keywords and title. and keep it meaningful.
+
+-------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+now comes the big challenge..
+1. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+map..
+
+
+
+
+
+
+
+
+
+

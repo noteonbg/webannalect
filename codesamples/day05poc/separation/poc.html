@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Products</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <meta name="description" content="A list of manufacturing products and their prices.">
+    <meta name="keywords" content="manufacturing, products, machines, prices, machinery">
+    <meta name="author" content="Your Company Name">
+    
+</head>
+<body>
+    <header>
+        <h1>Manufacturing Products List</h1>
+    </header>
+
+    <section class="product-list">
+        <ul id="productList">
+            <li class="product">
+                <span class="product-name">Machine A</span> - Rs<span class="product-price">1000</span>
+                <button class="update-price" onclick="updatePrice('Machine A')">Update Price</button>
+            </li>
+            <li class="product">
+                <span class="product-name">Machine B</span> - Rs<span class="product-price">1500</span>
+                <button class="update-price" onclick="updatePrice('Machine B')">Update Price</button>
+            </li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

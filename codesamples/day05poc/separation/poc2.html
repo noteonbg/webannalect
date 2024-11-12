@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example page demonstrating the use of the aria-live attribute for dynamic content updates.">
+    <meta name="keywords" content="aria-live, accessibility, screen readers, live regions, web accessibility">
+    <meta name="author" content="Your Name or Company">
+    <title>ARIA Live Region Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>ARIA Live Region Example</h1>
+    </header>
+
+    <section>
+        <p>This page demonstrates the use of the <code>aria-live</code> attribute in a paragraph element.</p>
+
+        <p>In this example, the product price will be updated dynamically, and screen readers will announce the new price.</p>
+
+        <!-- Live region for the price update -->
+        <p aria-live="polite" id="product-price">
+            Current Price: $500
+        </p>
+
+        <button id="update-price-btn">Update Price</button>
+    </section>
+
+    <footer>
+        <p>Example for demonstrating the <code>aria-live</code> attribute in HTML.</p>
+    </footer>
+
+    <script>
+        // Simulate a price update when the button is clicked
+        document.getElementById('update-price-btn').addEventListener('click', function() {
+            setTimeout(() => {
+                // Dynamically update the price in the live region
+                document.getElementById("product-price").innerText = "Current Price: $450";
+            }, 3000); // Update after 3 seconds
+        });
+    </script>
+
+</body>
+</html>
+
+
+<!--
+
+aria-live="polite": Ensures the change to the paragraph will be announced politely when
+ the user is idle. It doesn't interrupt the screen reader from reading other content.
+
+Dynamic Content: The content changes dynamically (price update after 3 seconds), and the
+ screen reader announces this update automatically because of the aria-live attribute.
+
+Button Interaction: The button triggers the update, simulating an interactive scenario,
+ such as changing the price of a product in a real-world application.
+
+-->

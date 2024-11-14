@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Management - CRUD Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input, select, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            width: 200px;
+        }
+        button {
+            cursor: pointer;
+        }
+        .machine-list {
+            margin-top: 20px;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .machine-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .actions button {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Machine Management</h1>
+
+    <!-- Input Fields to Add/Update Machine -->
+    <input type="text" id="machineName" placeholder="Machine Name" />
+    <select id="machineStatus">
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+    </select>
+    <input type="date" id="lastMaintained" />
+
+    <button id="saveButton">Add Machine</button>
+    <button id="updateButton" style="display: none;">Update Machine</button>
+
+    <div class="machine-list" id="machineList"></div>
+</div>
+
+<script>
+    // Function to load machines from localStorage
+    function loadMachines() {
+        const machines = JSON.parse(localStorage.getItem('machines')) || [];
+        const machineList = document.getElementById('machineList');
+        machineList.innerHTML = '';
+
+        if (machines.length === 0) {
+            machineList.innerHTML = 'No machines available.';
+        } else {
+            machines.forEach(machine => {
+                const div = document.createElement('div');
+                div.classList.add('machine-item');
+                div.innerHTML = `
+                    <span><strong>${machine.name}</strong> - ${machine.status} - Last Maintained: ${machine.lastMaintained}</span>
+                    <div class="actions">
+                        <button onclick="editMachine(${machine.id})">Edit</button>
+                        <button onclick="deleteMachine(${machine.id})">Delete</button>
+                    </div>
+                `;
+                machineList.appendChild(div);
+            });
+        }
+    }
+
+    // Create a new machine and save to localStorage
+    document.getElementById('saveButton').addEventListener('click', function() {
+        const machineName = document.getElementById('machineName').value;
+        const machineStatus = document.getElementById('machineStatus').value;
+        const lastMaintained = document.getElementById('lastMaintained').value;
+
+        if (machineName && lastMaintained) {
+            const machines = JSON.parse(localStorage.getItem('machines')) || [];
+            const newMachine = {
+                id: Date.now(),  // Use timestamp as a unique ID
+                name: machineName,
+                status: machineStatus,
+                lastMaintained: lastMaintained
+            };
+            machines.push(newMachine);
+            localStorage.setItem('machines', JSON.stringify(machines));
+
+            // Clear input fields
+            document.getElementById('machineName').value = '';
+            document.getElementById('machineStatus').value = 'active';
+            document.getElementById('lastMaintained').value = '';
+
+            loadMachines();
+        } else {
+            alert('Please fill in all fields.');
+        }
+    });
+
+    // Edit an existing machine
+    function editMachine(id) {
+        const machines = JSON.parse(localStorage.getItem('machines'));
+        const machineToEdit = machines.find(machine => machine.id === id);
+
+        if (machineToEdit) {
+            document.getElementById('machineName').value = machineToEdit.name;
+            document.getElementById('machineStatus').value = machineToEdit.status;
+            document.getElementById('lastMaintained').value = machineToEdit.lastMaintained;
+
+            // Show the update button and hide the save button
+            document.getElementById('saveButton').style.display = 'none';
+            document.getElementById('updateButton').style.display = 'inline-block';
+
+            // Set up update logic
+            document.getElementById('updateButton').onclick = function() {
+                updateMachine(id);
+            };
+        }
+    }
+
+    // Update an existing machine
+    function updateMachine(id) {
+        const machines = JSON.parse(localStorage.getItem('machines'));
+        const updatedName = document.getElementById('machineName').value;
+        const updatedStatus = document.getElementById('machineStatus').value;
+        const updatedLastMaintained = document.getElementById('lastMaintained').value;
+
+        const updatedMachines = machines.map(machine => {
+            if (machine.id === id) {
+                machine.name = updatedName;
+                machine.status = updatedStatus;
+                machine.lastMaintained = updatedLastMaintained;
+            }
+            return machine;
+        });
+
+        localStorage.setItem('machines', JSON.stringify(updatedMachines));
+
+        // Clear input fields and update UI
+        document.getElementById('machineName').value = '';
+        document.getElementById('machineStatus').value = 'active';
+        document.getElementById('lastMaintained').value = '';
+        document.getElementById('saveButton').style.display = 'inline-block';
+        document.getElementById('updateButton').style.display = 'none';
+
+        loadMachines();
+    }
+
+    // Delete a machine
+    function deleteMachine(id) {
+        const machines = JSON.parse(localStorage.getItem('machines'));
+        const updatedMachines = machines.filter(machine => machine.id !== id);
+        localStorage.setItem('machines', JSON.stringify(updatedMachines));
+        loadMachines();
+    }
+
+    // Load machines when the page is ready
+    window.onload = function() {
+        loadMachines();
+    };
+
+</script>
+
+</body>
+</html>

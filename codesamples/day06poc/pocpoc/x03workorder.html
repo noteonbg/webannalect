@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Order Request Form</title>
+    <link rel="stylesheet" href="workorder.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Work Order Request Form</h2>
+        <form action="#" method="POST">
+            <!-- Work Order ID and Date -->
+            <div class="form-group">
+                <label for="wo_id">Work Order ID:</label>
+                <input type="text" id="wo_id" name="wo_id" placeholder="Enter Work Order ID" required>
+            </div>
+            <div class="form-group">
+                <label for="date_issued">Date Issued:</label>
+                <input type="date" id="date_issued" name="date_issued" required>
+            </div>
+
+            <!-- Production Line and Priority -->
+            <div class="form-group">
+                <label for="production_line">Production Line:</label>
+                <select id="production_line" name="production_line" required>
+                    <option value="line1">Line 1</option>
+                    <option value="line2">Line 2</option>
+                    <option value="line3">Line 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="priority">Priority:</label>
+                <input type="radio" id="high" name="priority" value="high" required> High
+                <input type="radio" id="medium" name="priority" value="medium"> Medium
+                <input type="radio" id="low" name="priority" value="low"> Low
+            </div>
+
+            <!-- Part Details -->
+            <h3>Part Details</h3>
+            <div class="form-group">
+                <label for="part_number">Part Number:</label>
+                <input type="text" id="part_number" name="part_number" placeholder="Enter Part Number" required>
+            </div>
+            <div class="form-group">
+                <label for="part_description">Part Description:</label>
+                <input type="text" id="part_description" name="part_description" placeholder="Part Description" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity to Produce:</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Enter Quantity" required>
+            </div>
+
+            <!-- Machine Details -->
+            <h3>Machine Details</h3>
+            <div class="form-group">
+                <label for="machine_id">Machine ID:</label>
+                <input type="text" id="machine_id" name="machine_id" placeholder="Enter Machine ID" required>
+            </div>
+            <div class="form-group">
+                <label for="maintenance_due">Maintenance Due Date:</label>
+                <input type="date" id="maintenance_due" name="maintenance_due">
+            </div>
+            <div class="form-group">
+                <label for="machine_status">Machine Status:</label>
+                <select id="machine_status" name="machine_status" required>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                    <option value="in_repair">In Repair</option>
+                </select>
+            </div>
+
+            <!-- Comments/Notes Section -->
+            <div class="form-group">
+                <label for="comments">Additional Notes:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional notes here..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit Work Order</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

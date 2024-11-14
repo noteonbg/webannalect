@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Production Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button {
+            cursor: pointer;
+        }
+        .output {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Factory Production Tracker</h1>
+
+    <!-- Input Field for Number of Items Produced -->
+    <input type="number" id="itemsProduced" placeholder="Enter items produced" />
+
+    <!-- Button to Save Data -->
+    <button id="saveButton">Save Production Count</button>
+
+    <!-- Button to Reset Data -->
+    <button id="resetButton">Reset Count</button>
+
+    <!-- Display Current Production Count -->
+    <div class="output" id="productionOutput"></div>
+</div>
+
+<script>
+    // Check if there's any saved production data in localStorage
+    window.onload = function() {
+        const storedCount = localStorage.getItem('productionCount');
+        if (storedCount !== null) {
+            // If there is, display it
+            document.getElementById('productionOutput').textContent = `Current production count: ${storedCount} items`;
+        } else {
+            document.getElementById('productionOutput').textContent = 'No production data found.';
+        }
+    };
+
+    // Event listener for the "Save" button
+    document.getElementById('saveButton').addEventListener('click', function() {
+        const itemsProduced = document.getElementById('itemsProduced').value;
+        if (itemsProduced) {
+            // Save to localStorage
+            localStorage.setItem('productionCount', itemsProduced);
+            document.getElementById('productionOutput').textContent = `Current production count: ${itemsProduced} items`;
+        } else {
+            alert('Please enter a valid number of items produced.');
+        }
+    });
+
+    // Event listener for the "Reset" button
+    document.getElementById('resetButton').addEventListener('click', function() {
+        // Reset the stored production data
+        localStorage.removeItem('productionCount');
+        document.getElementById('productionOutput').textContent = 'Production data has been reset.';
+    });
+</script>
+
+</body>
+</html>

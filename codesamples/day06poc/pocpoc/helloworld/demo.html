@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> ok poc on css</title>
+
+        <!-- find what in html as x, makeupset as y-->
+    </head>
+    <style>
+        h1 { color:red }
+        p  { color:blue }  /* where p tag is available we have to apply color as blue */
+        /*  makeupset1 has to be applied for span tag which comes under p */
+        p span.makeupset1 { text-decoration: underline }  /* this . is called as a class */
+
+        /*  */
+        button#b1:hover { background-color: blue; }
+
+        button.redcolor { background-color: greenyellow;}
+        /* hey browser when you apply hover on the button,  make the backcolor... */
+
+    </style>
+
+    <body>
+        <h1 class="makeupset1"> freak </h1>
+        <p > <span class="makeupset1"> ok another </span>  freak thing</p>
+        <h3> <span> inside h3 span </span></h3>
+        <button id="b1">junk</button>
+        <button class="redcolor">freak</button>
+
+        
+
+
+    </body>
+
+</html>

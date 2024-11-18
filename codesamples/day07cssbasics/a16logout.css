@@ -1,0 +1,88 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.main-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff6347;  /* Tomato color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #e55342;  /* Darker shade of tomato */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+/* Link Styles for Login */
+.login-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-link:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

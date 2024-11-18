@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Products</title>
+    <style >
+    /* Universal selector */
+    * {
+        box-sizing: border-box; /* Ensures padding and borders are 
+        included in total width and height */
+        margin: 0; /* Resets default margin */
+        padding: 0; /* Resets default padding */
+        /*
+        This selector applies styles to all elements on the page. 
+        In this case, it sets the box-sizing property to border-box, 
+        resets the default margin and padding for all elements, ensuring consistent
+         spacing across the layout.
+        */
+    }
+    
+    /* Descendant selector */
+    main h2 {
+        color: #2c3e50; /* Dark blue color for section headings */
+        font-size: 24px; /* Font size for section headings */
+    }
+    
+    main ul li {
+        list-style-type: square; /* Square bullets for list items */
+        margin: 5px 0; /* Margin between list items */
+        padding: 5px; /* Padding inside list items */
+        background-color: #ecf0f1; /* Light gray background for list items */
+    }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manufacturing Products</h1>
+    </header>
+    <main>
+        <section class="machines">
+            <h2>Machines</h2>
+            <ul>
+                <li>Lathe Machine</li>
+                <li>Milling Machine</li>
+                <li>Drilling Machine</li>
+            </ul>
+        </section>
+        <section class="tools">
+            <h2>Tools</h2>
+            <ul>
+                <li>Screwdriver</li>
+                <li>Wrench</li>
+                <li>Hammer</li>
+            </ul>
+        </section>
+        <section class="parts">
+            <h2>Parts</h2>
+            <ul>
+                <li>Gear</li>
+                <li>Bearing</li>
+                <li>Motor</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Manufacturing Co.</p>
+    </footer>
+</body>
+</html>

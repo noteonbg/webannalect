@@ -1,0 +1,265 @@
+1. we will talk about CSS
+2. how to share data between multiple pages. given our background..
+
+hopefully all you know that html does some job and javascript does some job
+and you cannot compare both..
+
+what did you do in html.
+1. structure of the page.. identify sections which needs to changed based on some logic..
+
+
+what you do in javascript.
+1. logic part
+take some input
+does some logic
+get some output.. we should knowing meaning of the output
+what is success, what is failure... -- trying to do the logic..
+usually we will contact some server, supply inputs and server will add it and give
+us the response..
+big sin  we are using global functions we are using global variables.this is recognized
+big sin we will over come. what is good logic part.. no matter which
+ever framework you use, logic part will remain unchanged.
+
+
+
+2.  ui part
+
+2.1 setting up event registrations.
+2.2 whatever is input we are picking up from the ui..
+2.3 you are calling the logic functions..
+2.4 based on what logic function is telling you are again updating the ui.
+
+we can deal with lies but very difficult to deal with myths..
+
+i have come to repair tv in the house and the house is on fire, i am busy repairing
+the tv.. separate skill..
+
+we are not going to use raw javascript in our project most of times
+we are going to use some frameworks,, why.. our job is to solve customer problem
+and not improve our technical skill at customers cost..
+
+fix intent first and then the approach.
+intent.. to solve customer problem or be busy in jargon of some technology...
+i will always repeat my job is to solve customer problem and not .. run around jargons
+by some technology..
+
+
+case study given on Tuesday -- production or manufact
+case study given on casestudy  -- ps1 and ps2
+
+when get struck are we willing to write a small program.. poc
+
+CSS
+expand it.. Cascading style sheets.
+what is it...  it is makeupset for the some markup things..(html, xml)
+learning css is it difficult .. ok..no... but it is a separate skill everybody may
+not have it.. jsut because you learn css syntax it does not mean eligible for makeup..
+
+it is a separate skillset..
+what should we do..
+somebody has used css in the html page, recognize why he has used and what it means
+and be able to make changes to it.
+
+why use css..
+css used to makeup for the web page..
+what do you mean by makeup..
+
+1. layout of the page.. hard thing..
+2. positionin of elements.. hard thing.
+3. easy thing.. color, font...
+
+everybody wants to make a product and ensure people get addicted
+to it.. but what people should do is tell i dont like addiction of any
+kind .. addiction of any kind is a drug.. good thing for technical
+person to avoid it..
+
+people who use adjectives which are strong are generally unfit
+to be a technical person..
+
+SASS   --Syntatically Awesome StyleSheet. but .. browser does
+not understand this... 
+some thing which can convert SASS to css.. there is something processor
+which convert SASS to css.
+
+css 4/5
+sass 1/5
+
+what does css have..
+1. css has got something context selector...
+logic in css is broadly like this..
+
+find what in html  -- find h1 or input textbox or input password 
+apply this kind of makeup  --css properties
+
+this gets applied automatically
+
+
+
+makeupset1  -- classes in css
+make font red in color, underline the text
+
+makeupset2
+make font blue in color, blink the text or hide the button
+
+
+get the logic working first and take a call what the page
+is supposed to do and then we will do makeup for the page..
+
+can we write a small poc when in doubt..
+
+always a challenge the word , there are many things to rememember
+
+for all people who begin css spend your time
+understanding the selector first.. and not the css declaration..
+
+project begins after all the enthusiasm is gone... initial josh
+means nothing in the project..
+
+what is : pseudo class.
+what is pseudo class.
+
+. it is called class.
+who defines the class, programmer.
+who decides what is makeup programmer.
+who applies the class programmer.
+
+<h1 class="abc"> freak </h1>
+this is applying the class.
+
+: pseudo class.
+1. programmer is not defining the pseudo class is inbuilt... 
+2. when it is applied is already decided by the browser..
+3. as a programmer you only tell what should happen when it is applied..
+
+unstructured learning.. on need basis i should be able to learn anything..
+
+
+when ever you see
+: in css selector.
+ask yourself what is name of pseudo class
+find out .. when it is applied the browser.
+and you take a call whatmakeup to apply(you control)
+
+
+element 
+.class  == who applies it programmer ..classname is yours makeup is yours
+and application also done by programmer only.
+
+:pseudoclass.
+
+one of the selector..
+we have a button, it must have an id b1.. and then on it if the browser
+applies the pseudo class 
+
+button#b1:hover { here comes the makeup }
+button.b1.. b1 will not an id become a classname.
+
+ever since dinosaurs were programming they were praying
+that they should understand everything they see int he project.
+that prayer has never been answered...
+
+when in project tolerate uncertainty.. lower the cost of failure
+are you willing to do a poc.
+
+
+I want this makeup..
+
+any company which crates technology wants people to use it.
+do you agree
+
+so the company will make things 
+
+1. guide  --textbook
+2. documentation  -- dictonary
+
+
+after selector what did you learn.
+i learn the box modell.
+what is margin
+what is padding.
+
+Try the following, understand
+a06drop.html
+a07crud.html
+try to understand all the syntax of css that comes there
+and when in doubt write a small poc..
+start doing your practicals in the case study1 which
+you completed and sort and filtering example you completed
+think what all css  you want to use based on what we know..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+addEventListener approach .. one more opinion.. finally what you will use..
+is decided by the framework you are going to use..
+
+
+
+
+
+
+
+
+

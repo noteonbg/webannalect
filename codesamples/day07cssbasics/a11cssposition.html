@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        /*
+
+        Static Positioning (position: static;):
+
+The header uses static positioning, which is the default for all elements.
+ It does not change the element's position and will appear in the normal document flow. In this example, 
+ it is positioned at the top of the page.
+
+ Absolute Positioning (position: absolute;):
+The product elements use absolute positioning. They are positioned relative to the
+ nearest positioned ancestor, which is the .container. This means they are removed from
+  the normal document flow and can overlap other elements. The first product is 
+  positioned 50px from the top and 20px from the left of the container, 
+  while the second product is positioned further down and to the right.
+
+Fixed Positioning (position: fixed;):
+
+The notification box uses fixed positioning. This means it is positioned relative to 
+the viewport, so it stays in a fixed position even when the page is scrolled.
+ It appears 10px from the top and 10px 
+from the right of the browser window.
+Inherit Positioning (position: inherit;):
+
+The footer uses inherit positioning, which means it inherits the position property 
+from its parent. In this case, since the parent (the body) has static positioning, 
+the footer also behaves as a static element and appears at the bottom of the content.
+
+        */
+        body {
+            font-family: Arial, sans-serif; /* Font for the body */
+            margin: 0; /* Remove default margin */
+            padding: 20px; /* Padding around the body */
+            background-color: #f4f4f4; /* Light gray background */
+        }
+
+        .header {
+            position: static; /* Default positioning (static) */
+            background-color: #2c3e50; /* Dark background */
+            color: white; /* White text */
+            padding: 15px; /* Padding for header */
+            text-align: center; /* Center text */
+            font-size: 24px; /* Font size for header */
+        }
+
+        .container {
+            position: relative; /* Establish a positioning context for child elements */
+            margin-top: 20px; /* Margin above container */
+            padding: 20px; /* Padding inside container */
+            background-color: white; /* White background */
+            border: 2px solid #ccc; /* Light gray border */
+        }
+
+        .product {
+            position: absolute; /* Absolute positioning relative to the nearest positioned ancestor */
+            top: 50px; /* Position 50px from the top of the container */
+            left: 20px; /* Position 20px from the left of the container */
+            width: 150px; /* Fixed width */
+            height: 100px; /* Fixed height */
+            background-color: #3498db; /* Blue background */
+            color: white; /* White text */
+            text-align: center; /* Center text */
+            padding: 10px; /* Padding inside the product box */
+        }
+
+        .notification {
+            position: fixed; /* Fixed positioning relative to the viewport */
+            top: 10px; /* Position 10px from the top of the viewport */
+            right: 10px; /* Position 10px from the right of the viewport */
+            background-color: #e74c3c; /* Red background */
+            color: white; /* White text */
+            padding: 15px; /* Padding for notification */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .footer {
+            position: inherit; /* Inherits position from the body (static) */
+            background-color: #2c3e50; /* Dark background */
+            color: white; /* White text */
+            text-align: center; /* Center text */
+            padding: 10px; /* Padding for footer */
+            margin-top: 20px; /* Margin above footer */
+            font-size: 14px; /* Font size for footer */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Manufacturing Company</div>
+    <div class="container">
+        <div class="product">Product 1</div>
+        <div class="product" style="top: 100px; left: 200px;">Product 2</div> <!-- Positioned absolutely at a different location -->
+    </div>
+    <div class="notification">New Product Launch!</div>
+    <div class="footer">© 2024 Manufacturing Company</div>
+</body>
+</html>

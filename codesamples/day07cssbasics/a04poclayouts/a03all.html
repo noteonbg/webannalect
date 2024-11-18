@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Layout Types</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .container {
+      margin-bottom: 40px;
+      padding: 10px;
+      border: 2px solid #ccc;
+    }
+
+    .item {
+      padding: 10px;
+      text-align: center;
+      color: white;
+      margin: 5px;
+    }
+
+    /* Block Layout */
+    .block-container {
+      background-color: lightblue;
+    }
+
+    /* Inline Layout */
+    .inline-container {
+      background-color: lightgreen;
+    }
+
+    /* Flexbox Layout */
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      background-color: lightcoral;
+    }
+
+    /* Grid Layout */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background-color: lightyellow;
+    }
+
+    /* Positioning Layout */
+    .position-container {
+      position: relative;
+      background-color: lightgray;
+      height: 150px;
+    }
+    .position-item {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: lightgreen;
+      padding: 10px;
+    }
+
+    /* Float Layout */
+    .float-container {
+      background-color: lightpink;
+    }
+    .float-item {
+      float: left;
+      width: 30%;
+      margin: 5px;
+      background-color: lightblue;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Table Layout */
+    .table-container {
+      display: table;
+      width: 100%;
+      background-color: lightcyan;
+    }
+    .table-row {
+      display: table-row;
+    }
+    .table-cell {
+      display: table-cell;
+      padding: 10px;
+      text-align: center;
+      background-color: lightgreen;
+    }
+
+    /* Viewport-based Layout */
+    .viewport-container {
+      width: 50vw;
+      height: 50vh;
+      background-color: lightseagreen;
+      text-align: center;
+      line-height: 100px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Block Layout -->
+  <div class="container block-container">
+    <h2>Block Layout</h2>
+    <div class="item" style="background-color: lightblue;">Block 1</div>
+    <div class="item" style="background-color: lightgreen;">Block 2</div>
+    <div class="item" style="background-color: lightcoral;">Block 3</div>
+  </div>
+
+  <!-- Inline Layout -->
+  <div class="container inline-container">
+    <h2>Inline Layout</h2>
+    <span class="item" style="background-color: lightblue;">Inline 1</span>
+    <span class="item" style="background-color: lightgreen;">Inline 2</span>
+    <span class="item" style="background-color: lightcoral;">Inline 3</span>
+  </div>
+
+  <!-- Flexbox Layout -->
+  <div class="container flex-container">
+    <h2>Flexbox Layout</h2>
+    <div class="item" style="background-color: lightblue;">Flex 1</div>
+    <div class="item" style="background-color: lightgreen;">Flex 2</div>
+    <div class="item" style="background-color: lightcoral;">Flex 3</div>
+  </div>
+
+  <!-- Grid Layout -->
+  <div class="container grid-container">
+    <h2>Grid Layout</h2>
+    <div class="item" style="background-color: lightblue;">Grid 1</div>
+    <div class="item" style="background-color: lightgreen;">Grid 2</div>
+    <div class="item" style="background-color: lightcoral;">Grid 3</div>
+  </div>
+
+  <!-- Positioning Layout -->
+  <div class="container position-container">
+    <h2>Positioning Layout</h2>
+    <div class="position-item">Positioned Item</div>
+  </div>
+
+  <!-- Float Layout -->
+  <div class="container float-container">
+    <h2>Float Layout</h2>
+    <div class="float-item" style="background-color: lightblue;">Float 1</div>
+    <div class="float-item" style="background-color: lightgreen;">Float 2</div>
+    <div class="float-item" style="background-color: lightcoral;">Float 3</div>
+  </div>
+
+  <!-- Table Layout -->
+  <div class="container table-container">
+    <h2>Table Layout</h2>
+    <div class="table-row">
+      <div class="table-cell" style="background-color: lightblue;">Table 1</div>
+      <div class="table-cell" style="background-color: lightgreen;">Table 2</div>
+      <div class="table-cell" style="background-color: lightcoral;">Table 3</div>
+    </div>
+  </div>
+
+  <!-- Viewport-based Layout -->
+  <div class="container">
+    <h2>Viewport-based Layout</h2>
+    <div class="viewport-container">
+      50% of Viewport Width & Height
+    </div>
+  </div>
+
+</body>
+</html>

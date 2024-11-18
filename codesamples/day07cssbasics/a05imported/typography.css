@@ -1,0 +1,14 @@
+/* styles/typography.css */
+h1 {
+    color: #3498db;
+    text-align: center;
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+.product-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}

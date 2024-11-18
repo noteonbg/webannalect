@@ -1,0 +1,50 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+    display: flex;              /* Use flexbox to arrange items */
+    justify-content: space-between; /* Space out the items */
+    align-items: center;        /* Vertically center the items */
+    background-color: #333;     /* Dark background color */
+    color: white;               /* White text */
+    padding: 10px 20px;         /* Padding around the header */
+}
+
+/* Logo Styles */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation Styles */
+.nav ul {
+    list-style-type: none;      /* Remove bullets */
+    display: flex;              /* Arrange list items in a row */
+}
+
+.nav li {
+    margin: 0 15px;             /* Space between items */
+}
+
+.nav a {
+    text-decoration: none;      /* Remove underline */
+    color: white;               /* White text */
+    font-size: 1rem;
+}
+
+.nav a:hover {
+    color: #ff6347;             /* Change color on hover */
+}
+
+/* Search Bar Styles */
+.search-bar input {
+    padding: 5px 10px;          /* Padding for the input field */
+    font-size: 1rem;            /* Text size inside input */
+    border: none;               /* Remove border */
+    border-radius: 4px;         /* Rounded corners */
+}

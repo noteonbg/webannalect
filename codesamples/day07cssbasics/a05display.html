@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Products</title>
+    <style>
+
+        /*
+
+        Block:
+
+The element takes up the full width available and starts on a new line.
+Example: <div>, <p>, <h1>, <section>, etc.
+
+inline:
+The element only takes up as much width as necessary and does not start on a new line.
+Example: <span>, <a>, <strong>, etc.
+
+
+inline-block:
+The element behaves like an inline element but allows setting width and height.
+Example: <button>, <img>, etc.
+
+ flex:
+Enables a flex container for flexible layout, allowing items within to be arranged easily.
+Example: .container { display: flex; }
+
+grid:
+Enables a grid layout for arranging child elements in rows and columns.
+Example: .grid { display: grid; }
+
+none:
+The element is not displayed at all (it will not take up any space).
+Example: Hiding elements dynamically using JavaScript.
+
+
+        */
+        body {
+            font-family: Arial, sans-serif; /* Font for the body */
+            margin: 0; /* Remove default margin */
+            padding: 20px; /* Padding around the body */
+            background-color: #f4f4f4; /* Light gray background */
+        }
+
+        header {
+            background-color: #2c3e50; /* Dark background */
+            color: white; /* White text */
+            text-align: center; /* Center text */
+            padding: 20px; /* Padding for header */
+        }
+
+        .container {
+            display: flex; /* Using flexbox to arrange items */
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: space-around; /* Space out the items */
+            margin-top: 20px; /* Margin above the container */
+        }
+
+        .product {
+            display: inline-block; /* Allows for block-like behavior while staying inline */
+            width: 30%; /* Set width for each product */
+            margin: 10px; /* Margin around each product */
+            background-color: #3498db; /* Blue background */
+            color: white; /* White text */
+            padding: 15px; /* Padding inside product box */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            transition: transform 0.3s; /* Transition effect for hover */
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        footer {
+            text-align: center; /* Center text */
+            padding: 10px; /* Padding for footer */
+            background-color: #2c3e50; /* Dark background */
+            color: white; /* White text */
+            margin-top: 20px; /* Margin above footer */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manufacturing Company</h1>
+        <p>Quality products for your manufacturing needs</p>
+    </header>
+
+    <div class="container">
+        <div class="product">
+            <h2>Lathe Machine</h2>
+            <p>High-precision lathe machine for versatile machining tasks.</p>
+        </div>
+        <div class="product">
+            <h2>Milling Machine</h2>
+            <p>Advanced milling machine for high-speed and accurate operations.</p>
+        </div>
+        <div class="product">
+            <h2>Drilling Machine</h2>
+            <p>Robust drilling machine equipped with cutting-edge technology.</p>
+        </div>
+        <div class="product">
+            <h2>CNC Machine</h2>
+            <p>State-of-the-art CNC machine for precise manufacturing needs.</p>
+        </div>
+        <div class="product">
+            <h2>Surface Grinder</h2>
+            <p>High-quality surface grinder for superior finishing.</p>
+        </div>
+        <div class="product">
+            <h2>Band Saw</h2>
+            <p>Versatile band saw for various cutting applications.</p>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 Manufacturing Company. All rights reserved.
+    </footer>
+</body>
+</html>

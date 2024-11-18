@@ -1,0 +1,39 @@
+/* Define the grid container */
+.grid-container {
+    display: grid;                        /* Enable grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    grid-template-rows: auto;              /* Automatically size rows */
+    grid-gap: 10px;                        /* Space between grid items */
+    justify-items: center;                 /* Center items horizontally */
+    align-items: center;                   /* Center items vertically */
+    justify-content: center;               /* Center the grid itself horizontally */
+    align-content: center;                 /* Center the grid itself vertically */
+    height: 80vh;                         /* Full viewport height */
+    border: 2px solid black;               /* Border around the grid container */
+  }
+  
+  /* Grid item styles */
+  .grid-item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #333;
+  }
+  
+  /* Different background for each grid item */
+  .grid-item:nth-child(1) {
+    background-color: lightgreen;
+  }
+  .grid-item:nth-child(2) {
+    background-color: lightcoral;
+  }
+  .grid-item:nth-child(3) {
+    background-color: lightyellow;
+  }
+  .grid-item:nth-child(4) {
+    background-color: lightpink;
+  }
+  .grid-item:nth-child(5) {
+    background-color: lightgray;
+  }
+  

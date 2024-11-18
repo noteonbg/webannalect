@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <style>
+
+/* Child Selector */
+.category > h3 {
+    color: #3498db; /* Blue color for category titles */
+    font-size: 22px; /* Font size for category titles */
+    margin-bottom: 10px; /* Margin below category titles */
+
+    /*
+The selector .category > h3 targets <h3> elements that are direct 
+    children of any element with the class category.
+     This means it styles only the category titles
+      (like "Mobile Phones," "Laptops," "Tablets") and not any nested elements.
+    */
+}
+
+/* Attribute Selector */
+li[data-new="true"] {
+    background-color: #f1c40f; /* Yellow background for new items */
+    font-weight: bold; /* Bold text for new items */
+    /*
+he selector li[data-new="true"] targets <li> elements that have a specific 
+    attribute (data-new) with the value "true". This is used to style items that 
+    are marked as new, giving them a yellow background and bold text.
+    */
+}
+
+.featured {
+    color: #e74c3c; /* Red color for featured items */
+    font-weight: bold; /* Bold text for featured items */
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Electronics Store</h1>
+    </header>
+    <main>
+        <section class="categories">
+            <h2>Categories</h2>
+            <div class="category">
+                <h3>Mobile Phones</h3>
+                <ul>
+                    <li class="featured" data-new="true">Smartphone A</li>
+                    <li>Smartphone B</li>
+                    <li>Smartphone C</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Laptops</h3>
+                <ul>
+                    <li class="featured">Laptop A</li>
+                    <li data-new="true">Laptop B</li>
+                    <li>Laptop C</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Tablets</h3>
+                <ul>
+                    <li>Tablet A</li>
+                    <li>Tablet B</li>
+                    <li class="featured" data-new="true">Tablet C</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Online Store</p>
+    </footer>
+</body>
+</html>

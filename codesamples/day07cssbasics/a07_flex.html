@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Font for the body */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background-color: #f4f4f4; /* Light background color */
+        }
+
+        .container {
+            display: flex; /* Enable Flexbox */
+            flex-direction: column; /* Stack items vertically */
+            height: 100vh; /* Full viewport height */
+        }
+
+        header {
+            background-color: #2c3e50; /* Dark background */
+            color: white; /* White text */
+            text-align: center; /* Center text */
+            padding: 20px; /* Padding for header */
+        }
+
+        .content {
+            display: flex; /* Enable Flexbox for content area */
+            flex: 1; /* Allow content to grow */
+            justify-content: space-around; /* Space items evenly */
+            align-items: center; /* Center items vertically */
+            padding: 20px; /* Padding for content area */
+        }
+
+        .box {
+            background-color: #ffffff; /* White background for boxes */
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 20px; /* Padding inside boxes */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            flex:1; /* Allow boxes to grow equally */
+            margin: 0 10px; /* Margin between boxes */
+            text-align: center; /* Center text inside boxes */
+        }
+
+        footer {
+            background-color: #2c3e50; /* Dark background */
+            color: white; /* White text */
+            text-align: center; /* Center text */
+            padding: 10px; /* Padding for footer */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Flexbox Layout Example</h1>
+        </header>
+
+        <div class="content">
+            <div class="box">Text Block 1</div>
+            <div class="box">Text Block 2</div>
+        </div>
+
+        <footer>
+            © 2024 Flexbox Example. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

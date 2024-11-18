@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units Example</title>
+  <style>
+    /* General Styles for each section */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .unit-container {
+      margin-bottom: 40px;
+      padding: 15px;
+      border: 2px solid #ccc;
+    }
+
+    .unit-example {
+      padding: 10px;
+      margin: 10px;
+      color: white;
+      text-align: center;
+    }
+
+    /* Layout container styling */
+    .unit-container {
+      background-color: lightgray;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 1. Pixel (px) -->
+  <div class="unit-container">
+    <h2>Pixel (px)</h2>
+    <div class="unit-example" style="background-color: lightblue; width: 200px; height: 100px;">
+      200px x 100px (Fixed size in pixels)
+    </div>
+    <p>The <strong>pixel (px)</strong> is a fixed unit used for precise layout dimensions. It doesn't change based on screen size or resolution.</p>
+  </div>
+
+  <!-- 2. Percent (%) -->
+  <div class="unit-container">
+    <h2>Percent (%)</h2>
+    <div class="unit-example" style="background-color: lightgreen; width: 50%; height: 100px;">
+      50% width of its parent container
+    </div>
+    <p>The <strong>percent (%)</strong> unit is relative to the parent element's dimensions. In this case, the width is 50% of the parent container's width.</p>
+  </div>
+
+  <!-- 3. Em (em) -->
+  <div class="unit-container">
+    <h2>Em (em)</h2>
+    <div class="unit-example" style="background-color: lightcoral; font-size: 2em; padding: 20px;">
+      Font size 2em (relative to its parent's font size)
+    </div>
+    <p>The <strong>em</strong> unit is relative to the font size of the parent element. Here, the font size is 2 times the parent element's font size.</p>
+  </div>
+
+  <!-- 4. Rem (rem) -->
+  <div class="unit-container">
+    <h2>Rem (rem)</h2>
+    <div class="unit-example" style="background-color: lightyellow; font-size: 2rem; padding: 20px;">
+      Font size 2rem (relative to the root font size)
+    </div>
+    <p>The <strong>rem</strong> unit is relative to the root element's font size (typically <code>html</code>). In this case, it is 2 times the root font size.</p>
+  </div>
+
+  <!-- 5. Viewport Width (vw) -->
+  <div class="unit-container">
+    <h2>Viewport Width (vw)</h2>
+    <div class="unit-example" style="background-color: lightseagreen; width: 50vw; height: 100px;">
+      50vw (50% of the viewport's width)
+    </div>
+    <p>The <strong>vw (viewport width)</strong> unit is relative to the width of the viewport. Here, the element is 50% of the viewport's width.</p>
+  </div>
+
+  <!-- 6. Viewport Height (vh) -->
+  <div class="unit-container">
+    <h2>Viewport Height (vh)</h2>
+    <div class="unit-example" style="background-color: lightpink; height: 50vh;">
+      50vh (50% of the viewport's height)
+    </div>
+    <p>The <strong>vh (viewport height)</strong> unit is relative to the height of the viewport. Here, the element is 50% of the viewport's height.</p>
+  </div>
+
+  <!-- 7. Viewport Minimum (vmin) -->
+  <div class="unit-container">
+    <h2>Viewport Minimum (vmin)</h2>
+    <div class="unit-example" style="background-color: lightgoldenrodyellow; width: 50vmin; height: 50vmin;">
+      50vmin (50% of the smaller dimension of the viewport)
+    </div>
+    <p>The <strong>vmin</strong> unit is relative to the smaller of the viewport's width or height. It helps ensure that the element scales proportionally across different screen sizes.</p>
+  </div>
+
+  <!-- 8. Viewport Maximum (vmax) -->
+  <div class="unit-container">
+    <h2>Viewport Maximum (vmax)</h2>
+    <div class="unit-example" style="background-color: lightblue; width: 50vmax; height: 50vmax;">
+      50vmax (50% of the larger dimension of the viewport)
+    </div>
+    <p>The <strong>vmax</strong> unit is relative to the larger of the viewport's width or height. It ensures that the element scales based on the largest dimension of the viewport.</p>
+  </div>
+
+  <!-- 9. Auto -->
+  <div class="unit-container">
+    <h2>Auto</h2>
+    <div class="unit-example" style="background-color: lightgray; width: auto; height: auto;">
+      Width and height set to 'auto'
+    </div>
+    <p>The <strong>auto</strong> unit is used to allow the browser to determine the width or height based on content, parent container, or other factors.</p>
+  </div>
+
+  <!-- 10. Ch (ch) -->
+  <div class="unit-container">
+    <h2>Ch (ch)</h2>
+    <div class="unit-example" style="background-color: lightpink; width: 10ch; height: 50px;">
+      10ch (10 character widths)
+    </div>
+    <p>The <strong>ch</strong> unit is based on the width of the "0" (zero) character in the font. It is often used for sizing input fields.</p>
+  </div>
+
+</body>
+</html>

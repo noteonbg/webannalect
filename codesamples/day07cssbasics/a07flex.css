@@ -1,0 +1,72 @@
+/* Reset some basic styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Flexbox for the navigation bar */
+.navbar {
+    display: flex; /* Enable flexbox */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around navbar */
+}
+
+/* Flexbox for the navigation list */
+.nav-list {
+    display: flex; /* Enable flexbox */
+    list-style-type: none; /* Remove bullet points */
+}
+
+/* Flex items for navigation links */
+.nav-list li {
+    margin-left: 20px; /* Space between links */
+}
+
+/* Main content area */
+.content {
+    display: flex; /* Enable flexbox */
+    justify-content: space-around; /* Space out cards */
+    margin: 20px; /* Margin around the content */
+}
+
+/* Flex items for cards */
+.card {
+    background-color: #ecf0f1; /* Light background */
+    border: 1px solid #bdc3c7; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    width: 30%; /* Each card takes up 30% of the container */
+    text-align: center; /* Center text */
+}
+
+/* Footer styles */
+.footer {
+    text-align: center; /* Center text in footer */
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* White text */
+    padding: 10px 0; /* Padding around footer */
+}
+
+/*
+
+display: flex;:
+
+This property enables Flexbox layout for the element. It converts the container (like .navbar, .nav-list, and .content) into a flex container.
+justify-content:
+
+This property defines how the flex items are aligned along the main axis (horizontally).
+In .navbar, justify-content: space-between; distributes space between the title and the navigation links, pushing them to the opposite ends.
+In .content, justify-content: space-around; evenly distributes space around the cards, creating equal gaps between them.
+align-items:
+
+This property aligns flex items along the cross axis (vertically). In the .navbar, align-items: center; vertically centers the items within the flex container.
+Flex Items:
+
+Each .card has a width of 30%, meaning three cards will fit in the row with space around them, thanks to the justify-content property in the .content class.
+The cards have a light background, border, and padding for better visual presentation.
+
+*/

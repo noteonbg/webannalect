@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Manufacturing Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Font for the body */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background-color: #f4f4f4; /* Light gray background */
+        }
+
+        header {
+            background-color: #2c3e50; /* Dark background */
+            color: white; /* White text */
+            text-align: center; /* Center text */
+            padding: 20px; /* Padding for header */
+        }
+
+        .container {
+            max-width: 1200px; /* Maximum width for the container */
+            margin: 20px auto; /* Center the container */
+            padding: 20px; /* Padding inside the container */
+            background-color: white; /* White background */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .product-grid {
+            display: flex; /* Enable flexbox */
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: space-between; /* Space between items */
+            margin-top: 20px; /* Margin above the product grid */
+        }
+
+        .product {
+            flex: 1 1 calc(33% - 20px); /* Responsive width */
+            background-color: #3498db; /* Blue background */
+            color: white; /* White text */
+            margin: 10px; /* Margin between products */
+            padding: 15px; /* Padding inside product box */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            transition: transform 0.3s; /* Transition effect for hover */
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        .product h2 {
+            margin: 0 0 10px; /* Margin below title */
+        }
+
+        .product p {
+            margin: 0; /* Remove default margin */
+        }
+
+        footer {
+            text-align: center; /* Center text */
+            padding: 10px; /* Padding for footer */
+            background-color: #2c3e50; /* Dark background */
+            color: white; /* White text */
+            position: relative; /* Position footer */
+            margin-top: 20px; /* Margin above footer */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .product {
+                flex: 1 1 calc(50% - 20px); /* Two products per row */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                flex: 1 1 100%; /* One product per row */
+            }
+        }
+
+        /*
+
+        Header:
+
+The header contains the company name and a brief tagline. It is styled with a dark background and white text.
+Container:
+
+The .container class provides a maximum width of 1200px and centers the content using margin auto. It has padding and a white background to separate it from the page background.
+Product Grid:
+
+The .product-grid uses Flexbox to create a responsive grid. The flex-wrap: wrap; property allows products to move to the next line if there isn’t enough space.
+Product Items:
+
+Each .product item is given a flexible width. The flex: 1 1 calc(33% - 20px); rule ensures that three products fit in a row with some margin.
+On hover, products scale up slightly for an interactive effect.
+Responsive Media Queries:
+
+The media queries adjust the layout based on screen size:
+For screens smaller than 768px, each product takes up about half the width (2 products per row).
+For screens smaller than 480px, each product takes up the full width (1 product per row).
+Footer:
+
+The footer provides a simple copyright notice and is styled similarly to the header
+
+
+        */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manufacturing Company</h1>
+        <p>Your trusted partner in quality manufacturing.</p>
+    </header>
+
+    <div class="container">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <h2>Lathe Machine</h2>
+                <p>High-precision lathe machine for versatile machining tasks.</p>
+            </div>
+            <div class="product">
+                <h2>Milling Machine</h2>
+                <p>Advanced milling machine for high-speed and accurate operations.</p>
+            </div>
+            <div class="product">
+                <h2>Drilling Machine</h2>
+                <p>Robust drilling machine equipped with cutting-edge technology.</p>
+            </div>
+            <div class="product">
+                <h2>CNC Machine</h2>
+                <p>State-of-the-art CNC machine for precise manufacturing needs.</p>
+            </div>
+            <div class="product">
+                <h2>Surface Grinder</h2>
+                <p>High-quality surface grinder for superior finishing.</p>
+            </div>
+            <div class="product">
+                <h2>Band Saw</h2>
+                <p>Versatile band saw for various cutting applications.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 Manufacturing Company. All rights reserved.
+    </footer>
+</body>
+</html>

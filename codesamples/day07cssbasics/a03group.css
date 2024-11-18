@@ -1,0 +1,28 @@
+/* Grouping Selectors */
+h1, h2, h3 {
+    color: #34495e; /* Dark blue color for headings */
+    font-family: Arial, sans-serif; /* Font family for headings */
+}
+/*
+The selector h1, h2, h3 groups multiple selectors together, allowing you to
+ apply the same styles to all three heading levels. This way, all headings in
+  the document will have the same dark blue color and font family without needing 
+  to repeat the styles for each heading.
+
+*/
+
+/* Styling for the main product section */
+.products {
+    padding: 20px; /* Padding for the products section */
+    background-color: #ecf0f1; /* Light gray background for the section */
+    border-radius: 5px; /* Rounded corners for the section */
+}
+
+/* Styling for list items */
+.category ul li {
+    margin: 5px 0; /* Margin for list items */
+    padding: 10px; /* Padding for list items */
+    background-color: #ffffff; /* White background for list items */
+    border: 1px solid #bdc3c7; /* Light border for list items */
+    border-radius: 3px; /* Rounded corners for list items */
+}

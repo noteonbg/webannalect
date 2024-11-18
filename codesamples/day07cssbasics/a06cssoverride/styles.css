@@ -1,0 +1,36 @@
+/* Default styles */
+h2 {
+    color: blue; /* Default color for all <h2> elements */
+}
+
+/* Specific styles for product titles */
+.product-title {
+    color: red; /* This will be overridden */
+    font-size: 20px;
+}
+
+/* More specific selector with higher specificity */
+.product h2 {
+    color: green; /* This will take precedence over the other two rules */
+}
+
+
+/*
+
+
+Use Specific Selectors Wisely: Aim to write clear and concise selectors that target elements directly,
+ rather than relying on multiple classes or IDs.
+ 
+Avoid Over-Specificity: Using too many class or ID selectors can lead to
+ complicated styles that are hard to override later.
+
+Follow a Naming Convention: Using conventions like BEM (Block Element Modifier) can help
+ maintain clarity in class naming and reduce the need for overrides.
+
+Organize Stylesheets: Group related styles together and document them to keep track
+ of what styles are applied to which elements.
+
+Use Consistent Class Names: Establish a consistent naming scheme for your
+ classes to make it easier to remember which styles apply to which elements.
+
+*/

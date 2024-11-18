@@ -1,0 +1,12 @@
+/* main.css */
+@import url('./layout.css');
+@import url('./typography.css');
+
+/* Additional custom styles can be added here */
+.product {
+    background-color: white;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}

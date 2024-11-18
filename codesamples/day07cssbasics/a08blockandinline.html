@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--
+
+    Block Elements: These elements take up the full width available (by default) and start 
+    on a new line. Examples include <div>, <h1> to <h6>, <p>, <form>, and <section>.
+Inline Elements: These elements do not start on a new line and only take up as much 
+width as necessary. Examples include <span>, <a>, <img>, and <strong>.
+    
+    
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .product-list {
+            display: flex;
+            flex-direction: row; /* Align products vertically */
+            max-width: 800px;
+            margin: auto; /* Center the product list */
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .product {
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        .product-title {
+            font-size: 1.5em; /* Title size */
+            color: #2c3e50; /* Dark color for titles */
+        }
+
+        .product-description {
+            color: #666; /* Gray color for descriptions */
+        }
+
+        .product-price {
+            font-weight: bold; /* Bold price */
+            color: #27ae60; /* Green color for price */
+        }
+
+        .product-tags {
+            display: inline-block; /* Inline element example */
+            margin-top: 5px; /* Space above tags */
+        }
+
+        .tag {
+            display: inline; /* Inline element for individual tags */
+            padding: 3px 6px;
+            margin-right: 5px;
+            background-color: #3498db; /* Blue background for tags */
+            color: white; /* White text for tags */
+            border-radius: 3px; /* Rounded corners for tags */
+        }
+    </style>
+</head>
+<body>
+    <h1>Manufacturing Products</h1>
+    <div class="product-list">
+        <div class="product">
+            <h2 class="product-title">Lathe Machine</h2>
+            <p class="product-description">A high-precision lathe machine suitable for various machining tasks.</p>
+            <p class="product-price">$5,000</p>
+            <div class="product-tags">
+                <span class="tag">Machinery</span>
+                <span class="tag">Precision</span>
+            </div>
+        </div>
+        <div class="product">
+            <h2 class="product-title">Milling Machine</h2>
+            <p class="product-description">Our milling machine offers high speed and accuracy for your manufacturing needs.</p>
+            <p class="product-price">$7,500</p>
+            <div class="product-tags">
+                <span class="tag">Machinery</span>
+                <span class="tag">Industrial</span>
+            </div>
+        </div>
+        <div class="product">
+            <h2 class="product-title">Drilling Machine</h2>
+            <p class="product-description">The drilling machine is equipped with advanced features to enhance productivity.</p>
+            <p class="product-price">$3,500</p>
+            <div class="product-tags">
+                <span class="tag">Tools</span>
+                <span class="tag">Heavy Duty</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

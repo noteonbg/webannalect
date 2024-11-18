@@ -1,0 +1,202 @@
+<html>
+<script>
+
+    class Task
+    {
+        constructor(taskid,taskname,taskstatus)
+        {
+            this.taskid=taskid;
+            this.taskname=taskname;
+            this.taskstatus=taskstatus;
+
+        }
+   
+    }
+
+    class TaskLogic
+    {
+        constructor()
+        {
+            this.tasks=[];
+        }
+
+        addTask(newTask)
+        {   
+            this.tasks.push(newTask);
+            return "added";  //check wheher taskid is presnet in the array or not
+            //if present return "not added"
+            
+        }
+
+        getAllTasksBasedonStatus(statusgiven)
+        {
+            return array whose status matches givenstatus
+        }
+
+        updatetask(updatedtask) 
+        {
+
+                /*
+                locate taskid in the array and update that particualr task object
+                in array with updatedtask. taskname and status
+                */
+        }
+
+        getAllTasks()
+        {
+            return this.tasks;
+        }
+
+
+
+    }
+
+    let y =new Task(12,"abc","running"); // task object is created
+    let tl =new TaskLogic();  // tasklogic object is created
+    let t = tl.addTask(y);  // addtask is an operation on TaskLogic hence it needs a
+    //tasklogic object.. addtask input argument is a task object , return type is a string
+    
+    let scrap = tl.getAllTasks(); //getAllTasks is an operation on Tasklogic.. and return type
+    //is an array of Task
+    console.log(t,scrap);
+
+
+
+
+
+
+
+
+
+    
+        
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+    /*
+
+    let t1=new Task(23,"abc","stopped");
+    let t2=new Task(24,"def","running");
+    let t3=new Task(25,"ghi","walking");
+
+    */
+
+    
+
+
+
+
+    /*
+    class TaskLogic
+    {
+
+
+
+    }
+    */
+
+
+
+
+/*
+    //when i write a class I will think of content and operations.
+    class TellMe
+    {
+        constructor(maybe)
+        {
+            this.numbers=maybe;// making kids feel happy, why... array is there
+            //array content is number type or string type.. .and not object type..
+            //may the kids feel unhappy.
+        }
+
+        getFirstNumber()
+        {
+            return this.numbers[0];
+
+        }
+
+        getNumberofOddNumbers()  {// what logic you will write  
+            }
+
+        
+    
+    }
+
+    let y=[2,3,5,8];
+    let z = new TellMe(y);
+    let q =[4];
+    let anothervariable =new TellMe();
+    anothervariable.numbers=q;  //manually assinging.
+    console.log(anothervariable.getFirstNumber());
+
+
+
+
+
+
+
+
+    console.log(z.getFirstNumber());
+
+
+*/     
+
+
+
+    /*
+    //we have created a data type called Rectangle.. why project demanded it.
+    class Rectangle  // java guys are happy, c sharp are happy, javascript is secretly laughing
+    {
+
+
+        constructor(l,b)
+        {
+            //BEUCASE WE USED THIS.LENTH, THIS.BREADTH.. WE WILL TREAT THIS CONTENT OF THE DATA TYPE
+            this.length=l;
+            this.breadth=b;
+
+        }
+
+        // OPERATIONS ARE AREA AND PERIMETER..
+        area() { return this.length *this.breadth; }
+        perimeter() { return 2*(this.length+this.breadth);}
+
+    }
+
+    let r1 =new Rectangle(4,5);  //r1 is variable name, its data type is rectangle
+    let r2 =new Rectangle(1,2);
+    let r3 =new Rectangle(1,1)
+    console.log(r1.area(),r2.perimeter());
+
+    // let i =3;  i is the variable name it data type is number
+
+
+
+    let x=4;
+    let y = x-1;
+    console.log(y);
+
+    */
+
+
+
+
+
+
+
+</script>
+<body>
+
+</body>
+
+</html>

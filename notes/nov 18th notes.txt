@@ -1,0 +1,342 @@
+expectation.. last class.
+
+how css works.
+1. selector, declaration, property. value..
+selectors elements, class, pseudo classes..
+
+2.some more examples on css and also storage, sesson storage and local storage
+of html5 how it can be accessed in javsacript..
+
+just like javascript...
+quick summary 
+web ..http
+logic part for the web.. for which we are building presenation.
+role of html
+role of javascript (
+we know some logic we have to do.
+based on the logic we capture things from the html
+get the logic done ... (happens on server..) and we get some output.
+based on the output we update the ui..
+
+we keep logic part, ui part separate
+
+ui .. part..
+major part is how you do event hanlding and access different sections
+of the page..
+
+<button onclick="f1()">  --> addEventListener....== again if you use
+frameworks things can change..
+
+we will add css to all the problem statements we have done so far..
+with login and logout..
+
+we are working on css.. again use the telescope.. dont get preoccupied
+with syntax... restrict syntax to use in particular scenario..
+
+
+user friendliness.
+1. no scrolling
+2. do whatever you want keep the number of clicks to less than 3.
+3. consistency..
+
+
+1. problem statement 1
+2. problem statement 2
+3. we will add css to it..
+4. javascript oops concept == objects... class and then create object..
+
+
+javascript tells I never believed in oops.
+but people kept on crying no javascript we dont have decency to learn javascript
+as a new language, I come from java or I come from c++ or I come from .net
+so you should look like java or c++ or C# for me javsacript told No I wont look
+like that.. then programmers cried.. then javascript told ok I will act
+as though I will use oops But I wont follow any oops concept except for
+concept of class.
+
+if you begin with a intent of design called X... no matter whatever changes.
+X intent will never go away it will remain..
+
+"intent"
+in javascript we have written
+
+logic functions we are using global variables, global functions
+the event handling variables and functions.. no global fucntions..
+
+what is object oriented..?
+if object orientedness mean just a class usage .. it is not object orientedness.
+
+Object orientedness.
+1. abstraction ( debatable..)
+2. encapsulation ( we get it)
+3. relationship between classes. ( we also get this)
+4. packages ( we get this
+
+I am not talking about object orientedness  I  just talking about the word called
+class.
+
+what is a class. we can chew somebody brain by using lot of words..
+
+class is project specific data type..
+
+data type = content + operations.
+
+tell what are its content, what are its operations..
+
+starting point
+just tell class is  project specific data type..
+
+whenever we define a function, think who is going to call it...
+constructor case.. the moment you create an object the constructor will
+get called..
+
+class Product
+{
+   constructor(id,tname,tprice)
+	{
+	  this.productid=id;
+	  this.name=tname;
+	  this.price = tprice;
+	}
+   getProductDetails()  { return this.productid+"  " + this.name+ "" +this.price"
+
+
+}
+
+let x =new Product(2,"pencil",3);
+
+
+
+
+
+class ProductLogic
+{
+
+}
+
+
+
+let i=3;
+
+data type..
+
+1. content
+2. operations 
+we choose data type based on 2.. we decided we want to add or multiply things
+hence we choosed a numeric data type.
+
+
+1. when we have pieces of information which are logically related we want to group
+them. do you agree.
+
+now how does it make a difference... why... remember all projects change with time..
+
+addproduct(newproduct)  //signature will not change
+
+addproduct(productid,productname,price)
+
+
+let newproduct={ id:3,name:'pencil',price:4}
+let newproduct={ id:3,name:'pencil',price:4,categoryid:5, manufactureddate:2024}
+
+what will change what will not change, should be thought about before the project
+begins else be 100% sure funeral as began.. in the projct.
+
+class..
+class is meant for encapsulation... class is template for an object.. ok 1 mark in
+the exam..
+now telescope
+
+1. we are in javascript..javascript when it began never had classes..
+crying of fellow programmers who did not have decency tolearn javascript
+ as new language..
+
+class is a data type..
+you decide what will be teh content what will the operation..
+no I cant decide ok dont write the class.
+
+function freak()
+{
+	let i=0;// i created a variable called i whose data type is a number.
+	let x =new Rectangle();//this is time we tell we created x whose
+//data type is a rectangle
+
+we have rectangle object we have to tell this object content is , to indicate
+this object content is.. we use this.. inside the function of the class.
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+all of you who know that class means content + operatons
+simple way of telling this is a class is a data type..
+
+number is a data type. how do you use the data type
+
+1. create a variable
+2. store something
+3. operate on it.
+
+class is a data type
+1. create an object.
+2. store something, usually pass it with constructor or manually assign.
+3. operate on it, call the functions of the class.
+
+having strong opinions on subjective things separate flavor of stupidity.
+
+
+student is very happy to read the code explain what it does, until
+he is asked what is input , what is its data type
+what is output what is its data type
+then student faints. and some times goes into comma state..
+
+
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+data type means content and operations
+
+
+in any programming language..dont read variable names.. read in terms of data types
+to which variables belong to..
+
+2 to 2.40PM ..
+
+answer is no. we are still not doing object oriented programming
+we have just started using class
+
+usage of class != object oriented programming.
+
+treat class like a project specific data type.. that's it. dont talk about oops.. yet..
+
+what to do.
+
+1. webannalect\codesamples\day07cssbasics\classusageinjs\a01classuage.html
+
+during adding check whether task id present if it is present return noteadded
+dont add to the array.
+
+during update task.. if the tasked matches, update the array task object's
+taskname and status with input given task object status and taskname.
+
+get all tasks based on some status... 
+
+check all the functions whether they work both in positive scenario
+
+Logic portion
+class product
+class ProductLogic.
+	constructor()  {   this.products=[] }
+	addproduct(newproduct)
+	updateprduct(updateproduct)
+	applydiscount()
+	getallproducts()  return this.products
+
+
+
+event handling portion
+
+document.addEventListener("domcontentloaded",()=>
+{
+	let productlogic =new ProductLogic();
+	on need basis, you can create product object
+	
+
+
+}); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

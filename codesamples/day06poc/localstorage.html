@@ -50,6 +50,7 @@
     // Check if there's any saved production data in localStorage
     window.onload = function() {
         const storedCount = localStorage.getItem('productionCount');
+        
         if (storedCount !== null) {
             // If there is, display it
             document.getElementById('productionOutput').textContent = `Current production count: ${storedCount} items`;

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Production Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button {
+            cursor: pointer;
+        }
+        .output {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .history {
+            margin-top: 20px;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-height: 200px;
+            overflow-y: scroll;
+        }
+        .history-item {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Factory Production Tracker</h1>
+
+    <!-- Input Field for Number of Items Produced -->
+    <input type="number" id="itemsProduced" placeholder="Enter items produced" />
+
+    <!-- Button to Save Data -->
+    <button id="saveButton">Save Production Count</button>
+
+    <!-- Button to Reset Data -->
+    <button id="resetButton">Reset Data</button>
+
+    <!-- Display Current Production History -->
+    <div class="output" id="productionOutput"></div>
+
+    <!-- Display History of Production Counts -->
+    <div class="history" id="productionHistory"></div>
+</div>
+
+<script>
+    // Function to load production history from localStorage
+    function loadProductionHistory() {
+        const history = JSON.parse(localStorage.getItem('productionHistory')) || [];
+        const historyElement = document.getElementById('productionHistory');
+        historyElement.innerHTML = '';
+
+        if (history.length === 0) {
+            historyElement.innerHTML = 'No production history available.';
+        } else {
+            history.forEach((entry) => {
+                const div = document.createElement('div');
+                div.classList.add('history-item');
+                div.textContent = `Date: ${entry.date} - Produced: ${entry.itemsProduced} items`;
+                historyElement.appendChild(div);
+            });
+        }
+    }
+
+    // Display the production history when the page loads
+    window.onload = function() {
+        loadProductionHistory();
+    };
+
+    // Event listener for the "Save" button
+    document.getElementById('saveButton').addEventListener('click', function() {
+        const itemsProduced = document.getElementById('itemsProduced').value;
+
+        if (itemsProduced) {
+            const currentDate = new Date().toLocaleDateString();
+            const productionData = {
+                date: currentDate,
+                itemsProduced: parseInt(itemsProduced)
+            };
+
+            // Get the current history from localStorage
+            const history = JSON.parse(localStorage.getItem('productionHistory')) || [];
+
+            // Add the new data to the history array
+            history.push(productionData);
+
+            // Save the updated history back to localStorage
+            localStorage.setItem('productionHistory', JSON.stringify(history));
+
+            // Update the production output on the page
+            document.getElementById('productionOutput').textContent = `Data saved for ${currentDate}: ${itemsProduced} items produced.`;
+
+            // Reload the history display
+            loadProductionHistory();
+        } else {
+            alert('Please enter a valid number of items produced.');
+        }
+    });
+
+    // Event listener for the "Reset" button
+    document.getElementById('resetButton').addEventListener('click', function() {
+        // Clear all production history from localStorage
+        localStorage.removeItem('productionHistory');
+        document.getElementById('productionOutput').textContent = 'Production history has been reset.';
+
+        // Reload the history display (which will now be empty)
+        loadProductionHistory();
+    });
+</script>
+
+</body>
+</html>

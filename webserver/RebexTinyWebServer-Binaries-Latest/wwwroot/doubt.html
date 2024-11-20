@@ -1,0 +1,70 @@
+<html>
+<head>
+    
+
+</head>
+<body>
+
+</body>
+<script>
+        class Logic
+        {
+           constructor(numbers)
+           {
+                this.numbers=numbers;
+                this.message="great";
+           }    
+
+           getAllNumbers()
+           {
+            return this.numbers;
+
+           }
+
+           storeItinBrowser()
+           {
+                localStorage.setItem("k1",this.message);
+           }
+
+           getitfrombrowser()
+           {
+            console.log("let us think how to get it");
+           }
+
+        }
+
+        function check()
+        {
+            /*
+                let x=[2,3];
+                let l = new Logic(x);
+                //l.storeItinBrowser();
+                l.getitfrombrowser();
+                console.log(l.getAllNumbers());
+
+                */
+				localStorage.setItem("myCat", "Tom");
+                
+                
+
+
+
+        }
+
+        function check2()
+        {
+            let x = sessionStorage.getItem("k1");
+            console.log("reading from sessionstroage",x);
+        }
+
+        check();
+       // check2();
+
+
+
+
+
+        
+</script>
+</html>
+

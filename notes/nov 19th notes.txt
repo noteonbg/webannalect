@@ -1,0 +1,393 @@
+what was yesterday
+dont talk complicated words, example oops.. no just tell i know class.
+what is a class, it is data type..(content + operations)
+after doing this.. 
+
+we do two things.
+
+1.  define the class ( we will this is content, this is operations)
+== we taught the system hey look here is my data type..
+
+2. we are creating the object.. using the class .. ( using the data type)
+let i =3;// this is way we are using the number data type..
+let x=new Task();// we are teaching the system hey look whatever type I told you
+earlier now i am using it..
+
+using the data type... creating the variable of it and performing operations..
+let x =new TaskLogic(); //creating the object
+x.addTask(new Task(1,"A","running")); //doing the operation.
+
+2. what is benefit.. we avoided global things...
+we can create the object of the productlogic in event handling part..
+
+"accidentally or intentionally not being conscious about the data type
+of the variable we see is a sin as a programmer"
+
+
+where are we.
+1. html, setup events, write javascript  ( event handling part, logic part)
+little bit of css usage.. css can be applied via javascript usually applied via classes
+of css. css selector..  declaration, attribute property.. hopefully some tiny story
+on box model... padding, margin..
+
+
+what do we next..
+1. know how localstorage and session storage in web applications work..
+2. css layouts.. little bit..
+3. add css to all our code which we have written so far make it decent.
+
+login page..
+postlogin page -logout
+	1. problem statement 1
+	2. problem statement 2.
+logout..
+
+4. trying to modify javsacript code.. for closures function within function.. 
+5. accessibility part of css, aria..
+
+
+localstorage
+sessionstorage
+what are these, what is document..
+
+read official things irrespective of whether we understand or dont understand..
+
+localstorage... 
+we want to store data in the browser.. then you should consider local storage..
+data is stored even when you close the browser..
+
+product 
+add
+update
+getllproduct
+applydiscount..
+
+when the page gets loaded.. go to the local storage pick up things which 
+are stored and ensure product array has got that contents..
+
+have one more button in the ui.. store things. when you click on store things
+then it should store the things in the local storage.
+
+how to store the data.. simple
+localStorage.setItem('key', data here..);
+
+extract the data.
+const storedCount = localStorage.getItem('key');
+
+intent is to store things in the client browser..
+
+problem statement 1, array of products
+that array of products need to stored in the local storage..
+you need add two functions in your logic part of javascript..
+
+storeitinbrowser..  have an extra button called store it, clicking on it should 
+call this function..
+getitfrombrowser.  --- when page is loaded.. "domcontentloaded" immediately call the
+getitfrombrowser
+
+
+when did see the output of our program, if somebody tells long time ago.. that means
+we have a met a poet who is acting like programmer..
+
+localstorage .. you can store data and when you close the browser and you open
+the browser the data should be retrievable..
+
+when we get struck are we willing to do a poc. rather than sticking "big problem"
+
+web.. working with http...
+
+what is a session..? people chew the brain, relax...
+session means some data that needs to be stored over multipe requests
+for a particular client.
+
+what data.
+show you have multiple requests and data is stored.
+
+
+
+
+
+login...
+
+userid is x.
+and password is y then login is successful
+else login has failed..
+
+you put userid in  session...
+
+then you to postlogin page...
+
+localStroage  -- you need to store information and retrieve it when you close the browser
+also and then open the browser
+sessionStroage  -- data that needs to survivie over multiple requests for a particular user
+login, logout
+
+
+
+JSON..
+
+add.html..
+add two links to problemstatement1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+session. like a notice board.
+
+1. where did you write to the noticeboard.. login
+2. where are you going to read from the notice board to know did the user login or not..
+add.html, logout.html
+3. when you are clear the notice board logout.html.
+sessionStorage.removeItem("loggedIn");
+
+
+localStorage  --if you want store data after the browser is closed also and later
+n after some time let us after 1 week open the brower data which i stored should
+still be there...  option is localstorage 
+
+
+sessionStorage..
+your browser is open, if you close it session is not longer accessible for you..
+
+
+keep me signed in for 2 weeks. ==localstroage
+remember my userid... == 
+any who tells remember anything after you close the browser also.. it must be
+local storage.
+
+session storage.
+1. information
+2. store the 1 over multiple requests for a particular client
+
+why are we learning this..
+1. problem statement 1 and problem statement 2... we need to implement login
+postlogin and logout.. we need to session.. storage..
+
+2. the array of products.. needs to be stored permenanetly e when we close the browser
+and open it tomorrow i want to see what products where added today ... that means
+we need local storage.. they are stored in the browser accessible file..
+
+today if you are adding an element inthe product array.. and then we close the browser.
+and then we open the browser.. is element we added still available in the array.
+
+during login you will put something into session storage give a key and value..
+where you wanted to know the guy did login... you will check for that key...
+when you tell logout, you will remove the key, as a result value also will be removed.
+
+you look at the files.
+day6poc\pocpoc  folder.
+
+here look at 
+login.html
+add.html
+logout.html
+and see whether it works in your system first..
+
+day7cssbasics\a12poc.
+1.login.html
+2.logout.html
+3.postlogin1.html
+
+now what to do...
+
+in login.html  of day7cssbasics\a12poc.. add the logic for login. which you
+see in login.html of day6poc\pocpoc
+
+in postlogin1.html of day7cssbasics\a12poc
+in logout.html... find out what logout logic written in add.html imitae the same logic
+in postlogin1.html of day7cssbasics..
+
+how do you punish a programmer?
+give him code written by somebody else and ask him to make changes.. this is what
+real life..
+
+login.. successfully
+1. postlogin page..
+ in postlogin page you will three links
+
+	1. adding of two numbers.
+	2. problem tatement 1
+	3. problem statmenet 2
+	4. ..employee
+
+what is need in add.html
+problem statement1
+problem statement2
+
+it just a needs a link for logout..
+
+if you logged out
+you should not be able to see add.html or ps1.html
+
+dont get distracted focus on what has been said...
+1. while doing this assignment make liberally usage of css used in day 7\
+
+focus on getting day7 login, postlogin, logout and adding link in postlogin
+
+check list. ( your folder should contain 4 files, login.html, postlogin1.html, add.html,
+logout.html) ...
+
+1. login ... login logic, sessionstorage writing..
+2. postlogin,, checking if login... else go back to login page.
+2.1 in postlogin,hyperlink to add.html.
+2.2 logout logic in postlogin taking to logout.html. which will ask do you want to logout
+if yes only logout..
+3. add.html .. header footer all consistant in look.
+checking if user logged in.
+you need a section in header which tells welcome user, logout same like postlogin in add.html
+when we click on logout, same logout logic as postlogin.
+4. in logout.html
+check if user logged in
+if yes remove the key from session storage.
+if not logged in , take him to login page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------
+so called future...
+1. css.. needs to join the bootstrap party..
+2. javascript has to meet this thing called jquery...
+
+
+version =html,javascript, css without any framework
+login
+postlogin
+ps1
+ps2
+logout..
+
+version2 =html, javascript + jquery, css +bootstrp 
+
+version 3 == let us how fast you can make this application work...
+
+
+
+
+
+
+
+
+
+

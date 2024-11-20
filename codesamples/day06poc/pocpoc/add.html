@@ -27,11 +27,15 @@
     <script>
         window.onload = function() {
             // Check if the user is logged in
-            if (!sessionStorage.getItem("loggedIn")) {
+            if (!sessionStorage.getItem("color")) {
+
+                window.location.href = "login.html";
+                /*
                 document.getElementById("loginError").innerText = "You must be logged in to perform this action.";
                 setTimeout(function() {
                     window.location.href = "login.html"; // Redirect if not logged in
                 }, 2000);
+                */
             }
         };
 

@@ -30,7 +30,7 @@
 
             // Simple hardcoded validation
             if (username === "poc" && password === "pass") {
-                sessionStorage.setItem("loggedIn", "true");
+                sessionStorage.setItem("color", "green");
                 window.location.href = "add.html"; // Redirect to add.html page
             } else {
                 document.getElementById("error").innerText = "Invalid username or password.";

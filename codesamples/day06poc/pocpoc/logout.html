@@ -19,13 +19,13 @@
 
     <script>
         function logout() {
-            sessionStorage.removeItem("loggedIn");
+            sessionStorage.removeItem("color");
             window.location.href = "login.html"; // Redirect to login page
         }
 
         // Check if the user is already logged out
         window.onload = function() {
-            if (!sessionStorage.getItem("loggedIn")) {
+            if (!sessionStorage.getItem("color")) {
                 window.location.href = "login.html"; // Redirect if not logged in
             }
         };

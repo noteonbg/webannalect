@@ -1,7 +1,7 @@
 /* Container that uses flex layout */
 .container {
     display: flex;
-    flex-wrap: wrap;            /* Allows items to wrap if necessary */
+    flex-wrap: nowrap;            /* Allows items to wrap if necessary */
     justify-content: space-between;  /* Distributes items with space between */
     align-items: center;        /* Aligns items vertically in the center */
     align-content: space-around;  /* Distributes rows with space around */

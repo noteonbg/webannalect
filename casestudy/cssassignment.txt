@@ -1,0 +1,183 @@
+assingment 1
+
+ Assignment: Flex Layout in CSS for Advertisement Design
+
+
+
+Task 1: Advertisement Banner Layout
+
+Description:  
+Design a flexible advertisement banner that contains a headline, an image, and a call-to-action button. The layout should adjust itself based on screen size (responsive design) using the Flexbox layout system.
+
+ Requirements:
+1. Container:
+   - The container should have a width of `100%` and a background color of your choice.
+   - It should be a flex container that holds all the elements inside it.
+   
+2. Headline:
+   - Create a headline (e.g., "Special Offer!") that should be aligned to the left side of the container.
+   
+3. Image:
+   - Place an image (for example, a product image or promotional graphic) on the right side of the container.
+   - The image should be responsive and adjust its size according to the container’s width.
+   
+4. Call-to-Action Button:
+   - Create a button with the text "Shop Now" or something similar.
+   - The button should be centered in the container, below the headline and image.
+   - The button should be styled with padding, background color, and hover effects (e.g., change color on hover).
+   
+5. Responsive Design:
+   - On small screen sizes (mobile), the headline, image, and button should stack vertically, taking up the full width of the container.
+   - On larger screens (tablet and desktop), the layout should be in a row, with the headline on the left, the image on the right, and the button below the headline.
+
+---
+
+may be tips
+
+ Use the Flexbox layout model to achieve the following:
+   1. Use `display: flex` on the container to create a flexbox context.
+   2. Use `flex-direction: row` for larger screens and `flex-direction: column` for smaller screens (use media queries to adjust this).
+   3. Use `justify-content` and `align-items` properties to align elements inside the container.
+   4. Use `flex` properties on the elements inside the container to control their relative sizes.
+
+
+
+Custom Styling and Animation
+
+peferable
+
+- Add a hover effect on the image (e.g., a slight zoom-in effect).
+- Add an animation to the call-to-action button when the page loads (e.g., a smooth slide-in from the bottom).
+- Use CSS transitions for smooth effects.
+
+
+
+  
+Ensure that the layout works well across different screen sizes and devices, and that it is visually appealing.
+
+--- 
+
+ Example Screenshot:
+
+The layout should look something like this on desktop:
+
+
+|-------------------- Advertisement Banner --------------------|
+| Headline  |                       Image                      |
+|-----------|---------------------------------------------------------|
+|                   Call to Action Button (Centered)          |
+|-------------------------------------------------------------|
+```
+
+On mobile, it should look like this:
+
+
+|-------------------- Advertisement Banner --------------------|
+|                         Headline                           |
+|-------------------------------------------------------------|
+|                          Image                             |
+|-------------------------------------------------------------|
+|                   Call to Action Button                    |
+|-------------------------------------------------------------|
+
+--------------------------------------------------------------------------------------
+
+problem statement 2
+
+CSS Grid Layout for Media Management Dashboard
+
+Media Management Dashboard Layout
+
+Description:
+Design a simple media management dashboard that includes sections for:
+   Header with a title or navigation
+   Sidebar for filtering or navigation links
+   Main content area** displaying a grid of media items (e.g., images, videos)
+   Footer with copyright or information links
+
+The layout should adapt to different screen sizes using CSS Grid, making sure the dashboard looks good on both desktops and mobile devices.
+
+Requirements:
+
+1. Container:
+    The main container of the dashboard should use CSS Grid.
+    The container should have a **header**, **sidebar**, **main content**, and **footer** section.
+
+2. Header:
+    The header should be at the top of the page and span across the full width of the container.
+    Include a simple title like "Media Dashboard" or similar.
+
+3. Sidebar:
+    The sidebar should be a vertical column on the left side of the screen.
+    It should include links or buttons for filtering media (e.g., "All Media", "Images", "Videos").
+    The sidebar should be a fixed width, and content in it should stack vertically.
+
+4. Main Content Area:
+    The main content should display media items in a grid layout.
+    Use `grid-template-columns` to create a responsive grid of items.
+    Each media item can be represented by a simple card-like structure containing an image (or placeholder), title, and media type (e.g., "Image", "Video").
+    The grid should automatically adjust the number of columns based on the screen width (3 columns on desktop, 2 columns on tablet, 1 column on mobile).
+
+5. Footer:
+    The footer should be at the bottom of the page and span across the full width of the container.
+    Include placeholder text like "© 2024 Media Management, All Rights Reserved."
+
+
+if useful tips
+
+ Use the CSS Grid layout to organize the content. Your grid should consist of 4 main areas: **Header**, **Sidebar**, **Main content**, and **Footer**.
+ In the Main Content area, use a grid layout to display media items.
+   For example: 
+    css
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+Use `grid-template-rows` to define the height of rows if necessary, but focus mainly on using `grid-template-columns` for responsiveness.
+Use media queries to adjust the layout for different screen sizes:
+On large screens (desktop), display the sidebar and media grid side by side.
+On smaller screens (tablet and mobile), stack the sidebar and media grid vertically.
+
+nice to have
+- Add hover effects on the sidebar links (e.g., change background color or font weight when hovered).
+- Make the sidebar collapsible on smaller screens (mobile) by toggling its visibility.
+
+Example Layout:
+
+Desktop View:
+
+|----------------------------------------|
+|           Header: Media Dashboard      |
+|----------------------------------------|
+| Sidebar |        Main Content Grid     |
+|         |  [Image Card] [Video Card]    |
+|         |  [Image Card] [Image Card]    |
+|         |  [Video Card] [Image Card]    |
+|         |  [Image Card] [Image Card]    |
+|----------------------------------------|
+| Footer: © 2024 Media Management       |
+|----------------------------------------|
+
+
+Mobile View:
+
+
+|----------------------------------------|
+|           Header: Media Dashboard      |
+|----------------------------------------|
+| Sidebar  (stacked below header)       |
+|----------------------------------------|
+| Main Content Grid (1 column layout)   |
+|----------------------------------------|
+| Footer: © 2024 Media Management       |
+|----------------------------------------|
+
+
+
+
+
+
+
+

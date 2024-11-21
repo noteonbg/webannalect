@@ -1,3 +1,29 @@
+what to do
+
+phase 1
+login, logout given by me.. postlogin given by me, adding of two numbers.. 
+
+phase 2  ( no need for login, logout)
+build your postlogin screen
+problem statement 1
+problem statement 2
+employee statement given yesterday
+
+
+
+phase 3.  ( dont build any javascript, just build html, css with some dummy data..)
+employee case study.. login.search elemployee ile p
+1. login
+2. postlogin... search, upload ..search page
+3. logout..
+
+
+
+
+
+
+
+
 Day 1  -- 4th Nov
 
 Problem Statement 1: Product Management System

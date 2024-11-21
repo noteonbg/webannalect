@@ -1,0 +1,185 @@
+discussion with your mentors
+1. poc1
+2. poc2
+3. employee... starting from login, postlign, logoff
+
+zoom out.. that css layouts ... we have heard something..
+
+1. problems statement 1  ( almost did it without their own logic)
+2. problem statement  2.  ( shaky  )
+
+
+telescope..
+we can get a dialog without using any framework, that that is unnecessary peice of code
+
+telescope is..
+1. you need to be good at html  (5/5), javascript(3/5)  and css(2/5)
+5/5 in everything, i think they should get concious..
+
+all feedback should be acted upon by collecting details.
+
+1. login.html -- separgte page
+2. postlogin.html  -- separate page is justified
+3. adding of two numbers.  -- need not be justified..
+4. problemstatement1.html  -- SP
+5. problemstatmen2.html   --SP
+6. employee.html --A cousin
+7. logoff.html where you taking a confirmation logging off
+
+
+feedback given
+1. why separate pages are given
+2. we need to be good at css and html
+3. usage of form tag... why use form tag..
+
+what is a form...
+grouping some data that needs to be sent some where..
+
+
+html, javascript,add css to it.
+html,css... and then add javascxript
+
+why did you not use form tag..
+
+i did not have the need for using method and action...
+
+
+you stick with the css whatever we have suggested in the login, postlogin..
+1. problems statement 1.
+2. problem statement 2
+
+employee case study..
+1. you come with your own css for each of the screens with no javascripot.
+
+
+
+phase 1
+login, logout given by me.. postlogin given by me, adding of two numbers.. 
+phase 2  ( no need for login, logout)
+build your postlogin screen
+problem statement 1
+problem statement 2
+employee statement given yesterday
+
+phase 3.  ( dont build any javascript, just build html, css with some dummy data..)
+employee case study.. login.search elemployee ile p
+1. login
+2. postlogin... search, upload ..search page
+3. logout..
+
+we have to be good at css.
+1.
+
+
+
+
+
+
+<table class="table table-dark">
+table tag , we are apply two css classes one called table, other called table-dark.
+
+<h1 class="a b">
+for h1 tag we are applying two classes a and b.
+
+no matter whatever web project we are building today..we use framework
+in css also we use frameworks.. especially for table formatting, layout ....we dont use raw
+css . good to know raw css formatting.. but framework  usage so what does it mean dont by heart any
+property of css.
+
+basics of css.
+0. looking at existing code and making some new code based on existing styles..
+1. selector property..
+2. box model. padding, margin..
+3. different kind of layouts available.. block, flex, grid, 
+4. responsive ui... it means depending on the device we adapt the css properties..
+
+whether it is javascript or css. we can include one css in another css.
+we can include one javascript n another javascript..
+
+html
+keep javascript separate
+keep css separate..
+
+production.js
+main.js , in main.js i am using functions of production.js
+hello.html.. where we are using main.js.
+
+<link rel="stylesheet" href="main.css"> 
+
+you are in main.css
+
+hardest thing to do in css...
+
+1. deciding your layout...
+block...
+flex.... usage could be high
+grid .. usage could be high..
+what is catch... once you start using frameworks, frameworks will use these layouts and give
+you new syntax..
+
+your assignment css usage...
+
+1. phase i .. my design
+2. phase2 .. you put your design you dont need login, logout..
+3. phas3 -- everything is your design.. html and css.
+
+I want to work on css..
+
+
+
+phase i   -- html, javascript, css   ( html, jquery, bootstrap)
+phase ii   -- html, javsacript, css,  (html, jquery, bootstrap)
+phase iii    --html,css 	.. html, bootstrap, jquery UI
+
+
+
+
+
+
+we will join back at 2.40PM after lunch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

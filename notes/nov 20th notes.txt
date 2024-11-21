@@ -1,0 +1,84 @@
+
+1. we will quick intro to layouts..
+2. we will look various measurements used..
+3. problem statement.. complete it today itself..
+
+login.html
+postlogin1.html
+hyperlinks..
+1. add.html   -- header, footer, logout
+2. pbs1 .html -- header, footer, logout..
+
+when we talk about web presentation
+we should be clear what are the target devices we are targeting..with what resolution..
+
+which browsers are you targeting..
+
+
+CSS layouts.. please dont byheart the property know what each layout does..
+
+flex layout
+
+
+
+display property..
+
+
+
+<h1> hello </h1>
+<p> great </p>
+
+we will using a word Frameworks... Bootstrap framework.. again syntaxes will change..
+so that is reason i dont want you to byheart the syntax..
+
+units
+1. absolute units
+2. relative units..
+
+what do you know about css.
+1. selector..
+2. declaration
+3. attribute value..
+4. #, ., :
+5. box model.
+6. tiny story you are hearing about.. layout, measurement units...
+
+once in the project
+find out are they using any frameworks for css. if yes. learn it..
+bootstrap
+tailwind
+
+dont touch any new thing...
+1. you are doing a case study... 
+in that case study whatever css is being used try to understand..
+and implement it in poc1...
+
+login
+postlogin1
+
+add 
+problem statement 1
+employee scenario 2
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

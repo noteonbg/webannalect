@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo img {
+    width: 100px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+/* Content Styles with Flex Layout */
+.content {
+    display: flex;                  /* Enable Flexbox layout */
+    justify-content: space-between; /* Space out the sections evenly */
+    gap: 20px;                      /* Space between sections */
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+/*
+
+Flex Container: The .content class is the flex container, which contains
+ the three sections (section).
+Flex Items: The three section elements are the flex items.
+Flex Growth: flex: 1; ensures all sections have equal width and
+grow/shrink as necessary based on the container's size.
+Spacing: gap: 20px; gives consistent space between each section, without
+needing to manually apply margins to individual sections.
+
+*/
+
+section {
+    background-color: #e2e2e2;  /* Light grey background for each section */
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;                     /* Make each section flexible (takes equal space) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: slight shadow effect */
+}
+
+section h2 {
+    color: #003366;
+    font-size: 1.5em;
+}
+
+section p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+
+/* Responsive Flex Layout for Small Screens */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;   /* Stack the sections vertically */
+        align-items: center;      /* Center the sections horizontally */
+    }
+}

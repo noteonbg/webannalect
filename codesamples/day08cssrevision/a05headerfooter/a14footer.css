@@ -1,0 +1,86 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;   /* Distribute space evenly */
+    align-items: flex-start;          /* Align items at the top */
+    background-color: #333;           /* Dark background */
+    color: white;                     /* White text */
+    padding: 20px;
+    flex-wrap: wrap;                  /* Allow sections to wrap on smaller screens */
+}
+
+.footer-section {
+    width: 23%;                       /* Each section takes up 23% of the footer width */
+    margin-bottom: 20px;               /* Space between sections */
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style-type: none;             /* Remove bullet points */
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;                /* Space between links */
+}
+
+.footer-section ul li a {
+    text-decoration: none;             /* Remove underline */
+    color: white;                      /* White text */
+}
+
+.footer-section ul li a:hover {
+    color: #ff6347;                    /* Change color on hover */
+}
+
+/* Social Media Section */
+.social-media {
+    display: flex;
+    gap: 10px;                         /* Space between social icons */
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #444;            /* Slightly lighter background for icons */
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.social-icon:hover {
+    background-color: #ff6347;         /* Change background color on hover */
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;        /* Stack sections vertically on small screens */
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;                   /* Make each section take full width */
+        text-align: center;            /* Center the text */
+    }
+
+    .social-media {
+        justify-content: center;       /* Center the social media icons */
+    }
+}

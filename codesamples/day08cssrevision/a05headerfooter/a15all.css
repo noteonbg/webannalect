@@ -1,0 +1,159 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;  /* Space between logo and navigation */
+    align-items: center;             /* Center vertically */
+    background-color: #333;          /* Dark background */
+    color: white;                    /* White text */
+    padding: 10px 20px;              /* Padding around the header */
+}
+
+.header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;                   /* Horizontal navigation */
+}
+
+.nav li {
+    margin: 0 15px;                  /* Space between list items */
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.nav a:hover {
+    color: #ff6347;                  /* Hover effect on links */
+}
+
+/* Subheader Section */
+.subheader {
+    background-color: #f2f2f2;       /* Light gray background */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;  /* Space between welcome message and logout link */
+    align-items: center;             /* Center vertically */
+}
+
+.welcome-message {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.logout-link {
+    text-decoration: none;
+    color: #ff6347;
+    font-weight: bold;
+}
+
+.logout-link:hover {
+    color: #333;  /* Change color on hover */
+}
+
+/* Main Body Section */
+.body-content {
+    padding: 20px;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: space-between;   /* Space between footer sections */
+    align-items: flex-start;          /* Align items at the top */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    flex-wrap: wrap;                  /* Allow sections to wrap on smaller screens */
+}
+
+.footer-section {
+    width: 23%;                       /* Each section takes up 23% of the footer width */
+    margin-bottom: 20px;               /* Space between sections */
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style-type: none;             /* Remove bullet points */
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;                /* Space between links */
+}
+
+.footer-section ul li a {
+    text-decoration: none;             /* Remove underline */
+    color: white;                      /* White text */
+}
+
+.footer-section ul li a:hover {
+    color: #ff6347;                    /* Change color on hover */
+}
+
+/* Media Query for Responsive Layout */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;        /* Stack the header items vertically */
+        align-items: center;           /* Center the content */
+    }
+
+    .nav ul {
+        flex-direction: column;        /* Stack navigation items vertically */
+        align-items: center;           /* Center navigation items */
+    }
+
+    .footer {
+        flex-direction: column;        /* Stack footer sections vertically */
+        align-items: center;           /* Center footer sections */
+    }
+
+    .footer-section {
+        width: 100%;                   /* Each section takes full width */
+        text-align: center;            /* Center the text */
+    }
+}

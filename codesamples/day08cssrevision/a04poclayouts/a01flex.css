@@ -5,9 +5,9 @@
     justify-content: space-between;  /* Distributes items with space between */
     align-items: center;        /* Aligns items vertically in the center */
     align-content: space-around;  /* Distributes rows with space around */
-    gap: 10px;                  /* Sets space between flex items */
+    gap: 30px;                  /* Sets space between flex items */
     height: 100vh;              /* Full viewport height */
-    border: 2px solid black;    /* Just for visual clarity */
+    border: 4px solid black;    /* Just for visual clarity */
   }
   
   /* Flex items (the boxes) */

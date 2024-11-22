@@ -1,0 +1,180 @@
+1. not to byheart any css properties at the same time.. go randomly exploring css.
+2. if html is not fixed and it is shaky.. thinking of css is quite a bad process.
+3. ensure your html, css and javascript
+folder
+   html pages
+   js\js file
+   css\css file
+
+phase1
+    1. login, postlogin. logoff
+
+phase 2
+phase 3
+
+We should just refuse anything that tells there is "lot of things to learn" is mainly because of not generalizing enough
+refuse to learn syntaxes.. just think of syntax as on need basis you will find out..
+
+telescope... always products come with features first and then standards move slowly to have those features..
+playing video in the html page is normal thing.. video tag..
+once upon a time.. real player and which was plugin needed to play the video.
+
+what all frameworks we use in the project at presentation level.. = more opinions of doing the same thing with different syntaxes..
+in name of making things easier..
+
+framework == opinion...  == generalizing your learning..
+
+css..
+1. layout of the html page should be clear for you
+2. start learning the syntax for writing header.. start footer, start syntax for the body..
+3. you make a list of html page designs you are looking for..
+
+
+framework..
+0. our loyalty is towards project
+1. which layer of architecture it fits in.  -- jquery.. web based presentation.. level
+2. it will have an opinion on how to do things..--you to have know what its opinion..
+3. which programming language does it support.
+4. we have to start using its functions and objects...
+
+
+
+
+
+
+with respect to jquery..
+
+1. to use jquery include the jquery file from a CDN (content delivery network)
+2. any product, they guy wants everybody to use it, so is jquery..
+he will provide userguide and documentation..
+
+1. you told let me wait till page is loaded... (
+domcontentloaded event with the document object.
+that becomes
+
+for people who try to remember syntax, "Hell" is about to begin..
+
+what we want do with jquery..
+
+1. when the page is loaded, setup events.
+2. access sections of the html
+3. know which section we are accessing.. input box, div or span
+4. read its content or change its content.
+5. use css along with it..
+
+in javascript we split our code into two parts.
+1. logic part  -- will not change because of jquery  -- project specific thing..
+
+2. ui ( event handling,accesing html )  --this part will change.
+
+
+for all logic functions what is most important thing you are looking for?
+all logic functions should return... something. based on which we can judge whether function succeeded or failed.
+if your logic function did not return, it was not a logic function..
+
+ui will all the logic function
+and ui has to know whether logic function succeeded or failed.
+why basedon that only ui will upate itself..
+
+when in doubt can you write a small program.
+
+
+
+$(document).ready(()=>{} );  --earlier version
+or
+$(()=>{});  lter version 
+
+what is equivalent this in javascript
+
+document.addEventLIstener("domcontentloaded
+
+
+$('#addButton').click(()=>{});  // registering for event..
+$('#addButton').click();// event has occured
+
+$('#num1').val()  , get the value of the textbox
+
+document.getElementById("num1").value;
+
+#("#num1").va1("23");
+
+when ever you are seeing fuction calls and open ocumentation and see what it does..
+
+
+jquery
+1. setup events
+2. access parts of html
+3. do some logic
+4. change the parts of html
+
+javascript == super set
+library == ready made functions written in javascript which make thing "simpler" hopefully.
+
+
+
+
+what part of the page, will change , what part will not change..
+what all events you want to react to..
+layout of the page..
+
+
+
+
+$(()=>{
+        console.log("please work");
+    });
+
+if you hate the above you should work on jquery.. because you are not agreeing to jquery opinion..
+
+doing kichadi stuff. of mixing raw javascript and jquery syntax together.. for ui manipulation bad idea..
+once you start using jquery, start using jquery way of doing things..
+
+
+//registering for the event domcontentloaded..
+
+
+
+we are calling $ function and we are passing another function as input argument to it.
+what does it mean..
+
+$ function entire page is loaded, then call the function which we passed.
+
+
+
+
+IT industry... side effect  == lot of noise in the brain
+    
+
+how do you know jquery is working
+if jquery function is working, it means jquery is working.
+
+if you are back let me know..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+

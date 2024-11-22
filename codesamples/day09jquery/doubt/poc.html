@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title> when in doubt do a poc</title>
+    </head>
+<body>
+    <h1> small program which works that is poc</h1>
+
+    <input type="text"  id="t1" placeholder="poc making"/>
+    <br/><input type="text" id="t2" readonly placeholder="result"/>
+    <button id="b1"> poc on jquery</button>
+    <div id="nfe"> result</div>
+
+    <!-- logic read the text box value multiply by 2 and then
+     show the result in t2 textbox as well as the div region -->
+
+
+
+    
+
+
+  
+
+
+</body>
+ <!-- below line tells we want to use jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!--start using jquery in your JavaScript-->
+<script>
+
+    //old skill
+    class Logic
+    {
+        nextnumber(n) { return n+1;}
+
+    }
+
+
+    /*
+        set jquery
+        set up event hanlding in jquery
+        read textbox values..
+        change some non textbox content in the html
+
+    */
+
+    $(()=>{
+        
+            $("#b1").click(()=>{
+
+                const tbv= $("#t1").val();
+                
+                const lo = new Logic();
+                const result = lo.nextnumber(parseInt(tbv));
+                $("#t2").val(result);
+                 $("#nfe").text(result);
+            }
+            );
+
+    });
+    
+
+
+</script> 
+
+
+
+
+
+
+
+</html>

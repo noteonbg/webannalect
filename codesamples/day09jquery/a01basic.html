@@ -95,6 +95,9 @@
       }
     }
 
+
+
+//jquery part begins
     $(document).ready(function() {
       // Instantiate the Calculator class
       const calc = new Calculator();
@@ -104,7 +107,7 @@
         const num1 = parseFloat($('#num1').val());
         const num2 = parseFloat($('#num2').val());
         const result = calc.add(num1, num2);
-        $('#addResult').text(result); // Display addition result
+        $('#addResult').text("hello"); // Display addition result
       });
 
       // Handle the division button click

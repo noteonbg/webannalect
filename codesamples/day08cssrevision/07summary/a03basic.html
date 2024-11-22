@@ -1,0 +1,54 @@
+<!--
+
+CSS Grid Layout, fr (short for "fractional unit") is a flexible unit of
+ measurement used to distribute available space in a grid container.
+  It is a relative unit that represents a fraction of the available space
+   in the grid container after considering other fixed-size items 
+   (like those defined in px, em, etc.).
+
+The fr unit helps in creating layouts where elements automatically
+ adjust their size based on the container's dimensions.
+
+How fr Works:
+When you use fr in a grid layout, it divides the space between the grid items.
+For example, if you set grid-template-columns: 1fr 2fr;, the available space will
+ be divided into 3 equal parts (1 + 2 = 3), and the first
+  column will take 1 part, while the second column will take 2 parts.
+   The total space will be split in a 1:2 ratio.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid with fr Unit</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr; /* 3 columns with fractions of available space */
+      gap: 10px; /* Space between grid items */
+      padding: 20px;
+      background-color: lightgray;
+    }
+
+    .grid-item {
+      background-color: lightblue;
+      padding: 20px;
+      text-align: center;
+      border: 2px solid #007BFF;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+  </div>
+
+</body>
+</html>

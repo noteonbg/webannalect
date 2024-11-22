@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout - Header, Footer, and Two Sections</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* Reset margin and padding for all elements */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Main container using Flexbox */
+    .container {
+      display: flex;
+      flex-direction: column;  /* Stack header, body, and footer vertically */
+      height: 100vh;  /* Full viewport height */
+    }
+
+    /* Header styles */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    /* Body section container using Flexbox */
+    .body {
+      display: flex;
+      flex: 1;  /* Take up the remaining space between header and footer */
+      justify-content: space-between;  /* Space out the two sections */
+      padding: 20px;
+    }
+
+    /* Individual sections */
+    section {
+      background-color: #f4f4f4;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /*
+
+    
+We will use:
+flex-grow to control how much a section should grow relative to others when there’s extra space.
+flex-shrink to control how much a section should shrink relative to others when there’s not enough space.
+flex-basis to set the initial size of each section before any growing or shrinking happens.
+The Flexbox Shorthand: flex
+The flex shorthand property is a combination of:
+
+flex-grow: The factor by which the element should grow if there’s extra space.
+flex-shrink: The factor by which the element should shrink if there’s not enough space.
+flex-basis: The initial size of the element before any growing or shrinking happens.
+
+flex-item {
+  flex: flex-grow flex-shrink flex-basis;
+}
+  
+
+   */
+
+    /* First section (smaller space) */
+    .section-1 {
+      flex: 1;  /* Takes less space */
+    }
+
+    /* Second section (larger space) */
+    .section-2 {
+      flex: 3;  /* Takes more space */
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main container -->
+  <div class="container">
+    
+    <!-- Header Section -->
+    <header>
+      <h1>Manufacturing Dashboard</h1>
+    </header>
+
+    <!-- Body Section with Two Columns -->
+    <div class="body">
+      <!-- Left Section (smaller) -->
+      <section class="section-1">
+        <h2>Production Overview</h2>
+        <p>Details about the production status, goals, and performance.</p>
+      </section>
+
+      <!-- Right Section (larger) -->
+      <section class="section-2">
+        <h2>Machine Performance</h2>
+        <p>Insights on machine performance, efficiency, and downtime.</p>
+      </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Manufacturing Company</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Search Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Left-hand Sidebar */
+        .sidebar {
+            background-color: #333;
+            color: white;
+            width: 200px;
+            padding-top: 20px;
+            position: fixed;
+            height: 100%;
+            top: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar a:hover {
+            background-color: #007bff;
+        }
+
+        /* Main Content Area */
+        .content {
+            margin-left: 200px;
+            width: 100%;
+            padding: 20px;
+            flex: 1;
+        }
+
+        /* Search Box Container */
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .search-container button:hover {
+            background-color: #218838;
+        }
+
+        /* Table for search results */
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .results-table th,
+        .results-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .results-table th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Medical Search Portal</h1>
+    </header>
+
+    <div class="sidebar">
+        <a href="#" id="add-medication">Add Medication</a>
+        <a href="#" id="doctor-info">Doctor Information</a>
+        <a href="#" id="hospital-info">Hospital Information</a>
+    </div>
+
+    <div class="content">
+        <!-- Search Box Section -->
+        <div class="search-container">
+            <input type="text" id="search-box" placeholder="Search for medical conditions...">
+            <button onclick="searchResults()">Search</button>
+        </div>
+
+        <!-- Results Section (Table) -->
+        <section id="results-section">
+            <h2>Search Results</h2>
+            <table class="results-table" id="results-table">
+                <thead>
+                    <tr>
+                        <th>Condition</th>
+                        <th>Description</th>
+                        <th>Treatment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Asthma</td>
+                        <td>Chronic disease involving the airways in the lungs.</td>
+                        <td>Inhalers, steroids, lifestyle changes</td>
+                    </tr>
+                    <tr>
+                        <td>Diabetes</td>
+                        <td>A group of diseases that result in high blood sugar levels.</td>
+                        <td>Insulin therapy, diet management</td>
+                    </tr>
+                    <tr>
+                        <td>Hypertension</td>
+                        <td>Condition where the blood pressure in the arteries is persistently elevated.</td>
+                        <td>Medications, exercise, diet</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Medical Search Portal</p>
+    </footer>
+
+    <script>
+        function searchResults() {
+            const searchQuery = document.getElementById("search-box").value.toLowerCase();
+            const resultsTable = document.getElementById("results-table").getElementsByTagName('tbody')[0];
+
+            const medicalData = [
+                { condition: "Asthma", description: "Chronic disease involving the airways in the lungs.", treatment: "Inhalers, steroids, lifestyle changes" },
+                { condition: "Diabetes", description: "A group of diseases that result in high blood sugar levels.", treatment: "Insulin therapy, diet management" },
+                { condition: "Hypertension", description: "Condition where the blood pressure in the arteries is persistently elevated.", treatment: "Medications, exercise, diet" },
+                { condition: "Cancer", description: "A disease caused by uncontrolled division of abnormal cells.", treatment: "Chemotherapy, radiation, surgery" },
+                { condition: "Influenza", description: "A viral infection that attacks the respiratory system.", treatment: "Rest, hydration, antiviral medications" }
+            ];
+
+            // Clear existing rows
+            resultsTable.innerHTML = '';
+
+            // Filter results based on search query
+            const filteredData = medicalData.filter(item =>
+                item.condition.toLowerCase().includes(searchQuery) ||
+                item.description.toLowerCase().includes(searchQuery) ||
+                item.treatment.toLowerCase().includes(searchQuery)
+            );
+
+            // Display filtered results in the table
+            filteredData.forEach(item => {
+                const row = resultsTable.insertRow();
+                row.innerHTML = `
+                    <td>${item.condition}</td>
+                    <td>${item.description}</td>
+                    <td>${item.treatment}</td>
+                `;
+            });
+        }
+    </script>
+
+</body>
+</html>

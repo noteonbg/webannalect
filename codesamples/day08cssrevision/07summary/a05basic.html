@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout - Header, Footer, and Two Sections</title>
+  <style>
+    /* Reset margin and padding for all elements */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Main container using Flexbox */
+    .container {
+      display: flex;
+      flex-direction: column;  /* Stack header, body, and footer vertically */
+      height: 100vh;  /* Full viewport height */
+    }
+
+    /* Header styles */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    /* Body section container using Flexbox */
+    .body {
+      display: flex;
+      flex: 1;  /* Take up the remaining space between header and footer */
+      justify-content: space-between;  /* Space out the two sections */
+      padding: 20px;
+    }
+
+    /* Individual sections */
+    section {
+      background-color: #f4f4f4;
+      padding: 20px;
+      margin: 10px;
+      flex: 1;  /* Make each section take equal width */
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main container -->
+  <div class="container">
+    
+    <!-- Header Section -->
+    <header>
+      <h1>Manufacturing Dashboard</h1>
+    </header>
+
+    <!-- Body Section with Two Columns -->
+    <div class="body">
+      <!-- Left Section -->
+      <section>
+        <h2>Production Overview</h2>
+        <p>Details about the production status, goals, and performance.</p>
+      </section>
+
+      <!-- Right Section -->
+      <section>
+        <h2>Machine Performance</h2>
+        <p>Insights on machine performance, efficiency, and downtime.</p>
+      </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Manufacturing Company</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+
+<!--
+
+HTML Structure:
+<header>: This section contains the title of the page and represents the header of the layout.
+<div class="body">: This container holds two <section> elements. These sections represent the body content that is split into two areas (left and right).
+<footer>: This section represents the footer of the layout, which is placed at the bottom.
+
+2. CSS Styling:
+* { margin: 0; padding: 0; box-sizing: border-box; }:
+This is a CSS reset to remove default margin and padding from all elements, ensuring that the layout behaves consistently across browsers.
+box-sizing: border-box; ensures that padding and borders are included in the element's total width and height, making calculations easier.
+.container:
+
+display: flex;: This turns the .container into a flex container, allowing us to use flexbox layout properties.
+flex-direction: column;: This arranges the child elements (header, body, footer) in a vertical stack, making the layout stack on top of each other (header on top, footer on bottom).
+height: 100vh;: The container takes the full height of the viewport, ensuring that the content stretches across the entire screen height.
+header:
+
+We give the header a dark background, white text, and centered alignment.
+The padding adds spacing around the content to make it look neat.
+.body:
+
+display: flex;: This turns the .body container into a flexbox that will align its children (section elements) horizontally.
+flex: 1;: This makes the .body section take up any available space in between the header and footer.
+justify-content: space-between;: This ensures that the two sections inside .body are spaced out with space between them.
+section:
+
+Each section element inside the .body container is styled with a light background, padding, margin, and a shadow to make it stand out visually.
+flex: 1;: This ensures that each section inside .body takes up equal width.
+box-shadow and border-radius are used to add some visual appeal to each section.
+footer:
+
+Similar to the header, the footer has a dark background, white text, and centered content.
+The footer is also given some padding for spacing.
+
+-->
+
+
+

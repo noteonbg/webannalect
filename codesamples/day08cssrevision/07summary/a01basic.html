@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flow Layout with Flexbox</title>
+  <style>
+    /* The container uses flexbox to organize child elements */
+    .container {
+      display: flex;
+      flex-wrap: wrap; /* This allows items to wrap into the next row if needed */
+      gap: 70px /* Adds space between items */
+    }
+
+    /* Child elements inside the container */
+    .item {
+      flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis: each item will take up 200px initially */
+      background-color: lightblue;
+      padding: 20px;
+      text-align: center;
+      border: 2px solid #007BFF;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+  </div>
+
+</body>
+</html>
+
+<!--
+
+display: flex;:
+The .container div uses display: flex, which turns its children (the .item elements) into flex items. Flexbox aligns the children horizontally in the available space.
+flex-wrap: wrap;:
+This property ensures that if there’s not enough space in the container for all the items in one row, the items will wrap to the next line, creating a flow-like effect.
+flex: 1 1 200px;:
+This shorthand property defines how the items should grow, shrink, and what their base size should be.
+1: The items will grow to take up remaining space.
+1: The items will shrink if necessary to fit within the container.
+200px: The initial size of each item (before they grow or shrink).
+gap: 10px;:
+Adds space between each item in the flex container
+
+
+-->

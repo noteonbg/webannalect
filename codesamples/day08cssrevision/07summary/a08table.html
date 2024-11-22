@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Header section */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Footer section */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Main content container */
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        /* Search box container */
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .search-container button:hover {
+            background-color: #218838;
+        }
+
+        /* Table for search results */
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .results-table th,
+        .results-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .results-table th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Media queries for responsiveness */
+        @media (min-width: 600px) {
+            main {
+                grid-template-columns: 1fr 3fr;
+            }
+            .search-container {
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Medical Search Portal</h1>
+    </header>
+
+    <main>
+        <!-- Search Section -->
+        <section class="search-container">
+            <input type="text" id="search-box" placeholder="Search for medical conditions...">
+            <button onclick="searchResults()">Search</button>
+        </section>
+
+        <!-- Results Section (table) -->
+        <section id="results-section">
+            <h2>Search Results</h2>
+            <table class="results-table" id="results-table">
+                <thead>
+                    <tr>
+                        <th>Condition</th>
+                        <th>Description</th>
+                        <th>Treatment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Asthma</td>
+                        <td>Chronic disease involving the airways in the lungs.</td>
+                        <td>Inhalers, steroids, lifestyle changes</td>
+                    </tr>
+                    <tr>
+                        <td>Diabetes</td>
+                        <td>A group of diseases that result in high blood sugar levels.</td>
+                        <td>Insulin therapy, diet management</td>
+                    </tr>
+                    <tr>
+                        <td>Hypertension</td>
+                        <td>Condition where the blood pressure in the arteries is persistently elevated.</td>
+                        <td>Medications, exercise, diet</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Medical Search Portal</p>
+    </footer>
+
+    <script>
+        function searchResults() {
+            const searchQuery = document.getElementById("search-box").value.toLowerCase();
+            const resultsTable = document.getElementById("results-table").getElementsByTagName('tbody')[0];
+
+            const medicalData = [
+                { condition: "Asthma", description: "Chronic disease involving the airways in the lungs.", treatment: "Inhalers, steroids, lifestyle changes" },
+                { condition: "Diabetes", description: "A group of diseases that result in high blood sugar levels.", treatment: "Insulin therapy, diet management" },
+                { condition: "Hypertension", description: "Condition where the blood pressure in the arteries is persistently elevated.", treatment: "Medications, exercise, diet" },
+                { condition: "Cancer", description: "A disease caused by uncontrolled division of abnormal cells.", treatment: "Chemotherapy, radiation, surgery" },
+                { condition: "Influenza", description: "A viral infection that attacks the respiratory system.", treatment: "Rest, hydration, antiviral medications" }
+            ];
+
+            // Clear existing rows
+            resultsTable.innerHTML = '';
+
+            // Filter results based on search query
+            const filteredData = medicalData.filter(item =>
+                item.condition.toLowerCase().includes(searchQuery) ||
+                item.description.toLowerCase().includes(searchQuery) ||
+                item.treatment.toLowerCase().includes(searchQuery)
+            );
+
+            // Display filtered results in the table
+            filteredData.forEach(item => {
+                const row = resultsTable.insertRow();
+                row.innerHTML = `
+                    <td>${item.condition}</td>
+                    <td>${item.description}</td>
+                    <td>${item.treatment}</td>
+                `;
+            });
+        }
+    </script>
+
+</body>
+</html>

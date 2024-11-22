@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integer Array Operations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      font-size: 1.2em;
+      margin-right: 10px;
+    }
+    input[type="number"] {
+      padding: 8px;
+      font-size: 1em;
+      width: 80px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #e9ecef;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .result p {
+      font-size: 1.2em;
+      margin: 5px 0;
+    }
+    .array-view {
+      margin-top: 10px;
+      font-size: 1.2em;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Integer Array Operations</h2>
+
+    <!-- Inputs for adding and modifying the array -->
+    <div>
+      <label for="addNum">Add Number:</label>
+      <input type="number" id="addNum" placeholder="Enter number">
+      <button id="addButton">Add Number</button>
+    </div>
+
+    <div>
+      <label for="modifyIndex">Modify Index:</label>
+      <input type="number" id="modifyIndex" placeholder="Index" min="0">
+      <label for="modifyNum">Modify Value:</label>
+      <input type="number" id="modifyNum" placeholder="New Value">
+      <button id="modifyButton">Modify Number</button>
+    </div>
+
+    <button id="viewButton">View All Numbers</button>
+
+    <!-- Results for showing array -->
+    <div class="array-view" id="arrayView">
+      <p><strong>Array:</strong> <span id="arrayContent">[]</span></p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Class for managing an integer array with add, modify, and view functionality
+    class IntegerArrayManager {
+      constructor() {
+        this.array = [];
+      }
+
+      // Method to add a number to the array
+      addNumber(num) {
+        if (Number.isInteger(num)) {
+          this.array.push(num);
+        } else {
+          alert("Please enter a valid integer.");
+        }
+      }
+
+      // Method to modify an element at a specific index
+      modifyNumber(index, newValue) {
+        if (index >= 0 && index < this.array.length && Number.isInteger(newValue)) {
+          this.array[index] = newValue;
+        } else {
+          alert("Invalid index or value.");
+        }
+      }
+
+      // Method to get the current array
+      viewArray() {
+        return this.array;
+      }
+    }
+
+    // jQuery to handle button actions
+    $(document).ready(function() {
+      // Instantiate the IntegerArrayManager class
+      const arrayManager = new IntegerArrayManager();
+
+      // Add number to the array
+      $('#addButton').click(function() {
+        const num = parseInt($('#addNum').val(), 10);
+        arrayManager.addNumber(num);
+        $('#addNum').val(''); // Clear the input after adding
+      });
+
+      // Modify number at specific index
+      $('#modifyButton').click(function() {
+        const index = parseInt($('#modifyIndex').val());
+        const newValue = parseInt($('#modifyNum').val());
+        arrayManager.modifyNumber(index, newValue);
+        $('#modifyIndex').val('');
+        $('#modifyNum').val('');
+      });
+
+      // View all numbers in the array
+      $('#viewButton').click(function() {
+        const array = arrayManager.viewArray();
+        $('#arrayContent').text(array.join(", "));
+      });
+    });
+  </script>
+
+</body>
+</html>

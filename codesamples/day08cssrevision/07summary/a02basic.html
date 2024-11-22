@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absolute vs Relative Units in CSS</title>
+  <style>
+    /* Absolute Units Example */
+    .absolute-container {
+      width: 400px; /* Fixed width in pixels */
+      height: 200px; /* Fixed height in pixels */
+      background-color: lightblue;
+      margin-bottom: 20px;
+    }
+
+    .absolute-text {
+      font-size: 16px; /* Fixed font size in pixels */
+      text-align: center;
+      line-height: 200px; /* Vertical centering using absolute units */
+    }
+
+    /* Relative Units Example */
+    .relative-container {
+      width: 50%; /* Width relative to the parent container */
+      height: 50vh; /* Height relative to the viewport height */
+      background-color: lightgreen;
+      margin-bottom: 20px;
+    }
+
+    .relative-text {
+      font-size: 2em; /* Font size relative to the element's font size */
+      text-align: center;
+      line-height: 100%; /* Relative line height */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="absolute-container">
+    <div class="absolute-text">Absolute Units (400px)</div>
+  </div>
+
+  <div class="relative-container">
+    <div class="relative-text">Relative Units (50% width, 50vh height)</div>
+  </div>
+
+</body>
+</html>
+
+
+<!--
+
+Absolute Units (px):
+
+.absolute-container has a fixed width of 400px and height of 200px. This will always be the
+ same size, regardless of the size of the viewport or any other surrounding element.
+.absolute-text uses a font size of 16px, which will always be 16 pixels high
+ regardless of the parent element or viewport.
+
+
+Relative Units (%, vh, em):
+.relative-container has a width of 50%, which means it will take up 50% of the width
+ of its parent container (in this case, the body element). The height is set to 50vh,
+  which is 50% of the viewport height, so it adjusts dynamically as the viewport height changes.
+.relative-text uses a font size of 2em, which is relative to the font size of the parent container. If the parent container's font size changes, the text will grow or shrink proportionally.
+
+When to Use Absolute Units:
+Fixed sizes: When you need an element to have a specific, unchanging size 
+regardless of its parent or viewport size.
+Example: A logo that must be 200px wide or a specific image size.
+
+Precise control: When you're working with specific designs where exact pixel dimensions are
+ needed (e.g., borders, shadows, and exact spacing).
+
+ Example: An element that should always be a specific width, such as a navigation bar
+  or a button.
+
+  When to Use Relative Units:
+Responsive designs: When you want elements to scale based on the 
+parent container or viewport.
+
+Example:
+ A card layout where the width of cards should adjust with the screen size 
+ or window size.
+
+Font scaling: When you want text size to scale with the user’s settings 
+or to scale relative to the container size.
+ em and rem are often used for this purpose.
+
+Example: Responsive typography where the text size increases or decreases 
+relative to the parent container or the root element.
+
+Flexible layouts: When designing fluid layouts that adapt to the screen size 
+(like using vw, vh, or % for width, height, and spacing).
+
+Example: A content section that takes up the full height of the viewport (100vh).
+
+Summary:
+Use absolute units (px, in, pt) for fixed, precise measurements that do not change
+ relative to the surrounding environment.
+
+Use relative units (%, em, rem, vh, vw) for flexible and scalable designs that
+ adapt to the parent element or the viewport size, making them more suitable 
+ for responsive layouts and user accessibility preferences.
+
+This combination of absolute and relative units helps to create layouts that are both
+fixed in certain places (for precision) and fluid where necessary (for responsiveness).
+
+-->

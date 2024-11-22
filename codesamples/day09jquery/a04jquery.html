@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Status Toggle</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* Basic styling for the machines list */
+    .machine {
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      width:20%;
+      font-size: 18px;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    /* Class for online machines */
+    .online {
+      background-color: darkgreen;
+      color: bisque;
+    }
+
+    /* Class for offline machines */
+    .offline {
+      background-color: red;
+      color: bisque;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Manufacturing Machines</h2>
+  <p>Click on a machine to toggle its status between Online and Offline.</p>
+
+  <div class="machine offline" id="machine1">Machine 1 (Offline)</div>
+  <div class="machine online" id="machine2">Machine 2 (Online)</div>
+  <div class="machine offline" id="machine3">Machine 3 (Offline)</div>
+  <div class="machine online" id="machine4">Machine 4 (Online)</div>
+
+  <script>
+    // jQuery function to toggle classes when a machine is clicked
+    $(document).ready(function() {
+      // When a machine is clicked
+      $(".machine").click(function() {
+        // Toggle the class between 'online' and 'offline'
+        $(this).toggleClass("online offline");
+
+        // Update text based on the class
+        if ($(this).hasClass("online")) {
+          $(this).text($(this).text().replace("Offline", "Online"));
+        } else {
+          $(this).text($(this).text().replace("Online", "Offline"));
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

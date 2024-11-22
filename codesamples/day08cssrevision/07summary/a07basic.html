@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox with flex-grow, flex-shrink, flex-basis</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Main container */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      height: 100vh;
+    }
+
+    /* Flex items (sections) */
+    .section {
+      padding: 20px;
+      color: white;
+      text-align: center;
+      background-color: #3498db;
+      border-radius: 10px;
+      border-color: black;
+      border-style: dotted;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Section 1 */
+    .section-1 {
+      flex: 1 1 400px; /* flex-grow: 2, flex-shrink: 1, flex-basis: 200px */
+    }
+
+    /* 
+    flex-grow: The factor by which the element should grow if there’s extra space.
+    flex-shrink: The factor by which the element should shrink if there’s not enough space.
+    flex-basis: The initial size of the element before any growing or shrinking happens.
+
+    flex-item {
+        flex: flex-grow flex-shrink flex-basis;}
+        
+} */
+
+    /* Section 2 */
+    .section-2 {
+      flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
+    }
+
+    /* Section 3 */
+    .section-3 {
+      flex: 1 2 200px; /* flex-grow: 1, flex-shrink: 2, flex-basis: 200px */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main container -->
+  <div class="container">
+    <div class="section section-1">Section 1 (flex-grow: 2, flex-shrink: 1, flex-basis: 200px)</div>
+    <div class="section section-2">Section 2 (flex-grow: 1, flex-shrink: 1, flex-basis: 200px)</div>
+    <div class="section section-3">Section 3 (flex-grow: 1, flex-shrink: 2, flex-basis: 200px)</div>
+    
+  </div>
+
+</body>
+</html>

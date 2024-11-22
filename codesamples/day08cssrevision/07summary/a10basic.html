@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Partner Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General layout */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Sidebar for menu */
+        .sidebar {
+            background-color: #333;
+            color: white;
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar a:hover {
+            background-color: #007bff;
+        }
+
+        /* Main content area */
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        /* Search box section */
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .search-container button:hover {
+            background-color: #218838;
+        }
+
+        /* Sales Data Table */
+        .sales-data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .sales-data-table th,
+        .sales-data-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .sales-data-table th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        Sales Partner Management
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <a href="#" id="add-partner">Add Sales Partner</a>
+        <a href="#" id="remove-partner">Remove Sales Partner</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Search Section -->
+        <div class="search-container">
+            <input type="text" id="search-box" placeholder="Search for Sales Partners...">
+            <button onclick="searchSales()">Search</button>
+        </div>
+
+        <!-- Sales Data Section -->
+        <h2>Sales Data</h2>
+        <table class="sales-data-table" id="sales-table">
+            <thead>
+                <tr>
+                    <th>Partner Name</th>
+                    <th>Sales Amount</th>
+                    <th>Region</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ABC</td>
+                    <td>5000</td>
+                    <td>North America</td>
+                </tr>
+                <tr>
+                    <td>DEF</td>
+                    <td>7000</td>
+                    <td>Europe</td>
+                </tr>
+                <tr>
+                    <td>ABC DEF</td>
+                    <td>4500</td>
+                    <td>Asia</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Sales Partner Management
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to simulate the search behavior
+        function searchSales() {
+            const searchQuery = document.getElementById("search-box").value.toLowerCase();
+            const rows = document.querySelectorAll("#sales-table tbody tr");
+            
+            rows.forEach(row => {
+                const partnerName = row.cells[0].textContent.toLowerCase();
+                const region = row.cells[2].textContent.toLowerCase();
+                
+                if (partnerName.includes(searchQuery) || region.includes(searchQuery)) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        }
+
+        // Example functionality for Add/Remove Sales Partner
+        document.getElementById("add-partner").addEventListener("click", function() {
+            const partnerName = prompt("Enter the new Sales Partner's name:");
+            const salesAmount = prompt("Enter the Sales Amount for " + partnerName + ":");
+            const region = prompt("Enter the region for " + partnerName + ":");
+
+            if (partnerName && salesAmount && region) {
+                const table = document.getElementById("sales-table").getElementsByTagName('tbody')[0];
+                const newRow = table.insertRow();
+                newRow.innerHTML = `
+                    <td>${partnerName}</td>
+                    <td>${salesAmount}</td>
+                    <td>${region}</td>
+                `;
+            }
+        });
+
+        document.getElementById("remove-partner").addEventListener("click", function() {
+            const partnerName = prompt("Enter the Sales Partner's name to remove:");
+            const rows = document.querySelectorAll("#sales-table tbody tr");
+
+            rows.forEach(row => {
+                const nameCell = row.cells[0].textContent.toLowerCase();
+                if (nameCell === partnerName.toLowerCase()) {
+                    row.remove();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -3,11 +3,15 @@
 Rest parameters in JavaScript allow you to represent an
  indefinite number of arguments as an array.
 
- Function Declaration: The calculateTotalProduction function takes a lineName as its first argument, followed by a rest parameter ...shifts. This allows you to pass any number of production values for different shifts.
+ Function Declaration: The calculateTotalProduction function takes a lineName
+  as its first argument, followed by a rest parameter ...shifts.
+   This allows you to pass any number of production values for different shifts.
 
-Using reduce(): Inside the function, the reduce() method is used to calculate the total production by summing up all the values in the shifts array.
+Using reduce(): Inside the function, the reduce() method is used to 
+calculate the total production by summing up all the values in the shifts array.
 
-Logging the Result: The result is logged to the console, showing the total production for the specified line.
+Logging the Result: The result is logged to the console, showing the
+ total production for the specified line.
 
 */
 

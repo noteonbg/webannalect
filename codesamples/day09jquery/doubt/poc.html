@@ -2,13 +2,30 @@
     <head>
         <title> when in doubt do a poc</title>
     </head>
+
+    <style>
+
+            .r  { color:red  }
+            .b  { color:green }
+            .c  { text-decoration: underline}
+
+
+    </style>
 <body>
     <h1> small program which works that is poc</h1>
 
+    <p class="c r"> abc </p>
+    <p class="c b"> def </p>
+    <p> freak</p>
+
+    <!--
     <input type="text"  id="t1" placeholder="poc making"/>
     <br/><input type="text" id="t2" readonly placeholder="result"/>
     <button id="b1"> poc on jquery</button>
     <div id="nfe"> result</div>
+
+
+    -->
 
     <!-- logic read the text box value multiply by 2 and then
      show the result in t2 textbox as well as the div region -->
@@ -45,8 +62,27 @@
     */
 
     $(()=>{
+
+         $("p").click(function(){
+
+            console.log("event handling setup",$(this).text(),"freak");
+            //$(this).text().toUpperCase();//this wont work..
+            let z =$(this).text($(this).text().toUpperCase()); //you got the textvalue in that leement
+            /*
+            let q = z.toUpperCase();// q is going to be uppper case..
+            $(this).text(q);
+            */
+            
+
+
+            
+
+
+         });
         
-            $("#b1").click(()=>{
+      
+      
+          $("#b1").click(()=>{
 
                 const tbv= $("#t1").val();
                 

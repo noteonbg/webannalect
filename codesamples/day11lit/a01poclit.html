@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module">
+    import { LitElement, html, css } from 'https://cdn.skypack.dev/lit';
+
+    // Lit (formerly LitElement) is a lightweight library for building web components
+
+    class TemperatureMonitor extends LitElement {
+      static styles = css`
+        :host {
+          display: block;
+          padding: 16px;
+          border-radius: 8px;
+          font-family: Arial, sans-serif;
+          max-width: 200px;
+          text-align: center;
+        }
+
+        .temp {
+          font-size: 2em;
+          font-weight: bold;
+        }
+
+        .warning {
+          color: red;
+        }
+
+        .safe {
+          color: green;
+        }
+
+        .alert {
+          color: orange;
+        }
+      `;
+
+      static properties = {
+        temperature: { type: Number },
+      };
+
+      constructor() {
+        super();
+        this.temperature = 20; // Default temperature
+      }
+
+      connectedCallback() {
+        super.connectedCallback();
+        this._startTemperatureUpdate();
+      }
+
+      // Simulate updating the temperature every 3 seconds
+      _startTemperatureUpdate() {
+        setInterval(() => {
+          this.temperature = this._getRandomTemperature();
+        }, 3000);
+      }
+
+      _getRandomTemperature() {
+        // Random temperature generation to simulate a machine temperature
+        return Math.floor(Math.random() * (100 - 10 + 1)) + 10;
+      }
+
+      get temperatureClass() {
+        if (this.temperature > 80) {
+          return 'warning';  // High temperature, warning
+        } else if (this.temperature > 50) {
+          return 'alert';  // Moderate temperature, caution
+        } else {
+          return 'safe';  // Safe range
+        }
+      }
+
+      render() {
+        return html`
+          <div class="temperature-widget">
+            <h3>Machine Temp</h3>
+            <div class="temp ${this.temperatureClass}">
+              ${this.temperature}°C
+            </div>
+            <div>
+              <span>Status: ${this._getTemperatureStatus()}</span>
+            </div>
+          </div>
+        `;
+      }
+
+      _getTemperatureStatus() {
+        if (this.temperature > 80) {
+          return 'Warning: Too Hot!';
+        } else if (this.temperature > 50) {
+          return 'Caution: Getting Warm';
+        } else {
+          return 'Status: Safe';
+        }
+      }
+    }
+
+    // Register the component
+    customElements.define('temperature-monitor', TemperatureMonitor);
+  </script>
+</head>
+<body>
+  <temperature-monitor></temperature-monitor>
+</body>
+</html>

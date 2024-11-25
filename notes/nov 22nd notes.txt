@@ -148,13 +148,45 @@ IT industry... side effect  == lot of noise in the brain
 how do you know jquery is working
 if jquery function is working, it means jquery is working.
 
-if you are back let me know..
+today... you should how frameworks look and work..
+
+respect javascript as a new language.
+
+your logic part of javascript is not going to get impacted because of any framework.
+logic part your project specific thing..
+
+
+we can apply css related things dynamically via javascript.. all this means practically
+for a particular element in the html you can add a class can you remove a class or you can toggle a class.
+
+whenever you see a ready made function ask yourself the question are you going to use frequently
+if yes.. open documentation and read it..
+rarely.. ok you can assumptions bout the function.
+
+read official things even if we dont understand..
 
 
 
 
+is textfunction called in lineno 56
+
+$("#a.text(#a.text)";
+
+$(context).text()  ==get text content.
+$(content).text( $(content).text +"ehllo");
+
+coccepts dont change. that will happen only if you generalize your learning..
 
 
+
+1. take your old html , javascript assingments nd convert that into jquery.
+2. take your problem statement 1 convert that into jquery
+3. take your employee problem statement convert that into jquery..
+
+time management
+
+1. spend 15 to 20 minutes on jquery..
+2. go back to your css dashboard...
 
 
 

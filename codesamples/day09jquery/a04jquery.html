@@ -47,14 +47,18 @@
       // When a machine is clicked
       $(".machine").click(function() {
         // Toggle the class between 'online' and 'offline'
-        $(this).toggleClass("online offline");
+        //$(this).toggleClass("online offline");
 
+        
         // Update text based on the class
         if ($(this).hasClass("online")) {
-          $(this).text($(this).text().replace("Offline", "Online"));
+
+             $(this).text($(this).text().replace("Offline", "XOnline"));
         } else {
-          $(this).text($(this).text().replace("Online", "Offline"));
+            
+          $(this).text($(this).text().replace("Online", "XOffline"));
         }
+          
       });
     });
   </script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Component Example</title>
+</head>
+<body>
+
+  <!-- Use the custom element -->
+  <my-button label="Click Me"></my-button>
+
+  <script>
+    // Define the new custom element class
+    class MyButton extends HTMLElement {
+      constructor() {
+        super(); // Always call the parent constructor first
+
+        // Attach shadow DOM to this element
+        const shadow = this.attachShadow({ mode: 'open' });
+
+        // Create a button element
+        const button = document.createElement('button');
+        
+        // Set the button's label from the 'label' attribute
+        button.textContent = this.getAttribute('label') || 'Default Button';
+        
+        // Add styles to the button using Shadow DOM
+        const style = document.createElement('style');
+        style.textContent = `
+          button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          button:hover {
+            background-color: #45a049;
+          }
+        `;
+
+        // Attach the style and button to the shadow DOM
+        shadow.appendChild(style);
+        shadow.appendChild(button);
+
+        // Add a click event listener
+        button.addEventListener('click', () => {
+          alert('Button clicked!');
+        });
+      }
+    }
+
+    // Define the custom element
+    customElements.define('my-button', MyButton);
+  </script>
+
+</body>
+</html>

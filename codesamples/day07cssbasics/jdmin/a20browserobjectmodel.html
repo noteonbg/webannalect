@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Example</title>
+</head>
+<body>
+    <h1>Browser Object Model Example</h1>
+    <hr/>
+
+    <h3 style="font-family: Arial, Helvetica, sans-serif">
+
+        The Browser Object Model (BOM) is a set of objects provided by the browser that 
+        allows interaction with the browser environment 
+        (such as the window, document, history, location, and navigator objects).
+         It enables you to manipulate aspects of the browser like controlling the 
+         window, accessing the user's location, interacting with browser history
+         There are other objects you can learn it on need basis.
+    </h3>
+    <button id="checkWindowSize">Check Window Size</button>
+    <button id="goToGoogle">Go to Google</button>
+    <button id="showAlert">Show Alert</button>
+    <button id="getBrowserInfo">Get Browser Info</button>
+
+    <script>
+        // Button event listeners
+        document.getElementById('checkWindowSize').addEventListener('click', function() {
+            // Using the window object to get the size of the browser window
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            alert(`Window size: ${width}x${height}`);
+        });
+
+        document.getElementById('goToGoogle').addEventListener('click', function() {
+            // Using window.location to navigate to another URL
+            window.location.href = 'https://www.google.com';
+        });
+
+        document.getElementById('showAlert').addEventListener('click', function() {
+            // Showing an alert using the window.alert() method
+            window.alert('Hello! This is a Browser Object Model example.');
+        });
+
+        document.getElementById('getBrowserInfo').addEventListener('click', function() {
+            // Using the navigator object to get browser info
+            let browserInfo = navigator.userAgent;
+            alert(`Your browser information: ${browserInfo}`);
+        });
+    </script>
+</body>
+</html>

@@ -96,3 +96,7 @@ fetchProductionData()
 const widget = new Product("Widget", 500);
 widget.produce(300);
 console.log(`Widget efficiency: ${widget.efficiency()}%`);
+
+const anotherWidget = new Product("tool", 600);
+anotherWidget.produce(300);
+console.log(`Widget efficiency: ${anotherWidget.efficiency()}%`);

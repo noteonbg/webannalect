@@ -1,0 +1,479 @@
+Monday rant..
+1. loyalty is towards project.
+2. tolerate uncertainty and keep your bp level normal when things
+dont work.. willingness to do a poc ( small program which demsontrates the doubt)
+3. generalize your learning..
+
+1. where are we..
+2. javascript 
+3. lit component..
+4. currently css familiarity adventures are going on..
+
+in css. .what most of you are doing in assingments is becoming familiar with
+some properties of css by looking at some existing code.
+
+in javascript..
+1. keep logic and event handling separate.
+2. using a framework.. opinion... obviously syntax will change..
+
+
+in html..
+trying to give properid, that would be important...
+
+we can sit in the class room for 1000 years .. once we are in real life uncertainty will hit us..
+
+all your are comfortable with a javacript class.
+we can create a class in javasript by using function syntax..
+
+1. i will learn htl completely
+2. i will learn javsacript completely
+3. i will learn css complexly
+just not going to work in web presentation..
+
+
+
+in jquery...
+"this word behaved differently"
+
+class X
+{
+constructor(y)
+	{
+	this.z = y;
+	}
+
+}
+what is this... this refers to he object calling the function or the constructor..
+
+let temp =new X(2);
+let y =new  X(3);
+
+what is meaning of this.. it depends in javascript on the context.
+show me the code. I will only then you tell what is this..
+
+lot of times in technical world.. we wont understand things if we dont value collaboration..
+
+constructor.
+1. who created the class -- person X
+2. who is creating the object of the class Person Y
+person X is created the class, person X is only creating the object of the class, ok it does not make sense..
+when we used arrow functions.. 
+who defined the function we
+who assigned the function we.
+who called the function not we..
+
+during inheritance. you are making a hierarchy.. hierarchy making people should not do it for fun...
+generalize things out..
+
+in every bank, you have an Account, because Account is away to generalize SavingAccount.currentAccount
+or SalaryAccount..
+
+we tell IPAddress,IPAddress  there to generalize ip4address or ip6address..
+
+process, daemn process, non daemonprocess.
+
+before we talk about inheritance syntax.
+
+1. identify things which are above in the hierarchy... X
+2. identify things which are below in the hierarchy... Y
+Y "is a " X and read it two times if you are convinced they sound logical dont use inheritance..
+
+X=Account , IPAddress
+Y=SavingAccount , IP4Address
+
+SavingAccount is a Account..
+IP4Address is a IPAddress
+
+
+worst word to use for inheritance is the word "reusability" this is moral science word...
+there is a class called BAttery, MObile needs all features of the battery let us make
+mobile as the sub class  and let us make Battery as a super class. so that mobile object
+gets all features of battery... English looks good, technically pathetic..
+
+use algebra in real life.. arithmetic
+
+once you make a hierarchy what is advantage we get.
+1. add  feature to the super class.
+2. no need to make any changes in the subclass
+3. all objects of the hierarchy will get access to new feature added in the super class.
+
+class is a data type.
+1.content
+2.operations.
+
+let x='33';// so somebody comes and why did you 3 as a string... ok i jsut 3 as a string
+let x ='a';  //content
+x.toUpperCase();  // operation on the data type
+
+if you tell i created a variable.. 
+1. what is its content.  then data type does not matter.
+2. you choose a data type because you have decided what operation to perform on it..
+
+
+
+i want to have a variable
+and print it..
+
+let i =3;
+console.log(i);
+
+class
+{
+
+//content of class data type
+this.lengt=3
+this.breadth=4
+
+//operations
+getArea
+getPerimete
+
+
+
+}
+
+when you created a class.. you defined the data type, you told the system hey look  here comes
+a data type which you did not know...
+
+when you created an object.. ok look here we are creating the variable of the data type
+when you called the functions.. ok look i have the variable, becuse i need these operations..
+
+
+I see product class definition..
+=
+we are teaching the system a data type called Product.
+==
+
+data type= content + operation.
+content... name, targetqty,producedqty
+operations.. product, efficiency
+
+if somebody wants operations like produce, efficiency in context of product.
+he will use the class called product..
+
+we told the system hey look product is a data type.
+but we are not using the data type anywhere in the code.. so...
+
+when you look at a class. just think of a data type..
+
+javascript never began its life as object oriented and it will never be..
+what we are seeing us, keeping the kids happy..
+who are kids.. who come from java, c++ and C# and tell javascript should look like this for me..
+ok...
+
+when you create hierarchies we never work on the super class
+super class is there to generalize..and we can never see it in real life..
+
+have you anytime worked in physics
+1. classical physics
+2. quantum physics..
+
+
+have you anytime worked in mathematics..
+1. discrete mathetics
+2. continuous mathematics..
+
+super cosntrutor call in the subclass should be done explicitly
+when ever super class constructor takes parameters..
+
+once we create the subclass object
+subclass object can call function of the super class and funtions
+of the subclass both..
+
+advantage of inheritance..
+1. projects change..if you identified inheritance...correctly.. as part
+of your design..
+2. you can add a new feature to the super class.
+3. dont need to make any changes in the subclass.
+4. all objects of the hierarchy will get the new feature added in the super class.
+
+telescope what will change, what will not change.. is important thing
+to know about the Project no I wont think about it.. ok enjoy the funeral ...
+
+
+to access super class objects to call subclass funtions illogical..
+
+I think most of people 99.99% dont know what abstract class
+and interface does..
+
+
+
+1. we made a hierarchy..
+2. we created the object of subclass and we are not creating objects
+of super class 
+
+"Modern".. these are not technical words..
+
+let us separate two things..
+
+1. inheritance as a concept..
+
+2. inheritance  in javascript..
+
+advantage of inheritance.
+1. add a feature to the super class.
+2. no need to make any changes in the sub class.
+3. all objects of the hierarchy are able to access the new feature
+added in the super class.
+
+
+
+
+
+class Account
+{
+accountno
+pancard  //new feature
+mobileno//mobileno
+adharcard..
+
+
+}
+
+class SavingAccount extends Account
+{
+
+}
+hierarchy making .. requires lot of intelligence..
+it is not the syntax..
+
+
+
+
+
+
+
+
+
+
+
+super class
+Machine..
+it has got a function called getStatus.
+
+subclass
+Printer3D has got a function called getStatus..
+
+why will a subclass have a a function with the same name as the super class.
+because subclass object does not like function given by the super class.
+
+
+
+class Window
+   copy()  {   }
+
+
+class PaintWindow extends Window
+  copy()  {  }//why
+
+PaintWindow object does not like the copy of Window.. hence it tells I will come with my own copy..
+
+
+
+
+this concept is called as "overriding" -- Runtime Polymorphism..
+
+which function gets called depends on type of object being created..
+
+what is overrding,
+function in the subclass and super class are with the same name and inputargument  ==syntax..
+
+
+class Employee
+  work()  { swipe badge }
+
+class GraduateTrainee extends Employee
+ work
+  work()  { super.work(); attend the training and do the poc   }
+
+class Projectmanager extends Employee
+work()  { super.work ; attend client meeting   }
+
+what does work do.. it depends on which object's work youa re calling..
+
+let x =new GradudateTrainee()
+x.work();
+let x =new )
+
+you cannot use this instead of super..
+
+this always refer to the class in which you are using the "this"
+super.. 
+1. we will use super keyword only in the subclass.
+2. super keyword refers to immediate super class of that subclass.
+
+class Employee
+work
+f1
+
+class SE extends Employee
+work
+f2
+
+
+class SSE extends SE
+work
+f3
+{
+	f1() ;//that is ok...
+	f2() ;//that is ok..
+
+	
+
+}
+
+
+copy three examples of inheritance in javasript
+and rate the example out of 3, 3 is very good, 1 is bad. 2 is ok example
+
+
+
+once you are back..
+1. continue with your jquery journey. (prioritize jquery )
+2. continue with adding css properties based on the codes shared.
+3. we will take stock... phase 3 employee case study dont attempt you can start later on..
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Order (Model or project specific data type)
+Ordercontroller ( Logic)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+inheritance..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="temp cssclass">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

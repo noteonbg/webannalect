@@ -2,7 +2,6 @@
 function createInventoryTracker() {
     let inventory = 0;  // `inventory` is a local variable closed over by the inner functions
   
-
     //closure functions becuse they have access to the outer function variable, after function
     //finishes execution..
     
@@ -31,6 +30,8 @@ function createInventoryTracker() {
       }
     };
   }
+
+  
   
   // Create an inventory tracker for a specific product (e.g., "Widget A")
   const widgetInventory = createInventoryTracker();

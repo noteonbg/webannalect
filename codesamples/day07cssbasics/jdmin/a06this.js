@@ -8,17 +8,20 @@ const productionLine = {
     target: 1000,
     produced: 800,
     efficiency() {
+        console.log("freak");
         return (this.produced / this.target) * 100;
     }
 };
 
-console.log(`Efficiency of ${productionLine.name}: ${productionLine.efficiency().toFixed(2)}%`);
+console.log("hi");  // in line 10 function is defined and assigned
+
+//console.log(`Efficiency of ${productionLine.name}: ${productionLine.efficiency().toFixed(2)}%`);
 
 
 /*
 
 When using a constructor function,
- this refers to the instance being created
+ this refers to the instance being created, this is old real javascript
 */
 function ProductionLine(name, target) {
     this.name = name;
@@ -30,10 +33,15 @@ function ProductionLine(name, target) {
     };
 }
 
+
+
 const lineB = new ProductionLine("Line B", 1200);
 lineB.produced = 900;
 
 console.log(`Efficiency of ${lineB.name}: ${lineB.efficiency().toFixed(2)}%`);
+
+
+
 
 
 /*
@@ -69,6 +77,8 @@ In event handlers, this usually refers to the element that
 triggered the event, unless it’s an arrow function.
 
 */
+
+
 
 const productionLineButton = {
     name: "Line A",
@@ -109,7 +119,11 @@ class ProductionLine {
 }
 
 const lineD = new ProductionLine("Line D", 900);
+const lineE = new ProductionLine("Line E", 100);
+
 lineD.produce(300); // Outputs: Efficiency of Line D: 33.33%
+lineE.produce(30);
+
 
 /*
 

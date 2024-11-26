@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <script>
+            "use strict"
+
+            //shock will reduce in javascript if you tell hey javascript I know you are new langauge
+            //to me..
+
+            function ok()
+            {
+                let r=[];
+                
+                return function(){ return {setradius:function(q){r=q;},
+                                        getradius:function(){ return r;}
+                                  }
+                            };
+            }
+
+            let circle=ok();  // circle is assigned with a function
+            //which is returned when ok function is called.
+            // return function of ok, does not take any input
+            //it does return an object with two properties which point to functions
+            //like setRAdius nd getRadius... all java guys,c++ guys,, screaming will so loud
+            //other galaxy people can hear...so javascript took sympathy...
+
+
+
+            let circleobject=circle();
+                        circleobject.setradius(4);
+            console.log(circleobject.getradius());
+
+
+
+
+
+            /*
+
+            function f1()
+            {
+                let x =3; // x is a local variable..
+
+                return function(){ console.log("junk"); return x; }
+            }
+            let y=f1();  // we should know that x has been assigned with a function.
+            // in this lineno 13, f1 fucntion completed execution.
+            console.log(y());
+
+            */
+
+
+
+
+
+            
+            /*
+            let x=3;
+            delete x; 
+
+            let emp={ empno:23, ename:44 };
+            delete emp.ename;
+
+
+            
+            console.log("freask",x);
+
+            */
+
+/*
+            "use strict";
+            
+            function f1()
+            {
+
+                console.log("hi",this);
+
+            }
+            
+
+            
+            f1();
+
+            */
+
+
+
+
+
+
+            /*
+            class Circle
+            {
+                constructor() { this.r=0;}
+                get radius() { console.log("getter accssed"); return this.r; }
+                set radius(x)   { console.log("setter is getting called",x); this.r=x; }
+
+            }
+
+            function ACircle()
+            {
+                this.r=0;
+                this.setRadius=function(x) { this.r = x;}
+                this.getRadius=function() { return this.r; }
+            }
+
+            const x =new ACircle();
+            x.setRadius(4);
+            console.log(x.getRadius(),"function can be treated as a class provided we wrie this...");
+
+                */
+
+            /*
+            const obj1=new Circle();
+            obj1.radius=4;// setter function will get accessed
+            console.log(obj1.radius);
+
+            */
+            
+            
+
+
+
+            
+
+
+
+        </script>
+    </head>
+
+
+</html>

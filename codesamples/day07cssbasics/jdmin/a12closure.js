@@ -14,9 +14,15 @@ function createProductFactory() {
   
   // Creating a factory instance
   const factory = createProductFactory();
+  //returning a function.. that function signature.. is
+  //what is returning input argument ...string
+  // what is returning function return type... object.
+  //inside the function you are seeing we have captured the local variable of the outer function..
+
+
   
   // Creating new products using the factory
-  const product1 = factory("Widget A");
+  const product1 = factory("widget a");
   const product2 = factory("Widget B");
   const product3 = factory("Widget C");
   

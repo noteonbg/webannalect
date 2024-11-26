@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Component Lifecycle Example</title>
+</head>
+<body>
+    <h1>Web Component Lifecycle</h1>
+    
+    <!-- Using the custom web component -->
+    <user-card name="John Doe" age="30"></user-card>
+    
+    <script>
+        // Define the custom element 'user-card'
+        class UserCard extends HTMLElement {
+            // Called when the element is created
+            constructor() {
+                super();  // Always call super() first
+                console.log('Constructor: Element created!');
+                
+                // Attach shadow DOM for encapsulation
+                this.attachShadow({ mode: 'open' });
+
+                // Create a simple template for the user card
+                const template = document.createElement('template');
+                template.innerHTML = `
+                    <style>
+                        div {
+                            border: 1px solid #ccc;
+                            padding: 10px;
+                            width: 200px;
+                            font-family: Arial, sans-serif;
+                        }
+                    </style>
+                    <div>
+                        <h2 id="name"></h2>
+                        <p id="age"></p>
+                    </div>
+                `;
+                
+                // Append the template content to shadow DOM
+                this.shadowRoot.appendChild(template.content.cloneNode(true));
+            }
+
+            // Called when the element is added to the DOM
+            connectedCallback() {
+                console.log('connectedCallback: Element added to the DOM!');
+                this.updateContent();
+            }
+
+            // Called when the element is removed from the DOM
+            disconnectedCallback() {
+                console.log('disconnectedCallback: Element removed from the DOM!');
+            }
+
+            // Called when an observed attribute is changed
+            static get observedAttributes() {
+                return ['name', 'age'];
+            }
+
+            attributeChangedCallback(name, oldValue, newValue) {
+                console.log(`attributeChangedCallback: ${name} changed from ${oldValue} to ${newValue}`);
+                this.updateContent();
+            }
+
+            // Helper function to update the content based on attributes
+            updateContent() {
+                const name = this.getAttribute('name');
+                const age = this.getAttribute('age');
+                this.shadowRoot.getElementById('name').textContent = `Name: ${name}`;
+                this.shadowRoot.getElementById('age').textContent = `Age: ${age}`;
+            }
+        }
+
+        // Define the custom element
+        customElements.define('user-card', UserCard);
+    </script>
+</body>
+</html>

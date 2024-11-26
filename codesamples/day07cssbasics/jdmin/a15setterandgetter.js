@@ -23,7 +23,7 @@ class Person {
   console.log(person.fullName);  // Output: John Doe
   
   // Using the setter method (assigning a value)
-  person.fullName = "freak";
+  person.fullName = "freak junk";
   
   // After changing fullName, the object now reflects the updated values
   console.log(person.firstName);  // Output: Jane

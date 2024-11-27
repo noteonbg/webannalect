@@ -1,0 +1,21 @@
+1. login 
+2. postlogin page
+2.1. upload the file.
+2.2  search  -- search crtiera
+2.3  search results.
+2.4 edit
+
+100% we will cover how to contact server and get data.
+some basic authentication jwt..
+
+1. css
+2. bootstrap
+3. custom elements.
+4. dynamic forms.
+5. validations
+
+
+
+
+
+

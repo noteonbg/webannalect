@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Information Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        /* Grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;  /* Default: one column */
+            grid-template-rows: auto auto auto;  /* Define rows */
+            gap: 20px;
+        }
+
+        /* First row has one column */
+
+        /*
+> (Child Combinator):
+
+        The > symbol is known as the child combinator.
+         It targets only direct child elements of the specified parent.
+        It will not target elements that are nested further inside a child element.
+         In other words, it matches only the immediate children, 
+         not deeper descendants.
+
+        */
+        .grid-container > .row1 {
+            grid-column: 1 / -1;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+
+            /*
+
+            grid-column:
+
+This property defines where an element starts and ends along the horizontal axis of
+ the grid (i.e., which columns it should occupy).
+The value for grid-column is typically written as grid-column: <start> / <end>.
+<start> defines the starting point (the line where the element begins).
+<end> defines the ending point (the line where the element stops).
+1 / -1:
+
+The value 1 / -1 is shorthand that tells the element to span from the
+ first column line to the last column line.
+
+ Here's what each part means:
+
+1: This is the start position, meaning the element will start at the first column of
+ the grid. The number 1 corresponds to the first vertical grid line.
+-1: This is the end position, and the negative number -1 is a
+ special shorthand that refers to the last grid line
+  (the line at the end of the grid).
+   Using -1 ensures that the element will stretch to the last available column.
+
+            */
+        }
+
+        /* Second row with 3 columns */
+        .grid-container > .row2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid-container > .row2 > div {
+            background-color: #2196F3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* Third row with 2 columns */
+        .grid-container > .row3 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .grid-container > .row3 > div {
+            background-color: #f44336;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* Optional styling for the grid items */
+        .grid-container > .row1, .grid-container > .row2 > div, .grid-container > .row3 > div {
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Machine Information Grid</h1>
+
+    <div class="grid-container">
+        <!-- First row (1 column) -->
+        <div class="row1">
+            <h2>Machine Overview</h2>
+            <p>General information about the machine</p>
+        </div>
+
+        <!-- Second row (3 columns) -->
+        <div class="row2">
+            <div>
+                <h3>Machine Type</h3>
+                <p>Lathe</p>
+            </div>
+            <div>
+                <h3>Model</h3>
+                <p>XYZ-5000</p>
+            </div>
+            <div>
+                <h3>Power</h3>
+                <p>7.5 kW</p>
+            </div>
+        </div>
+
+        <!-- Third row (2 columns) -->
+        <div class="row3">
+            <div>
+                <h3>Manufacturing Date</h3>
+                <p>June 2022</p>
+            </div>
+            <div>
+                <h3>Maintenance Due</h3>
+                <p>December 2024</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

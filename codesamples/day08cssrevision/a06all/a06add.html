@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition of Two Numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #addButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Styles for the dialog box */
+        .dialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dialog input {
+            padding: 5px;
+            font-size: 16px;
+            margin: 5px;
+            width: 80px;
+        }
+
+        .dialog button {
+            padding: 8px 16px;
+            background-color: burlywood;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dialog button:hover {
+            background-color: green;
+        }
+
+        /* Overlay effect */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Two Numbers</h1>
+    
+    <!-- Button to open the dialog -->
+    <button id="addButton">Add Two Numbers</button>
+    
+    <!-- Result display area -->
+    <div id="result"></div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Dialog Box -->
+    <div class="dialog" id="dialog">
+        <h3>Enter Two Numbers</h3>
+        <input type="number" id="num1" placeholder="Number 1" required>
+        <input type="number" id="num2" placeholder="Number 2" required>
+        <br><br>
+        <button id="submitButton">Add</button>
+        <button id="closeButton">Cancel</button>
+    </div>
+
+    <script>
+        // DOM elements
+        const addButton = document.getElementById('addButton');
+        const submitButton = document.getElementById('submitButton');
+        const closeButton = document.getElementById('closeButton');
+        const dialog = document.getElementById('dialog');
+        const overlay = document.getElementById('overlay');
+        const result = document.getElementById('result');
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+
+        // Show the dialog
+        addButton.addEventListener('click', function() {
+            dialog.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+
+        // Hide the dialog
+        closeButton.addEventListener('click', function() {
+            dialog.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+
+        // Perform the addition and display the result
+        submitButton.addEventListener('click', function() {
+            const num1 = parseFloat(num1Input.value);
+            const num2 = parseFloat(num2Input.value);
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                const sum = num1 + num2;
+                result.textContent = `Result: ${num1} + ${num2} = ${sum}`;
+                dialog.style.display = 'none';
+                overlay.style.display = 'none';
+            } else {
+                result.textContent = 'Please enter valid numbers!';
+            }
+        });
+    </script>
+</body>
+</html>

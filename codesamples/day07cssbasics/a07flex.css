@@ -59,14 +59,18 @@ This property enables Flexbox layout for the element. It converts the container 
 justify-content:
 
 This property defines how the flex items are aligned along the main axis (horizontally).
-In .navbar, justify-content: space-between; distributes space between the title and the navigation links, pushing them to the opposite ends.
-In .content, justify-content: space-around; evenly distributes space around the cards, creating equal gaps between them.
+In .navbar, justify-content: space-between; distributes space between the title
+ and the navigation links, pushing them to the opposite ends.
+In .content, justify-content: space-around; evenly distributes space around
+ the cards, creating equal gaps between them.
 align-items:
 
 This property aligns flex items along the cross axis (vertically). In the .navbar, align-items: center; vertically centers the items within the flex container.
 Flex Items:
 
-Each .card has a width of 30%, meaning three cards will fit in the row with space around them, thanks to the justify-content property in the .content class.
-The cards have a light background, border, and padding for better visual presentation.
+Each .card has a width of 30%, meaning three cards will fit in the row with
+ space around them, thanks to the justify-content property in the .content class.
+The cards have a light background, border, and 
+padding for better visual presentation.
 
 */

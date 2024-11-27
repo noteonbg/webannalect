@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Header and Footer with Flexible Body</title>
+    <style>
+        /* Basic styles for the page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%; /* Full height for the page */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Create the grid layout */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr; /* One column layout */
+            grid-template-rows: auto 1fr auto; /* 3 rows: header (auto), body (flexible), footer (auto) */
+            height: 100%; /* Full height of the viewport */
+
+              /*
+
+              Both the header and footer have auto heights,
+              meaning they will only take up as much space as their content needs,
+              and their size will not change when the viewport is resized.
+              
+              */
+
+        }
+
+        /* Header styles */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        /* Main content area (body) */
+        .content {
+            padding: 20px;
+            overflow-y: auto; /* Allow scroll if content overflows */
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /*
+                The body (inside .content) is set to take up the remaining space between 
+                the header and footer with grid-template-rows: auto 1fr auto;.
+                The overflow-y: auto; property ensures that if the body content 
+                exceeds the viewport height, a vertical scrollbar will appear.
+                Inside .content, we use a div element to wrap the main content.
+                 This div has a max-width of 900px to ensure it doesn’t stretch too
+                 wide on large screens, along with padding and a slight shadow 
+                 for better visual appeal.
+
+            */
+        }
+
+        /* Optional styling for content to fill space */
+
+        /*
+
+        applies only to the <div> that is a direct child of .content
+
+        */
+        .content > div {
+            width: 100%;
+            max-width: 900px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Fixed Header</h1>
+        </header>
+
+        <!-- Main content (body) -->
+        <div class="content">
+            <div>
+                <h2>Main Content</h2>
+                <p>This is the body of the page. It takes up the remaining space between the fixed header and footer.</p>
+                <p>The body will adjust its size automatically depending on the viewport, but the header and footer will always stay at a fixed height.</p>
+                <p>Resize the window to see the effect! The content area expands and contracts with the window size, but the header and footer remain the same height.</p>
+                <p>More content to show scrolling if necessary...</p>
+                <p>More content to show scrolling if necessary...</p>
+                <p>More content to show scrolling if necessary...</p>
+                <p>More content to show scrolling if necessary...</p>
+                <p>More content to show scrolling if necessary...</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Fixed Footer</p>
+        </footer>
+    </div>
+
+</body>
+</html>

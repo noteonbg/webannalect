@@ -1,0 +1,390 @@
+great basic is being 5/5 in variables and functions..
+
+
+1. javascript
+2. how do you design..
+3. css ... grid layout.. and flex layout..
+4. bootstrap...
+5. custom components in html, how they communicate...
+
+hello world jquery...
+1. problem statement 1 good
+or
+2. started problem statment 1 complete it.
+
+
+
+
+
+
+
+
+what happens
+standards go slow
+products go fast.. react or angular or jquery.. will feature called X
+then everybody will like feature called X... w3c standard
+will implement that feature called X in the standard. this takes
+time.. 5 years 7 years..
+
+product comes first
+standard comes next... 
+
+super class belongs to X
+subclass belongs to Y..
+typically we are Y..
+mature inheritance..
+background..
+1. always do bad things by telling good things..
+
+somebody tells "I want to make the product better" add lot
+of features to the product, product will become like a "elephant"
+somebody will come back and tell oh no we have an elephant
+I will give you an "ant"
+
+react.. was light weight framework... i will add features...
+they made into an elephant..
+Lit is a simple library for building fast, lightweight web components.
+
+
+
+
+
+
+
+javascript..
+
+1. how to create an object
+2. function assignment and function calling, function defition
+3. javascript never believes in being object oriented..
+4. we have "makeup" in form of object orientedness
+
+class.
+constructor
+	this.. you know its meaning in context of class.
+functions
+creating objects and calling this functions
+
+1. some more things on classes.
+2. closure...
+3. some syntaxes of javsacript
+4. "javscript real nature" period javascript  -- protype based language.
+
+basics 
+
+html
+1. basic layout of the page..
+2. do  i know which part is dynamic which part is not dynamic
+3. attribute usage.. what does id do, what does name do..
+
+javascript
+1. respect it as a new language.
+2. can i setup events...
+3. can we sections of the page.
+4. call some server.. fetch
+5. change the part of the page...
+5.1 changing some section of page.
+5.2 navigate to a new page.. carrying the data..
+
+css
+1. context selector.
+2. how to use properties
+3. css layout mechanism  ( flex , grid)
+
+https://developer.mozilla.org/en-US/docs/Web/Performance/Fundamentals
+
+
+
+
+get 
+setter functions.
+
+class Circle
+{
+constructor()
+{
+this.radius=0
+}
+
+set radius(x) {this.radius=x |
+get radius()  { return this.radius; }
+
+
+
+
+
+}
+
+my secret rant is screaming in my brain...
+javascript is laughing and telling hey java guys, c++ guys
+I am not java or c++ but c++ guys are crying and crying no
+you should be java only.. you should be c++ only so enjoy
+this scrap set get... , thse are "modern features"
+
+
+function ProductionLine(name, target) {
+    this.name = name;
+    this.target = target;
+    this.produced = 0;
+
+    this.efficiency = function() {
+        return (this.produced / this.target) * 100;
+    };
+}
+we have created a class called ProductionLIne
+input argument of the function act like a constructor
+for the class productionLine.
+name, target , producted are content.
+efficiency is operation..
+
+language guys will keep adding features whether people use it or not..
+people who use moral science words we cannot compete and we should not also..
+subjective things who wants to have absolute discussion..
+
+"cleaner","neater"... congrats Shakespeare on language skill.
+
+yesterday
+1. inheritance.
+today
+1. set, get
+2. function also can act like a class, when you see the word called  "this"
+what does this mean depends on usage scenario..
+if you are using in context of a class concept.. which you would have written
+by using Class keyword or function keyword.. this refers to the calling object.
+3.
+
+
+how do you create an object
+
+const x ={ length:3, breadth:4 }
+
+while reading hte code technically dont explain the logic...
+
+function add(x,y)
+{
+
+return parseInt(x)+parseInt(y);
+
+}
+
+
+
+
+class ProductionLine {
+    constructor(name, target) {
+        this.name = name;
+        this.target = target;
+        this.produced = 0;
+    }
+
+    produce(quantity) {
+        this.produced += quantity;
+        const logEfficiency = () => {
+            console.log(`Efficiency of ${this.name}: ${(this.produced / this.target * 100).toFixed(2)}%`);
+        };
+        logEfficiency();
+    }
+}
+
+produce is a function in the class ProductionLine.
+to call the produce function we need an object of ProductionLine.
+this used this.produced refers to the object which called the produce function.
+
+this meaning dont assume relax.. and see the context..
+
+
+if you dont any object with you and you are referring to this...
+it refers to the global object.. Window.. provided we are non strict mode..
+
+what is this, in javascript..
+it depends..
+
+if we see a normal function call f1();, if you have used this.. inside the function
+it refers to the window object.. global object , provided we are not using it in strict mode
+if we use it in strict mode...
+
+noraml function call like f1() and we had used "this" inside the function, this will be undefined..
+
+strict mode...
+dont use a variable until you have defined..
+
+1. get set
+2. this... 
+
+obj1.f1()// have no doubt this inside f1 refers to obj1.
+
+3. f1(); // this has no meaning in strict mode... 
+//this points window in non strict mode...
+
+people who are thinking why all this things in javsacript, remember javascript
+is javascript and not c++ or java or...
+respect javascript as javascript.. worst thing.. name.. 
+
+for any person who believes in science, Trust is pathetic word.
+you dont trust you check... in science..
+science does trust authority..
+
+intent first language next..
+intent .. to use it in the project..
+
+comparing javscript with any language is a sin.. compare it with C..
+"garbage value"...  in C, story if you write bad code you suffer who cares...
+
+"use strict"
+
+closure... another way to write a class in javascript, original old way of doing things..
+is this useful yes...
+
+closure..(X) somebody uses the word X.
+hey tell me about X ,is about architecture or code..
+closure is about code... 
+i just only two things variable, funtion, now you tell me what is closure..
+
+closure means
+
+comma state person in javascript
+1. he will not variable scope and data type..
+2. function.. he wont realize, whether it is function definition,  assignment.. , function calling.
+
+
+
+function f1()
+{
+	let x=3;  
+	return function() { console.log("freak"); return x ; }
+
+}
+let x=f1();  //function assignment..
+x()
+
+
+// x will be assigned a function which is returned from f1.
+
+
+
+
+
+
+can we define a fuction within a function in javscript yes or no..
+
+ui event handling code.
+in raw javascript
+jquery..
+function within a function..
+
+inner function can access outer class variables.. and it rmemeber it even 
+
+
+
+
+
+
+console.log(x);
+
+
+
+
+
+
+
+keep your focus..
+1. we have "completed" javascript, css and html
+
+closure...
+
+
+
+
+
+
+define basics of html, css and javascript 
+define good a html, javascript and css.
+
+
+good mood bad mood does not matter.
+
+we should conscious, function is called, function is assigned, function is defined..
+variable.. what is data type and what its scope..
+
+can a local variable exist in javascript after the function which created
+the variables completes execution, answer is yes...
+
+that local variable can be operated by some other fucntions...
+this mechanism is called as closure..
+
+what is big deal about this, welcome to another way of creating classes..
+
+if you dont have closure, local variable value will be lost once the function
+completed execution.
+
+if you have closure, there are set of functions which are able to access this local
+variable despite the function which created the local variable completed execution..
+
+
+f1 created the local variable x. f1 completed executing..
+because of closure there are functions f2 and f3 which are still able to access x.
+despite f1 completing the execution..
+this concept called as closure..   == stateful function.
+
+
+function prevnumber(x)   == pure function or stateless functions
+{
+return x-1;
+
+}
+
+you could have written your entire logic part.
+without global variable without class, by using a  closure..
+
+
+1. set get.. ok fancy way of accessing functions like variables..
+2. this meaning will change.. refers to calling objects, refers to window if not strict mode..
+3. strict mode.. hey javascript please behave decently for me...
+4. closure...  create stateful functions.. what i can do with it.. very good create a class..
+
+state... content
+inner functions  == operations..
+
+dont touch javascript
+dont touch css.
+
+case study1.
+dont write html
+dont write css.
+first thing, think how the ui should look like...
+copy pages and submit a word document how the ui will look like
+use any tool you feel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

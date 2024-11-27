@@ -1,0 +1,16 @@
+html, body {
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+    margin: 0; /* Remove default margin */
+    position: relative; /* This is necessary for absolute positioning of the footer */
+  }
+  
+  footer {
+    position: absolute; /* Position the footer absolutely within the body */
+    bottom: 0; /* Align the footer at the bottom of the viewport */
+    width: 100%; /* Ensure the footer spans the full width */
+    background-color: #333; /* Example background color */
+    color: white; /* Example text color */
+    padding: 10px;
+    text-align: center;
+  }
+  

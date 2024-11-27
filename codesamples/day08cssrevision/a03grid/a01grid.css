@@ -32,7 +32,7 @@ header h1 {
 /* Content Styles with Grid Layout */
 .content {
     display: grid;               /* Enable Grid Layout */
-    grid-template-columns: repeat(2, 1fr);  /* 3 equal-width columns */
+    grid-template-columns: repeat(3, 1fr);  /* 3 equal-width columns */
 
     /*
 

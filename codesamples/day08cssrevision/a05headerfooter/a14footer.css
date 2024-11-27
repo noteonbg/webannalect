@@ -14,7 +14,7 @@
     color: white;                     /* White text */
     padding: 20px;
     flex-wrap: wrap; 
-    bottom: 0;                 /* Allow sections to wrap on smaller screens */
+                    /* Allow sections to wrap on smaller screens */
 }
 
 .footer-section {

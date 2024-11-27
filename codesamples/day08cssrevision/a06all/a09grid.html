@@ -24,15 +24,15 @@
             grid-template-columns: 1fr 3fr;  /* Two columns: small left, large right */
             grid-template-rows: auto 1fr auto;  /* Header, body (flexible), footer */
             grid-template-areas: 
-                "header header"
-                "left right"
+                "x x"
+                "right left"
                 "footer footer";
             height: 100%;
         }
 
         /* Header styles */
         header {
-            grid-area: header;
+            grid-area: x;
             background-color: #4CAF50;
             color: white;
             padding: 20px;
@@ -87,6 +87,9 @@
         <!-- Header section -->
         <header>
             <h1>Responsive Layout</h1>
+            <p>This is a simple layout with a header, body, and footer.</p>
+            <p>This is a simple layout with a header, body, and footer.</p>
+            <p>This is a simple layout with a header, body, and footer.</p>
             <p>This is a simple layout with a header, body, and footer.</p>
         </header>
 

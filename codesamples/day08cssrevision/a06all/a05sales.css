@@ -57,9 +57,6 @@
     border-bottom: 1px solid #ddd;
   }
   
-  section .sales-grid div:nth-child(odd) {
-    background-color: #f0f0f0;
-  }
   
   footer {
     margin-top: 20px;

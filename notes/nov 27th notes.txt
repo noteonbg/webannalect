@@ -1,0 +1,231 @@
+1. hopefully we understood in javascript
+
+1.1 inheritance.
+1.2 get, set methods in javscript
+1.3 closure...  ( by knowing this concept we can avoid using
+the global variable)  -- something equivalent of a class.
+
+foundations of javascript...
+4/5  
+1  -- scheduled things.. promise, prototype .. misc syntax.. , 
+promise.. fetch ( how to you contact server and get some data )
+any person who is not clear about what is business logic they are going to solve
+should not attempt any presentation..
+
+basics of css..
+1. caution , you will get lot of properties dont byheart anything listen to it like a story..
+
+css
+1. login,logout adding of two numbers.. ( css was already )
+2. dashboard  (  you had to do css part for it.. for some completed for some not completed)
+3. employee case study ( word document ) -- pending..  ( no javascript..ok..html,css)
+4. so called medical case study  ( html, css and javascript -- can you come with design)
+
+all you know
+
+1. selector.  ( class, pseudo classes, )
+2. properities
+3. box model.
+4. heard word called layout..
+
+1. we will look lot of syntax. in the process we will cover some commonly used scnearios
+2. as an assignment.. divide your time between employe case study css and designing
+for the so called medical case study..
+
+concept is not a function of time
+syntax is..
+
+what is you target devices.. and what resolution, which browsers.. 
+application which runs inside the browser..
+
+you concentrate on grid and flex.. then we will look at other layouts..
+
+
+once you tell grid, you want some cells to grow rowwise or columnwise here are properties
+available for it... it is called as span..
+
+as keep going thru keep your bp level normal when new properties comne..
+
+flex :1
+css property flex
+
+when you see a property open documentation to understand the property properly
+
+
+flex is a shortcut for setting 3 properties..
+
+flex :1 1 0
+
+idea of this program
+you can mix both flex and grid..
+
+css syntax looks a lot.. just relax first , now you heard some words..
+
+flex
+grid
+some properties associated..
+example when flex grows.. what should happen
+how to tell among two flex which one will occupy will more space..
+grid.. how to tell columns, rows..
+
+scenarios
+1. i want a header, footer and body..
+2. i want a header, footer, body and subheader..
+3. i want a header, footer, body and subheader, body should be divided into three regions
+first region is small
+third rgion is small
+second region should be big.
+
+in today class, those who try to tell how will i remember properties gone..
+
+different layouts
+different layouts has got different properties with respect how it is created,
+how it grows... we have to learn those properties
+and then stick to scenario based css usage..
+
+once you are back let me know
+
+1. what devices are you targeting.
+2. how your layout will look like.
+3. which part of the screen will what space.. may be good idea to stick relative
+measurements than absolute measurements.
+4. suppose you get more screen size which areas which you want to grow
+which areas should not grow
+5. make a list of scenarios ..
+6. what all resolutions you are targeting..
+
+it should work on all systems.. this is a moral science word, cooking will be very high..
+
+
+
+
+flex
+grid..
+
+some story telling on layout..  grid, its properties,, flex its properties.. block 
+positioning of elements..
+
+if you intent is to learn syntax.. w3c school is good enough
+
+
+static
+relative
+absolute
+fixed
+sticky 
+
+
+
+day08
+these two folders.. look at html files and css properties and experimenet with he properties
+a05headerandfooter
+a06all.
+
+for medical case study design your ui.. no html, no css..
+
+employee login
+postlogin page
+
+same like problem statement 2 come up design first and then you can start with css.
+
+header
+body ..? details you figure out..
+footer
+
+something is on front and something is back..
+front .. zindex property usage in css.
+
+1. you heard some stories and properties on layouts.. grid, flex
+2. tiny story on positioning.. static, sticky, relative, absolute, fixed..
+3. think in terms of scenarios properties you cannot byheart..
+
+if you want to something to appear outside the screen..as a dialog think of zindex..
+
+
+what layout is doing
+
+
+
+
+
+grid-template-areas and grid-area should be used together..
+there are multiple ways of doing the same thing..
+
+story of today.
+1. in css lot of syntax.. how to remember less.
+2. you design your layout of the page..dont worry about css and html syntax..
+3. decide if you have extra space which portion of your page should grow or all portions shoul grow equally.
+4. think are you willing to show some layering.. some x is above, y is below..  zindex..
+5. positioning , elements are positioned by default, I want to move it from the default positiong..
+then you think of position property
+
+think of layout first.
+think of position..
+
+login
+postlogin adding of two numbers.
+logout..
+try to understand that css.
+
+employee and medical case study come up with design..
+those who byheart properties .. see you in hell, frameworks are there..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    grid-template-rows: auto 1fr auto auto; /* 3 rows: header, main content, and footer */
+    grid-template-areas:
+      "header header header header"
+      "sidebar main-content main-content overview"
+      "recent-sales recent-sales recent-sales recent-sales"
+      "footer footer footer footer";
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-right: 2px solid #ccc;
+  }
+  
+  /* Main Content */
+  .main-content {
+    grid-area: main-content;
+    background-color: #e2f7e2;
+    padding: 20px;
+  }
+  
+  /* Sales Overview (spanning multiple columns) */
+  .overview {
+    grid-area: overview;
+    background-color: #f9f9f9;
+    padding: 20px;
+    grid-column: span 2; /* Spans across 2 columns */
+  }
+  
+  /* Recent Sales */
+  .recent-sales {
+    grid-area:recent-sales;
+    background-color: #e9f7ff;
+    padding: 20px;
+    grid-column: span 2; /* Spans across 2 columns */
+  }
+  
+  /* Footer */
+  .footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  

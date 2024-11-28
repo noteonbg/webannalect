@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    /* Company Name Header */
+    .company-header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    /* Header (Welcome and Logout) */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header .welcome {
+      font-size: 1.2em;
+    }
+
+    header .logout {
+      float: right;
+      background-color: #ff4d4d;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: -10px;
+    }
+
+    header .logout:hover {
+      background-color: #cc0000;
+    }
+
+    /* Subheader */
+    .subheader {
+      background-color: #f1f1f1;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+
+    /* Main content container with left sidebar and right content */
+    .main-content {
+      display: flex;
+      flex: 1;
+    }
+
+    /* Left Sidebar Menu */
+    .sidebar {
+      width: 200px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      font-size: 1.3em;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.1em;
+    }
+
+    .sidebar ul li a:hover {
+      color: #28a745;
+    }
+
+    /* Cart Section with Grid Layout (Main Content) */
+    .cart-container, .profile, .return-policy, .shipping-policy {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+      gap: 20px; /* space between items */
+      margin: 20px;
+      padding: 20px;
+    }
+
+    /* Profile, Return Policy, Shipping Policy - Layout */
+    .profile, .return-policy, .shipping-policy {
+      grid-template-columns: 1fr;
+      display: block;
+      text-align: center;
+    }
+
+    /* Cart Item Style */
+    .cart-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .cart-item h3 {
+      margin: 10px 0;
+    }
+
+    .cart-item .price {
+      color: green;
+      font-size: 1.2em;
+    }
+
+    .cart-item .add-to-cart {
+      background-color: #28a745;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    .cart-item .add-to-cart:hover {
+      background-color: #218838;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Hide by default */
+    .hidden {
+      display: none;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1200px) {
+      .cart-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row on smaller screens */
+      }
+    }
+
+    @media (max-width: 900px) {
+      .cart-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row on even smaller screens */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cart-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on mobile screens */
+      }
+    }
+
+    @media (max-width: 400px) {
+      .cart-container {
+        grid-template-columns: 1fr; /* 1 item per row on very small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Company Name Header -->
+  <div class="company-header">
+    <strong>Company Name</strong>
+  </div>
+
+  <!-- Header (Welcome and Logout) -->
+  <header>
+    <div class="welcome">Welcome, <strong>Username</strong></div>
+    <a href="#" class="logout">Logout</a>
+  </header>
+
+  <!-- Subheader -->
+  <div class="subheader">
+    <p>Your Shopping Cart</p>
+  </div>
+
+  <!-- Main content (Sidebar + Cart) -->
+  <div class="main-content">
+    <!-- Left Sidebar Menu -->
+    <div class="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#" onclick="showProfile()">Profile</a></li>
+        <li><a href="#" onclick="showReturnPolicy()">Return Policy</a></li>
+        <li><a href="#" onclick="showShippingPolicy()">Shipping Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Content Area where Cart, Profile, Return Policy, and Shipping Policy will be displayed -->
+    <div class="content-area">
+      <!-- Cart Section -->
+      <div id="cart" class="cart-container">
+        <div class="cart-item">
+          <img src="https://via.placeholder.com/200" alt="Item 1">
+          <h3>Item 1</h3>
+          <p class="price">Rs 19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="cart-item">
+          <img src="https://via.placeholder.com/200" alt="Item 2">
+          <h3>Item 2</h3>
+          <p class="price">Rs 29.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="cart-item">
+          <img src="https://via.placeholder.com/200" alt="Item 3">
+          <h3>Item 3</h3>
+          <p class="price">Rs 39.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="cart-item">
+          <img src="https://via.placeholder.com/200" alt="Item 4">
+          <h3>Item 4</h3>
+          <p class="price">Rs 49.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="cart-item">
+          <img src="https://via.placeholder.com/200" alt="Item 5">
+          <h3>Item 5</h3>
+          <p class="price">Rs 59.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Profile Section -->
+      <div id="profile" class="profile hidden">
+        <h2>Your Profile</h2>
+        <p>Details about the user...</p>
+        <button onclick="showCart()">View Cart</button>
+      </div>
+
+      <!-- Return Policy Section -->
+      <div id="return-policy" class="return-policy hidden">
+        <h2>Return Policy</h2>
+        <p>Details about return policy...</p>
+        <button onclick="showCart()">View Cart</button>
+      </div>
+
+      <!-- Shipping Policy Section -->
+      <div id="shipping-policy" class="shipping-policy hidden">
+        <h2>Shipping Policy</h2>
+        <p>Details about shipping policy...</p>
+        <button onclick="showCart()">View Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Shopping Cart Example | All rights reserved</p>
+  </footer>
+
+  <script>
+    // Function to show Profile section
+    function showProfile() {
+      hideAllSections();
+      document.getElementById("profile").classList.remove("hidden");
+    }
+
+    // Function to show Return Policy section
+    function showReturnPolicy() {
+      hideAllSections();
+      document.getElementById("return-policy").classList.remove("hidden");
+    }
+
+    // Function to show Shipping Policy section
+    function showShippingPolicy() {
+      hideAllSections();
+      document.getElementById("shipping-policy").classList.remove("hidden");
+    }
+
+    // Function to hide all sections
+    function hideAllSections() {
+      document.getElementById("cart").classList.add("hidden");
+      document.getElementById("profile").classList.add("hidden");
+      document.getElementById("return-policy").classList.add("hidden");
+      document.getElementById("shipping-policy").classList.add("hidden");
+    }
+
+    // Function to show the Cart section again
+    function showCart() {
+      hideAllSections();
+      document.getElementById("cart").classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>

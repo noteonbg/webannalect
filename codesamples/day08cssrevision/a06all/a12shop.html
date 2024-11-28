@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Header */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header .welcome {
+      font-size: 1.2em;
+    }
+
+    header .logout {
+      float: right;
+      background-color: #ff4d4d;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: -10px;
+    }
+
+    header .logout:hover {
+      background-color: #cc0000;
+    }
+
+    /* Subheader */
+    .subheader {
+      background-color: #f1f1f1;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+
+    /* Cart Section */
+    .cart-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px;
+    }
+
+    .cart-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 200px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .cart-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .cart-item h3 {
+      margin: 10px 0;
+    }
+
+    .cart-item .price {
+      color: green;
+      font-size: 1.2em;
+    }
+
+    .cart-item .quantity {
+      margin-top: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="welcome">Welcome, <strong>Username</strong></div>
+    <a href="#" class="logout">Logout</a>
+  </header>
+
+  <!-- Subheader -->
+  <div class="subheader">
+    <p>Your Shopping Cart</p>
+  </div>
+
+  <!-- Cart Section -->
+  <div class="cart-container">
+    <div class="cart-item">
+      <img src="https://via.placeholder.com/200" alt="Item 1">
+      <h3>Item 1</h3>
+      <p class="price">$19.99</p>
+      <div class="quantity">
+        <label for="quantity1">Quantity:</label>
+        <input type="number" id="quantity1" name="quantity1" value="1" min="1">
+      </div>
+    </div>
+    <div class="cart-item">
+      <img src="https://via.placeholder.com/200" alt="Item 2">
+      <h3>Item 2</h3>
+      <p class="price">$29.99</p>
+      <div class="quantity">
+        <label for="quantity2">Quantity:</label>
+        <input type="number" id="quantity2" name="quantity2" value="1" min="1">
+      </div>
+    </div>
+    <div class="cart-item">
+      <img src="https://via.placeholder.com/200" alt="Item 3">
+      <h3>Item 3</h3>
+      <p class="price">$39.99</p>
+      <div class="quantity">
+        <label for="quantity3">Quantity:</label>
+        <input type="number" id="quantity3" name="quantity3" value="1" min="1">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Shopping Cart Example | All rights reserved</p>
+  </footer>
+
+</body>
+</html>

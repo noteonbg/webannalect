@@ -1,0 +1,149 @@
+Auto usage.. scenarios
+
+
+
+ 1. Auto Width and Height
+
+Width: When you set the width of an element to auto, it will adjust its width to fit the content inside it (unless otherwise restricted).
+Height: Similarly, setting height: auto allows the element to automatically adjust its height based on its content.
+
+ Example:
+css
+.container {
+  width: 500px; /* Fixed width */
+  height: auto; /* Height adjusts automatically based on content */
+}
+
+.box {
+  width: auto; /* Box width will adjust based on content */
+  height: 100px;
+  background-color: lightblue;
+}
+
+In this example, the .box will have its width automatically adjusted to fit its content.
+
+
+
+ 2. Auto Margin (Centering Elements)
+
+One of the most common uses of auto is for centering elements horizontally using margins. By setting left and right margins to auto, the element is centered within its container.
+
+ Example:
+css
+.container {
+  width: 80%;
+  margin: 0 auto; /* Automatically calculate equal margins on both sides */
+  background-color: lightgreen;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: lightcoral;
+}
+
+Here, .box is horizontally centered within .container because the left and right margins are set to auto.
+
+
+
+ 3. Auto Positioning (Using Positioning with top, right, bottom, left)
+
+When an element is positioned absolutely or relatively with position: absolute or position: relative, you can use auto for certain properties like top, right, bottom, and left to make the position dynamic.
+
+ Example:
+css
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: lightgray;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; /* Automatically center the element */
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+In this case, .box will be centered within the .container because the top,
+ right, bottom, and left values are set to 0 and the margin is auto.
+
+
+
+ 4. Flexbox Auto (Flex Item Sizing)
+
+In Flexbox, auto is often used for item sizing to make an element take up 
+as much space as necessary while allowing the container to determine 
+the available space.
+
+ Example:
+css
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.item {
+  flex: 0 1 auto; /* Item will grow/shrink based on available space, initial size is based on its content */
+  background-color: lightcoral;
+  padding: 10px;
+}
+
+Here, .item will adjust its width according to its content, and it will also grow or shrink depending on the available space in the container.
+
+
+
+ 5. Auto Scrollbar
+
+The auto value is often used with overflow to show scrollbars only when the content overflows its container.
+
+ Example:
+css
+.container {
+  width: 300px;
+  height: 200px;
+  overflow: auto; /* Scrollbars appear when content overflows */
+  border: 1px solid 000;
+}
+
+.content {
+  height: 400px; /* Content is taller than the container, so a scrollbar appears */
+}
+
+In this case, .container will only show scrollbars if the content inside it overflows. 
+The auto value automatically decides whether to show the scrollbar.
+
+
+
+ 6. Grid Layout with auto
+
+In CSS Grid, auto can be used to allow a column or row to size itself based on the
+ content inside it. If you want the column/row to automatically adjust to its content, 
+ you can use auto in grid-template-columns or grid-template-rows.
+
+ Example:
+css
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* First and third columns auto-size based on content, second column takes remaining space */
+}
+
+.box {
+  padding: 10px;
+  background-color: lightblue;
+}
+
+Here, the first and third columns will automatically size based on their content,
+while the second column will take up the remaining space in the container.
+
+
+
+ 
+

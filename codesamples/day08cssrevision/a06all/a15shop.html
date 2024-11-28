@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header .welcome {
+      font-size: 1.2em;
+    }
+
+    header .logout {
+      float: right;
+      background-color: #ff4d4d;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: -10px;
+    }
+
+    header .logout:hover {
+      background-color: #cc0000;
+    }
+
+    /* Subheader */
+    .subheader {
+      background-color: #f1f1f1;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+
+    /* Main content container with left sidebar and right content */
+    .main-content {
+      display: flex;
+      flex: 1;
+    }
+
+    /* Left Sidebar Menu */
+    .sidebar {
+      width: 200px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      font-size: 1.3em;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.1em;
+    }
+
+    .sidebar ul li a:hover {
+      color: #28a745;
+    }
+
+    /* Cart Section with Grid Layout (Main Content) */
+    .cart-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+      gap: 20px; /* space between items */
+      margin: 20px;
+      flex: 1;
+      padding: 20px;
+    }
+
+    .cart-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .cart-item h3 {
+      margin: 10px 0;
+    }
+
+    .cart-item .price {
+      color: green;
+      font-size: 1.2em;
+    }
+
+    .cart-item .add-to-cart {
+      background-color: #28a745;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    .cart-item .add-to-cart:hover {
+      background-color: #218838;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1200px) {
+      .cart-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row on smaller screens */
+      }
+    }
+
+    @media (max-width: 900px) {
+      .cart-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row on even smaller screens */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cart-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on mobile screens */
+      }
+    }
+
+    @media (max-width: 400px) {
+      .cart-container {
+        grid-template-columns: 1fr; /* 1 item per row on very small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="welcome">Welcome, <strong>Username</strong></div>
+    <a href="#" class="logout">Logout</a>
+  </header>
+
+  <!-- Subheader -->
+  <div class="subheader">
+    <p>Your Shopping Cart</p>
+  </div>
+
+  <!-- Main content (Sidebar + Cart) -->
+  <div class="main-content">
+    <!-- Left Sidebar Menu -->
+    <div class="sidebar">
+      <h3></h3>
+      <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Cart Section with Grid Layout -->
+    <div class="cart-container">
+      <div class="cart-item">
+        <img src="https://via.placeholder.com/200" alt="Item 1">
+        <h3>Item 1</h3>
+        <p class="price">Rs 19.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="cart-item">
+        <img src="https://via.placeholder.com/200" alt="Item 2">
+        <h3>Item 2</h3>
+        <p class="price">Rs 29.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="cart-item">
+        <img src="https://via.placeholder.com/200" alt="Item 3">
+        <h3>Item 3</h3>
+        <p class="price">Rs 39.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="cart-item">
+        <img src="https://via.placeholder.com/200" alt="Item 4">
+        <h3>Item 4</h3>
+        <p class="price">Rs 49.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="cart-item">
+        <img src="https://via.placeholder.com/200" alt="Item 5">
+        <h3>Item 5</h3>
+        <p class="price">Rs 59.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Shopping Cart Example | All rights reserved</p>
+  </footer>
+
+</body>
+</html>
+
+<!--
+Left Sidebar Menu:
+
+The .sidebar is a fixed-width column (200px) placed on the left-hand side of the page using Flexbox in the .main-content container.
+The menu contains links like Profile, Return Policy, and Shipping Policy which are styled with a hover effect that changes the text color.
+Responsive Layout:
+
+The sidebar remains fixed in size, while the content on the right adjusts dynamically. The main content (like the shopping cart) expands to take up the remaining space in the .main-content container.
+Responsive Design: The cart layout changes the number of items per row based on screen size (5 items per row on larger screens, 1 item per row on very small screens).
+Cart Section:
+
+The .cart-container now takes up the remaining space (using flex: 1), and items are displayed in a grid with 5 items per row.
+Fixed Footer:
+
+The footer remains at the bottom of the page, displaying copyright information.
+How It Works:
+
+Sidebar: The menu links are positioned on the left and are always visible with a fixed width.
+Main Content: The shopping cart items display in a grid format, and the number 
+of items per row adjusts based on the screen size.
+
+
+-->

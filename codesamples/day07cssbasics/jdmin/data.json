@@ -1,5 +1,5 @@
 {
-    "users": [
+    "scrap": [
       {
         "id": 1,
         "name": "abc def",
@@ -9,7 +9,13 @@
         "id": 2,
         "name": "ghi ijk",
         "email": "ghi@poc.com"
+      },
+      {
+        "id": 3,
+        "name": "klm nop",
+        "email": "klm@poc.com"
       }
+
     ]
   }
   

@@ -3,12 +3,25 @@ p {
     color: blue;  /* Normally, all <p> elements will be blue */
 }
 
+
 /* Rule with !important */
 p {
-    color: red !important;  /* This will override the previous blue rule */
+    text-align: left;
+    color: orange !important;  /* This will override the previous blue rule */
 }
 
 /* Class-based rule */
 .my-container p {
     color: green;  /* This would normally change the color inside .my-container */
+}
+
+.pqr
+{
+    color:red
+}
+
+
+#ijk
+{
+    color:aqua;
 }

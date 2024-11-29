@@ -67,7 +67,8 @@ Objective: Design a system to schedule the production of different products.
 
 Requirements:
 
-Implement a function that allows the scheduling of products for production based on demand forecasts.
+Implement a function that allows the scheduling of products for production based
+ on demand forecasts.
 Each scheduled production should have a unique identifier, product name, scheduled date, and quantity.
 Include functionality to update production schedules and view upcoming production tasks.
 Ensure that the system can handle overlapping schedules and notify when a product is already scheduled for the same date.

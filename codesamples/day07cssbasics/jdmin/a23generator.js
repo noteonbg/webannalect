@@ -55,9 +55,10 @@ function* productionLineGenerator() {
 const productionLine = productionLineGenerator();
 
 // Using the generator to get batches of production
-for (const batch of productionLine) {
-    console.log(batch);
-}
+
+console.log(productionLine.next());
+console.log(productionLine.next());
+
 
 /*
 

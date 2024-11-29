@@ -3,7 +3,31 @@
         <script>
             "use strict"
 
+
             // this x person has done it
+
+            function fetchData() {
+
+return new Promise(resolve => {
+    setTimeout(() => resolve("Data fetched!"), 1000000);
+});
+
+
+
+
+}
+
+// Using async/await
+async function processData() {
+console.log("Start fetching data...");
+let data = await fetchData();  // Waits for fetchData() to resolve
+console.log(data,"freak");             // Logs: Data fetched!
+}
+
+processData();
+
+
+            /*
 
             function freak(x,y)
             {
@@ -15,6 +39,8 @@
             }
 
             let anotherPromise=new Promise(freak);
+
+            */
 
 
 

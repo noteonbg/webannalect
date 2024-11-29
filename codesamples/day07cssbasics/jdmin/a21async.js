@@ -11,6 +11,7 @@ A Promise allows you to attach callbacks (then, catch) to handle the success or
 */
 
 //person X is doing it
+/*
 let myPromise = new Promise((resolve, reject) => {
     let success = true;
 
@@ -26,6 +27,8 @@ myPromise
     .then(result => console.log(result))  // Logs: Operation succeeded!
     .catch(error => console.log(error));  // Logs: Operation failed!
 
+    */
+
 
 
 
@@ -36,16 +39,21 @@ myPromise
 
 // Function that returns a promise .. aysnch
 function fetchData() {
+
     return new Promise(resolve => {
         setTimeout(() => resolve("Data fetched!"), 1000);
     });
+
+    
+
+
 }
 
 // Using async/await
 async function processData() {
     console.log("Start fetching data...");
-    let data = await fetchData();  // Waits for fetchData() to resolve
-    console.log(data);             // Logs: Data fetched!
+    let data = await  fetchData();  // Waits for fetchData() to resolve
+    console.log(data,"freak");             // Logs: Data fetched!
 }
 
 processData();

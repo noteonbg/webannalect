@@ -11,7 +11,7 @@ fetch('./data.json')
     const userContainer = document.getElementById('user-container');
 
     // Loop through the users and create HTML elements to display their details
-    data.users.forEach(user => {
+    data.scrap.forEach(user => {
       // Create a div element for each user
       const userDiv = document.createElement('div');
       userDiv.classList.add('user');

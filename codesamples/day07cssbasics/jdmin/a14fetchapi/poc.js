@@ -10,12 +10,12 @@ const messageDiv = document.getElementById('message');
 // Fetch machines and display them
 const fetchMachines = async () => {
     try {
-        const response = await fetch(apiUrl);
+        const response = fetch(apiUrl);// let us decide to talk with the server..
         console.log(response);
         if (!response.ok) {
             throw new Error(`Error fetching machines: ${response.status}`);
         }
-        const machines = await response.json();
+        const machines = await response.json();  //wait for server to respond..
         displayMachines(machines);
     } catch (error) {
         displayMessage(`Failed to load machines. ${error.message}`);

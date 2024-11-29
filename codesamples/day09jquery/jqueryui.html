@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery UI Dialog Example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<!-- Button to open the dialog -->
+<button id="openDialog">Add Numbers</button>
+
+<!-- The dialog content -->
+<div id="dialog" title="Add Two Numbers" style="display: none;">
+  <label for="num1">Number 1: </label>
+  <input type="number" id="num1" />
+  <br><br>
+  <label for="num2">Number 2: </label>
+  <input type="number" id="num2" />
+  <br><br>
+  <button id="addButton">Add</button>
+  <p id="result"></p>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // Initialize the dialog
+    $("#dialog").dialog({
+      autoOpen: false, // Prevent dialog from opening automatically
+      modal: true,     // Make it modal (disables interaction with the rest of the page)
+      buttons: {
+        Close: function() {
+          $(this).dialog("close");
+        }
+      }
+    });
+
+    // Open the dialog when the button is clicked
+    $("#openDialog").click(function() {
+      $("#dialog").dialog("open");
+    });
+
+    // Add the two numbers when the "Add" button is clicked
+    $("#addButton").click(function() {
+      const num1 = parseFloat($("#num1").val());
+      const num2 = parseFloat($("#num2").val());
+      
+      // Check if the input is valid
+      if (!isNaN(num1) && !isNaN(num2)) {
+        const sum = num1 + num2;
+        $("#result").text("The sum is: " + sum);
+      } else {
+        $("#result").text("Please enter valid numbers.");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

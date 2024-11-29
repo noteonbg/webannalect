@@ -1,0 +1,15 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "abc def",
+        "email": "abc@poc.com"
+      },
+      {
+        "id": 2,
+        "name": "ghi ijk",
+        "email": "ghi@poc.com"
+      }
+    ]
+  }
+  

@@ -6,6 +6,64 @@ we created a custom iterator for a ProductionBatch class,
 
 */
 
+// Create an array
+const numbers = [1, 2, 3, 4, 5];
+
+// Create an iterator for the array
+const iterator = numbers[Symbol.iterator]();
+
+/*
+
+Creating an Iterator: The Symbol.iterator is a built-in method that returns an
+ iterator for the array. Every array, string, or other iterable object 
+ has a built-in iterator.
+
+ Iterator End: Once all elements have been iterated over,
+  the done property will be true, and the value will be undefined.
+
+
+*/
+
+// Use the iterator to go through the array
+console.log(iterator.next()); // { value: 1, done: false }
+console.log(iterator.next()); // { value: 2, done: false }
+console.log(iterator.next()); // { value: 3, done: false }
+console.log(iterator.next()); // { value: 4, done: false }
+console.log(iterator.next()); // { value: 5, done: false }
+console.log(iterator.next()); // { value: undefined, done: true }
+
+
+const customIterable = {
+    data: [10, 20, 30, 40, 50],
+  
+    [Symbol.iterator]() {
+      let index = 0;
+      const data = this.data;
+  
+      return {
+        next() {
+          if (index < data.length) {
+            return { value: data[index++], done: false };
+          } else {
+            return { value: undefined, done: true };
+          }
+        }
+      };
+    }
+  };
+  
+  // Using the custom iterator
+  const iterator1 = customIterable[Symbol.iterator]();
+  console.log(iterator1.next()); // { value: 10, done: false }
+  console.log(iterator1.next()); // { value: 20, done: false }
+  console.log(iterator1.next()); // { value: 30, done: false }
+  console.log(iterator1.next()); // { value: 40, done: false }
+  console.log(iterator1.next()); // { value: 50, done: false }
+  console.log(iterator1.next()); // { value: undefined, done: true }
+
+
+
+
 class ProductionBatch {
     constructor(batchId, items) {
         this.batchId = batchId;

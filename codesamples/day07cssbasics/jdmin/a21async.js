@@ -10,6 +10,7 @@ A Promise allows you to attach callbacks (then, catch) to handle the success or
 
 */
 
+//person X is doing it
 let myPromise = new Promise((resolve, reject) => {
     let success = true;
 
@@ -20,9 +21,13 @@ let myPromise = new Promise((resolve, reject) => {
     }
 });
 
+//person Y is using it.
 myPromise
     .then(result => console.log(result))  // Logs: Operation succeeded!
     .catch(error => console.log(error));  // Logs: Operation failed!
+
+
+
 
 
 

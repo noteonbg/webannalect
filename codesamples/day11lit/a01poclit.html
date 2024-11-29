@@ -106,3 +106,23 @@
   <temperature-monitor></temperature-monitor>
 </body>
 </html>
+
+<!--
+Reactive Rendering:
+
+Lit components are reactive by default. This means that when properties of a Lit component change, the DOM automatically updates to reflect those changes.
+You don’t have to manually manipulate the DOM or use a separate framework to manage the updates. Lit handles this behind the scenes.
+Templates and Rendering:
+
+Lit uses template literals (backticks `) to define the HTML structure of components, making the templates concise and easy to understand.
+html: Lit provides a tagged template literal called html for rendering HTML inside the component.
+Shadow DOM:
+
+Like native Web Components, Lit components use the shadow DOM for encapsulation. This allows your component to have its own isolated DOM and styles.
+This ensures that the styles and behavior of the component don’t interfere with the global styles of the page or other components.
+Properties and Attributes:
+
+Lit components can have properties that define the state of the component. When a property changes, Lit re-renders the component automatically.
+You can map properties to attributes on the component using Lit’s built-in system, so changes to attributes will automatically trigger reactivity.
+
+-->

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow DOM Example</title>
+</head>
+<body>
+
+  <!-- Create a custom element -->
+  <my-button></my-button>
+
+  <script>
+    // Define a custom element class
+    class MyButton extends HTMLElement {
+      constructor() {
+        super(); // Call the parent constructor (HTMLElement)
+
+        // Create a shadow root (this is where the Shadow DOM starts)
+        const shadow = this.attachShadow({ mode: 'open' });
+
+        // Add some HTML inside the shadow DOM
+        shadow.innerHTML = `
+          <style>
+            /* Styles for the button inside the Shadow DOM */
+            button {
+              background-color: #4CAF50;
+              color: white;
+              font-size: 16px;
+              padding: 10px 20px;
+              border: none;
+              cursor: pointer;
+              border-radius: 5px;
+            }
+
+            button:hover {
+              background-color: #45a049;
+            }
+          </style>
+          <button>Click Me!</button>
+        `;
+      }
+    }
+
+    // Register the custom element
+    customElements.define('my-button', MyButton);
+  </script>
+
+</body>
+</html>
+
+<!--
+The button has its own styles (background color, hover effect, etc.), and these styles 
+are encapsulated inside the shadow DOM. External styles on the page won't interfere 
+with the button.
+
+The shadow DOM provides style and content isolation, allowing 
+custom components to have their own internal styles without 
+affecting the global styles.
+
+Use of Shadow DOM: These widgets need to have their own isolated environment to prevent
+ conflicts with the host page's styling and JavaScript.
+  Using Shadow DOM, the widget's DOM and styles are encapsulated,
+   making it easier to integrate with different environments.
+
+
+-->

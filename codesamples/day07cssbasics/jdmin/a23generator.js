@@ -23,6 +23,24 @@ Stateful: Generators maintain their own context and state
 
 */
 
+// Define a generator function
+function* myGenerator() {
+    yield 1;
+    yield 2;
+    yield 3;
+  }
+  
+  // Create a generator object
+  const gen = myGenerator();
+  
+  // Get the first value from the generator
+  const result = gen.next();
+  
+  // Log the value
+  console.log(result.value); // Output: 1
+
+  
+
 function* productionLineGenerator() {
     let batchNumber = 1;
 

@@ -3,9 +3,67 @@
         <script>
             "use strict"
 
+            // this x person has done it
+
+            function freak(x,y)
+            {
+                    let success=true;
+                    if(success)
+                        x(1); //success
+                    else
+                       y(2);//failure criteria.
+            }
+
+            let anotherPromise=new Promise(freak);
+
+
+
+    let myPromise = new Promise((freak, junk) => {
+    let success = true;
+//decide what is status success or failure
+    if (success === 123) {
+        freak("Operation succeeded!");
+    } else {
+       junk("basics are never out of fashion");
+    }
+});
+
+function everbodycares(weareforcedtocare)
+{
+    console.log("ok ",weareforcedtocare);
+}
+
+function nobodycares(weareforcedtocareherealso)
+{
+    console.log("not ok may be",weareforcedtocareherealso);
+}
+
+
+myPromise
+    .then(everbodycares)  // Logs: Operation succeeded!
+    .catch(nobodycares);  // Logs: Operation failed!
+
+
+
+//person Y is using it.
+
+/*
+myPromise
+    .then(result => console.log("123",result))  // Logs: Operation succeeded!
+    .catch(error => console.log("456",error));  // Logs: Operation failed!
+
+ */
+
+
+
+
+
+
             //shock will reduce in javascript if you tell hey javascript I know you are new langauge
             //to me..
 
+
+            /*
             function ok()
             {
                 let r=[];
@@ -16,6 +74,8 @@
                             };
             }
 
+            */
+
             let circle=ok();  // circle is assigned with a function
             //which is returned when ok function is called.
             // return function of ok, does not take any input
@@ -24,10 +84,12 @@
             //other galaxy people can hear...so javascript took sympathy...
 
 
-
+/*
             let circleobject=circle();
                         circleobject.setradius(4);
             console.log(circleobject.getradius());
+
+            */
 
 
 

@@ -1,0 +1,159 @@
+
+
+
+
+
+ 1. What does the <a> tag in HTML stand for?
+ A) Anchor  
+ B) Application  
+ C) Article  
+ D) Area
+
+Answer: A) Anchor
+
+
+
+ 2. Which attribute is used to specify the URL of a link in the <a> tag?
+ A) href  
+ B) src  
+ C) link  
+ D) url
+
+Answer: A) href
+
+
+
+ 3. How can you make a list that lists items with bullets in HTML?
+ A) <ol>  
+ B) <ul>  
+ C) <li>  
+ D) <dl>
+
+Answer: B) <ul>
+
+
+
+ 4. Which tag is used to define an internal style sheet in HTML?
+ A) <style>  
+ B) <link>  
+ C) <script>  
+ D) <css>
+
+Answer: A) <style>
+
+
+
+ 5. What is the correct HTML tag to define a table row?
+ A) <tr>  
+ B) <td>  
+ C) <th>  
+ D) <table>
+
+Answer: A) <tr>
+
+
+
+ CSS Questions
+
+ 6. What does the backgroundcolor property in CSS do?
+ A) Adds a background image to an element  
+ B) Changes the background color of an element  
+ C) Specifies the border color of an element  
+ D) Changes the color of the text
+
+Answer: B) Changes the background color of an element
+
+
+
+ 7. How do you select an element with the class name "menu" in CSS?
+ A) menu  
+ B) .menu  
+ C) menu  
+ D) *menu
+
+Answer: B) .menu
+
+
+
+ 8. What does the flex property in CSS do in a flex container?
+ A) Aligns the flex container  
+ B) Defines how items are spaced in the container  
+ C) Distributes the space between and around content items  
+ D) Sets the flex direction of items
+
+Answer: C) Distributes the space between and around content items
+
+
+
+ 9. Which CSS property is used to change the text color of an element?
+ A) textcolor  
+ B) color  
+ C) fontcolor  
+ D) textstyle
+
+Answer: B) color
+
+
+
+ 10. Which CSS property controls the space between the content and its border?
+ A) margin  
+ B) padding  
+ C) borderspacing  
+ D) borderwidth
+
+Answer: B) padding
+
+
+
+ JavaScript Questions
+
+ 11. What is the correct syntax to create a JavaScript function?
+ A) function myFunction()  
+ B) function:myFunction()  
+ C) create function myFunction()  
+ D) def myFunction()
+
+Answer: A) function myFunction()
+
+
+
+ 12. Which of the following is the correct way to define a variable in JavaScript?
+ A) var x = 10;  
+ B) let x == 10;  
+ C) int x = 10;  
+ D) let x := 10;
+
+Answer: A) var x = 10;
+
+
+
+ 13. How do you write "Hello, World!" to the browser console in JavaScript?
+ A) print("Hello, World!");  
+ B) console.log("Hello, World!");  
+ C) alert("Hello, World!");  
+ D) write("Hello, World!");
+
+Answer: B) console.log("Hello, World!");
+
+
+
+ 14. Which event is triggered when a user clicks on an element in JavaScript?
+ A) onchange  
+ B) onhover  
+ C) onclick  
+ D) onfocus
+
+Answer: C) onclick
+
+
+
+ 15. What is the correct way to check if a variable x is undefined in JavaScript?
+ A) if (x == null)  
+ B) if (x == undefined)  
+ C) if (x === undefined)  
+ D) if (x === null)
+
+Answer: C) if (x === undefined)
+
+
+

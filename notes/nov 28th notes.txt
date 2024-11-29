@@ -1,0 +1,265 @@
+take your scenario and figure out the syntax to code..
+
+something is common to the project and not specific to the programmer
+should not be decided by the programmer.
+javascript, css , color combination.. 
+
+main story
+multiple ways to the do same thing..
+
+you cannot remember the syntax..
+let me start with gridlayout first.
+let me go to flex layout
+let me go to position
+this approach will not work...
+
+
+1. let me how to create a header.
+2. let me how to create two section..
+3. i know how to create a footer.
+4. i know to display tubular content.
+5. i know how to shopping cart kind of page 
+
+in overenthusiasm syntax dont forget our loyalty is towards the project.
+still architecture is the boss.
+
+on need basis learning.. is what we need
+and not tell i will read toc...
+
+for doing X, can I leanr whatever is needed.
+
+focus today employee postlogin screen.
+design and coding..
+
+---------------------------------------------------
+
+javscript..
+
+1. promise.
+2. scheduling things..
+3. superset topic.. event handling..
+
+event ..
+Event source
+change in state -- some variable will change
+notification mechanism
+
+Event Listener  ==register for the event.
+registration of the Event..  document.addEventListener("domcontentloaded",()=>{} );
+function definition and assignment... == REgistration for the event..
+
+registering for the event  == event occurring  No
+
+superset word is ajax..
+
+fetch --is a mechanism available in javascript to make a request to the server.. in http mode..
+
+
+for anywho is interested in being in the http based world.. read some basics about http..
+
+what is http protocol
+what goes in requests.
+what goes in response
+what is response status codes
+what are modes of request.
+what is session
+what is cookie
+what typically goes in http headers..
+
+what does the programmer on the server done..
+
+1. he has registered his code for http request events..
+
+hey system, if the guy clicks on the button , call this function of mine..
+
+server guy do.
+
+hey system, in http request, if the event is get.. call this function of mine.
+hey system, in http request, if the event is post.. call this function of mine.
+
+somebody asks you what is a promise..
+promise is something that will not happen in the present.
+something is going to be done and it will take time...
+fancy dress on promise is asyn and await..
+
+with important concepts. like promise, what is problem.
+if you think one person is doing everything , whole concept will collapse.
+
+who created the promise I, who has delivering on the promise I only.. 
+horrible
+
+person X is delivering on the promise.
+person Y is using the promise..
+
+
+what is promise
+example I am going to show will correct in terms of syntax but bad in terms of application why...
+because 
+who created the promise I
+who is delivering on promise I..
+
+a person who is not conscious about the data type of the variables and scope of variables is a dead person
+in programming..
+
+when you create a promise object.. you pass two things to it.. both are functions..
+
+promise(a,b) , a and b both are functions..
+a function has to correspond to success
+b function has to correspond to failure..
+
+the guy who is implementing the promise, will call a, if he feels promise has been met.
+the ugy will function b, if he feels promise has not been met
+you can handle that in your code..
+
+
+when you define a function, think who is going to call it..
+if you dont know who is going to call it..
+then dont define the function.
+
+
+what did we pass to promise
+a function with two arguments
+
+generalized logic..
+
+x person is creating the promise and Y person is telling X person hey X person 
+when you full fill promise please let me know by calling a function called f1.
+when you fail to full fill the promise let me know by calling a function called f2.
+
+X created the promise
+
+Y is using the promise and letting know X hey X please let me know success or failure by calling functions
+f1 or f2.
+
+promise gets a function which takes two arguments.. one indicates success and other indicates failure
+
+input argument ot a promise is a single function . that function which we passed to promise takes two arguments..
+
+
+are you confident of replacing arrow function with a named function..
+or are you afraid..
+
+
+the person who is creating the promise.
+
+1. has to work on the promise
+2. then let the use of the promise know whether he succeed in the promise
+or failed in the promise.
+3. for this, user of the promise has to tell the guy who has promised, two functions one for success
+other for failure, this is indicated by then function for success, catch function for failure.
+
+
+fetch...to understand fetch we need to have some idea regarding promise
+
+1. two people are there..
+2. person who has crated the promise is doing some job and telling the other person hey give me two functions..
+one function which i will call if i feel i succeeded in promise
+other function which i will call if i feel i failied in promise.. you do this, by passing a single function which
+takes arguments.
+3.person who using the promise... he will use the promise and register with promise guy, hey if you succeed
+call this function of mine( define and assign), if you fail call this function of mine(define and assing)
+4.who thing will start working.
+
+
+
+
+fetch(getsomethingfromserver).then("got successfully ).catch("failed to get data from the srver")
+
+be focused.
+step 1
+
+GitHub has been updated, so fetch again..
+look at the code sample available in codesamples\day08cssrevision\a06all
+
+1. design the employee postlogin..
+2. design html and css for employee postlogin today itself.
+
+parallel step..
+\webannalect\reference
+gridandflexprop.txt  ( refer it wheever you see property and see what property does..)
+webui.txt.. what makes a  good ui for web appliactions.
+
+once you are back focus on the employee postlogin design and ensure
+you 
+go systematically
+header
+subheader
+body
+footer
+look at a17shop.html file also...  and see whether you are able to understand css properties.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Data Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdC8Jt7Mry2hCwVreWol6gG5j3unKzXyPrOn6k5RJ0tfjLcmV6fH20" crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- Header -->
+
+  <!-- The header has a background color (bg-primary), white text (text-white), 
+   and some padding (py-3).  -->
+  <header class="bg-primary text-white text-center py-3">
+    <h1>Sales Data Dashboard</h1>
+  </header>
+
+  <!-- Main Content (Body) -->
+
+  <!--
+  class="container":
+
+This is a Bootstrap utility class that applies a fixed-width container to the <div>.
+A container in Bootstrap is used to center and constrain the content on the page.
+ It creates a responsive layout with a fixed width (depending on the screen size),
+  meaning the content inside this container will adapt to different screen widths 
+  (from mobile devices to large desktop monitors).
+The width of the container will automatically adjust at specific breakpoints
+ (e.g., small, medium, large screens), ensuring that the page content remains readable and well-aligned on all screen sizes.
+Effect of container:
+
+On large screens, the container will have a maximum width of 1140px, on medium screens 
+it will be 960px, and on small screens, it will be 100% width of the screen
+ (full-width).
+The content inside the container is centered horizontally with margins on either side.
+
+my-4:
+This is another Bootstrap spacing utility class.
+The my-4 class is shorthand for "margin on the y-axis" with a value of 4.
+ The y represents the vertical axis (top and bottom), so this class will apply margins
+  to the top and bottom of the <div>.
+The value 4 is based on Bootstrap's spacing scale, which ranges from 0 to 5.
+ Each unit of spacing corresponds to a certain amount of padding or margin 
+ (usually in rem units).
+In this case, my-4 means a margin of 1.5rem will be applied to the top and
+ bottom of the container.
+
+Effect of my-4:
+The content inside this container will have vertical spacing 
+(top and bottom margins) of 1.5rem. This creates space around the content
+ inside the container, ensuring that the content doesn’t touch the top or
+  bottom of the page (or any other elements around it).
+    
+  -->
+
+  <div class="container my-4">
+    <h2>Sales Data</h2>
+    <!-- Sales Table -->
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Product Name</th>
+          <th>Sales Quantity</th>
+          <th>Sales Amount ($)</th>
+          <th>Sale Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Sales Data Rows -->
+        <tr>
+          <td>1</td>
+          <td>Product A</td>
+          <td>150</td>
+          <td>1200.00</td>
+          <td>2024-11-01</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Product B</td>
+          <td>80</td>
+          <td>640.00</td>
+          <td>2024-11-05</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Product C</td>
+          <td>120</td>
+          <td>960.00</td>
+          <td>2024-11-07</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Product D</td>
+          <td>200</td>
+          <td>1800.00</td>
+          <td>2024-11-10</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Product E</td>
+          <td>50</td>
+          <td>500.00</td>
+          <td>2024-11-12</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Sales Company. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS, Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybA7k9+PpPpYEOZbbF8MZpt9M1XtZ2llk4TQ9+1a4j68sbp7jJ" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-cu4cp7uI1Jmjg0smkqZ1bb1KcA9tL68kDgKTOqU5ZsCVbxY1V9k1W8ySyy+FJtDe" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+<!--
+
+
+
+The footer has a dark background (bg-dark), white text (text-white), and padding (py-3).
+It displays a copyright message in the center.
+
+
+-->

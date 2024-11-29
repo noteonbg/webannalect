@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Scrollable Body</title>
+    <style>
+        /* Table container to set overall width */
+        .table-container {
+            width: 80%; /* Adjust the width of the table */
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Ensures borders are collapsed */
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        td {
+            text-align: center; /* Center text in table data cells */
+        }
+
+        /* Make the table body scrollable */
+        tbody {
+            display: block;
+            max-height: 300px; /* Set the maximum height for the scrollable body */
+            overflow-y: auto; /* Adds vertical scroll */
+        }
+
+        /* Fix the table header while the body scrolls */
+        
+
+        /* Table row styling */
+        tr {
+            display: flex;
+            width: 100%;
+            
+        }
+
+        /* Ensure each cell takes equal space */
+        th, td {
+            justify-content: space-between;
+            text-align: center;
+            flex: 1;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+
+<div class="table-container">
+    <table>
+        <!-- Table Header -->
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+                <th>Header 4</th>
+            </tr>
+        </thead>
+
+        <!-- Table Body (Scrollable) -->
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+                <td>Data 4</td>
+            </tr>
+            <tr>
+                <td>Data 5</td>
+                <td>Data 6</td>
+                <td>Data 7</td>
+                <td>Data 8</td>
+            </tr>
+            <tr>
+                <td>Data 9</td>
+                <td>Data 10</td>
+                <td>Data 11</td>
+                <td>Data 12</td>
+            </tr>
+            <tr>
+                <td>Data 13</td>
+                <td>Data 14</td>
+                <td>Data 15</td>
+                <td>Data 16</td>
+            </tr>
+            <tr>
+                <td>Data 17</td>
+                <td>Data 18</td>
+                <td>Data 19</td>
+                <td>Data 20</td>
+            </tr>
+            <tr>
+                <td>Data 21</td>
+                <td>Data 22</td>
+                <td>Data 23</td>
+                <td>Data 24</td>
+            </tr>
+            <tr>
+                <td>Data 25</td>
+                <td>Data 26</td>
+                <td>Data 27</td>
+                <td>Data 28</td>
+            </tr>
+            <tr>
+                <td>Data 29</td>
+                <td>Data 30</td>
+                <td>Data 31</td>
+                <td>Data 32</td>
+            </tr>
+            
+            <!-- More rows can be added here -->
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+            <tr>
+                <td>Footer 1</td>
+                <td>Footer 2</td>
+                <td>Footer 3</td>
+                <td>Footer 4</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+</body>
+</html>
+
+<!--
+To create a table in HTML that uses the `<table>`, `<th>`, and `<td>` tags, with a scrollable body (while keeping the header fixed), you can use a combination of CSS properties such as `max-height` and `overflow-y: auto` on the `<tbody>`. Here's a simple example:
+
+### HTML & CSS Example with Scrollable Table Body
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Scrollable Body</title>
+    <style>
+        /* Table container to set overall width */
+        .table-container {
+            width: 80%; /* Adjust the width of the table */
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Ensures borders are collapsed */
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        td {
+            text-align: center; /* Center text in table data cells */
+        }
+
+        /* Make the table body scrollable */
+        tbody {
+            display: block;
+            max-height: 300px; /* Set the maximum height for the scrollable body */
+            overflow-y: auto; /* Adds vertical scroll */
+        }
+
+        /* Fix the table header while the body scrolls */
+        thead, tfoot {
+            display: block;
+        }
+
+        /* Table row styling */
+        tr {
+            display: flex;
+            width: 100%;
+        }
+
+        /* Ensure each cell takes equal space */
+        th, td {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="table-container">
+    <table>
+        <!-- Table Header -->
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+                <th>Header 4</th>
+            </tr>
+        </thead>
+
+        <!-- Table Body (Scrollable) -->
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+                <td>Data 4</td>
+            </tr>
+            <tr>
+                <td>Data 5</td>
+                <td>Data 6</td>
+                <td>Data 7</td>
+                <td>Data 8</td>
+            </tr>
+            <tr>
+                <td>Data 9</td>
+                <td>Data 10</td>
+                <td>Data 11</td>
+                <td>Data 12</td>
+            </tr>
+            <tr>
+                <td>Data 13</td>
+                <td>Data 14</td>
+                <td>Data 15</td>
+                <td>Data 16</td>
+            </tr>
+            <tr>
+                <td>Data 17</td>
+                <td>Data 18</td>
+                <td>Data 19</td>
+                <td>Data 20</td>
+            </tr>
+            <tr>
+                <td>Data 21</td>
+                <td>Data 22</td>
+                <td>Data 23</td>
+                <td>Data 24</td>
+            </tr>
+            <tr>
+                <td>Data 25</td>
+                <td>Data 26</td>
+                <td>Data 27</td>
+                <td>Data 28</td>
+            </tr>
+            <tr>
+                <td>Data 29</td>
+                <td>Data 30</td>
+                <td>Data 31</td>
+                <td>Data 32</td>
+            </tr>
+            <!-- More rows can be added here -->
+        </tbody>
+
+        <!-- Table Footer -->
+        <tfoot>
+            <tr>
+                <td>Footer 1</td>
+                <td>Footer 2</td>
+                <td>Footer 3</td>
+                <td>Footer 4</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+</body>
+</html>
+<!--
+
+### Explanation of the Code:
+
+1. **HTML Structure**:
+   - A typical HTML table structure with `<table>`, `<thead>`, `<tbody>`, and `<tfoot>` tags.
+   - The `<thead>` contains the table headers (`<th>`), and the `<tbody>` contains the actual table data (`<td>`).
+   - The `<tfoot>` contains the footer of the table.
+
+2. **CSS Styling**:
+   - **`.table-container`**: This div wraps the table and allows you to control the table's overall width and margins. It also adds a border around the table.
+   - **`table`**: The `border-collapse: collapse;` style makes sure the table borders are merged together without spacing.
+   - **`th, td`**: Both table header and data cells have padding, text alignment, and a border to separate them.
+   - **`tbody`**: The table body is made scrollable by setting `max-height: 300px` and using `overflow-y: auto`. This means the table will show a vertical scrollbar if the content exceeds the `max-height`.
+   - **`thead, tfoot`**: These sections are set to `display: block;` to ensure they stay fixed while the body scrolls.
+   - **`tr`**: Table rows are styled using `display: flex` to ensure the cells take equal width. This is useful when dealing with flexible layouts.
+   - **`th, td`**: The `flex: 1` property ensures that each table cell has the same width.
+
+3. **Scrollable Body**:
+   - The `<tbody>` section is scrollable. This is achieved by setting `display: block`, `max-height: 300px`, and `overflow-y: auto`. When the number of rows exceeds the height, a vertical scrollbar will appear.
+   - The `<thead>` and `<tfoot>` remain fixed at the top and bottom of the table, respectively.
+
+### How It Works:
+- The table body is scrollable while the header and footer remain fixed at the top and bottom, respectively.
+- As more rows are added, the body becomes scrollable, and the header/footer stays in place.
+- Each row has equally spaced columns because of `flex: 1`.
+
+### Result:
+This approach creates a table with a fixed header and footer, with a scrollable body that allows you to view large amounts of data without losing the context of the header and footer.
+
+
+-->
+-->
